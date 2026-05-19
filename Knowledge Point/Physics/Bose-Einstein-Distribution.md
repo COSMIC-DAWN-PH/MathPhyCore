@@ -12,8 +12,8 @@ status: In-Progress
 date: 2026-05-18
 tags:
   - Physics
-  - Statistical Physics
-  - Quantum Statistics
+  - Statistical_Physics
+  - Quantum_Statistics
   - Bose-Einstein
 ---
 
