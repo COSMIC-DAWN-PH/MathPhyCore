@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bose-Einstein Distribution.md",
+                "file": "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Bose-Einstein Distribution"
+              "title": "Bose-Einstein-Distribution"
             }
           }
         ],
@@ -124,12 +124,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "欢迎.md",
+                "file": "Bose-Einstein Distribution（玻色爱因斯坦分布）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "欢迎 的出链列表"
+              "title": "Bose-Einstein Distribution（玻色爱因斯坦分布） 的出链列表"
             }
           },
           {
@@ -167,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bose-Einstein Distribution.md",
+                "file": "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Bose-Einstein Distribution 的大纲"
+              "title": "Bose-Einstein-Distribution 的大纲"
             }
           },
           {
@@ -205,9 +205,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "17d3c259370175f5",
+  "active": "51f4e5d7f6ccd435",
   "lastOpenFiles": [
-    "Bose-Einstein Distribution.md",
+    "Knowledge Point/Math/Method-of-Separation-of-Variables.md",
+    "Knowledge Point/Math/Gaussian-Integral.md",
+    "Knowledge Point/Math/高斯积分 (Gaussian Integral).md",
+    "Knowledge Point/Math/分离变量法 (Method of Separation of Variables).md",
+    "Knowledge Point/Bose-Einstein Distribution（玻色爱因斯坦分布）.md",
+    "Knowledge Point/（高斯积分）.md",
+    "Knowledge Point/未命名 1.md",
+    "Knowledge Point/Method of Separation of Variables（分离变量法）.md",
+    "Knowledge Point",
+    "README.md",
     "欢迎.md"
   ]
 }
