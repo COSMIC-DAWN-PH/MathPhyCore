@@ -8,16 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b3520fa3d5b98b8b",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
-            }
-          },
-          {
             "id": "17d3c259370175f5",
             "type": "leaf",
             "state": {
@@ -31,8 +21,7 @@
               "title": "Bose-Einstein-Distribution"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -89,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "99eba81808f9de66",
@@ -204,7 +192,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 316.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -218,11 +206,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "51f4e5d7f6ccd435",
+  "active": "17d3c259370175f5",
   "lastOpenFiles": [
+    "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
     "未命名.base",
     "未命名 1.base",
-    "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
     "Knowledge Point/Math/Method-of-Separation-of-Variables.md",
     "Knowledge Point/Math/Gaussian-Integral.md",
     "Knowledge Point/Math/高斯积分 (Gaussian Integral).md",
