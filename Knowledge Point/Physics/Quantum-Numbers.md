@@ -132,7 +132,7 @@ plt.show()
 
 下面这个交互图可以直接拖动 $n,l,m_l$，观察三者如何相互约束。它用三块图像分别表示壳层尺度、角向形状和角动量投影。
 
-<iframe src="../../tools/Quantum-Numbers-Interactive.html" width="100%" height="680" style="border:1px solid #d8dee9; border-radius:6px;"></iframe>
+<iframe src="file:///C:/Personal%20Profile/Profile/MathPhysCore/tools/Quantum-Numbers-Interactive.html" width="100%" height="680" style="border:1px solid #d8dee9; border-radius:6px;"></iframe>
 
 如果 iframe 在当前 Obsidian 设置中没有渲染，可以直接打开：[Quantum Numbers Interactive](../../tools/Quantum-Numbers-Interactive.html)
 

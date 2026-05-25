@@ -199,3 +199,25 @@ plt.show()
 
 - 每次修改笔记后，如果内容有较大变动，在文件末尾追加 `## 📝 更新记录`
 - 格式：`YYYY-MM-DD: [改动说明]`
+
+## Obsidian 交互式 HTML / iframe
+
+当需要在笔记中嵌入动态、可交互的物理图像时，可以在 `tools/` 下创建独立 HTML 文件，并用 `<iframe>` 嵌入笔记。
+
+重要经验：
+
+- iframe 的 `src` 不要优先使用相对路径，例如 `../../tools/example.html`，因为 Obsidian 的 HTML iframe 路径解析不一定按当前笔记文件位置处理。
+- 本地 HTML iframe 优先使用绝对 `file:///` URL。
+- Windows 路径中的空格必须 URL 编码为 `%20`。
+- 示例：
+
+```html
+<iframe src="file:///C:/Personal%20Profile/Profile/MathPhysCore/tools/Quantum-Numbers-Interactive.html" width="100%" height="680" style="border:1px solid #d8dee9; border-radius:6px;"></iframe>
+```
+
+如果 iframe 仍不能渲染，优先检查：
+
+1. Obsidian 插件是否允许 iframe / HTML / JavaScript。
+2. `file:///` 路径是否真实存在。
+3. 路径中的空格、中文或特殊字符是否已正确 URL 编码。
+4. 如本地 file iframe 被限制，可改用本地 HTTP 服务，例如 `http://127.0.0.1:8765/tools/example.html`。
