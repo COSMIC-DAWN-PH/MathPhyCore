@@ -144,6 +144,8 @@ plt.show()
 - [[Quantum-Numbers|Quantum Numbers (量子数)]]
 - [[Ising-Model|Ising Model (伊辛模型)]]
 - [[Spontaneous-Symmetry-Breaking|Spontaneous Symmetry Breaking (自发对称性破缺)]]
+- [[Gaussian-Integral|Gaussian Integral (高斯积分)]]
+- [[Method-of-Separation-of-Variables|Separation of Variables (分离变量法)]]
 
 ---
 

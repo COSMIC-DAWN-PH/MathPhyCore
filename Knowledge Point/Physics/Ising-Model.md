@@ -231,6 +231,8 @@ plt.show()
 
 - [[Spontaneous-Symmetry-Breaking|Spontaneous Symmetry Breaking (自发对称性破缺)]]
 - [[Bose-Einstein-Distribution|Bose-Einstein Distribution (玻色-爱因斯坦分布)]]
+- [[Gaussian-Integral|Gaussian Integral (高斯积分)]]
+- [[Method-of-Separation-of-Variables|Separation of Variables (分离变量法)]]
 
 ---
 
