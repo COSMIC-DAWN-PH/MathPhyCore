@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
+                "file": "Knowledge Point/Physics/Principal-Quantum-Number.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Bose-Einstein-Distribution"
+              "title": "Principal-Quantum-Number"
             }
           }
         ]
@@ -206,11 +206,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "32d48f4660d910e2",
+  "active": "17d3c259370175f5",
   "lastOpenFiles": [
+    "Knowledge Point/Physics/Quantum-Numbers.md",
+    "Knowledge Point/Physics/Magnetic-Quantum-Number.md",
+    "Knowledge Point/Physics/Azimuthal-Quantum-Number.md",
+    "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
+    "Knowledge Point/Physics/Principal-Quantum-Number.md",
     "tools/Knowledge-Note-Template.md",
     "AGENTS.md",
-    "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
     "未命名.base",
     "未命名 1.base",
     "Knowledge Point/Math/Method-of-Separation-of-Variables.md",
