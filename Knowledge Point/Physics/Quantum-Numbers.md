@@ -47,6 +47,97 @@ tags:
 
 ---
 
+## 物理图像：从壳层到投影
+
+最直接的图像是：
+
+- $n$ 像“半径层级”：决定电子云主要分布在多大的尺度上；
+- $l$ 像“形状类型”：决定电子云是球对称的 $s$ 型，还是有方向性的 $p,d,f$ 型；
+- $m_l$ 像“投影刻度”：在选定 $z$ 轴后，角动量投影只能落在若干个离散刻度上。
+
+> [!tip] 一个有用的心像
+> 先想象一组同心壳层，这是 $n$；每个壳层里有不同形状的波函数花纹，这是 $l$；当外部磁场或测量轴选定一个方向时，这些角动量状态沿该方向只能有离散投影，这是 $m_l$。
+
+更严格地说，电子不是沿经典轨道绕核运动的小球，所谓“轨道”是波函数概率云。量子数描述的是波函数的允许形状和角动量本征值，而不是一条确定的运动轨迹。
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.rcParams['font.sans-serif'] = ['Microsoft YaHei', 'SimHei']
+plt.rcParams['axes.unicode_minus'] = False
+
+fig, axes = plt.subplots(1, 3, figsize=(13, 4))
+
+# 1. n: shell scale
+ax = axes[0]
+theta = np.linspace(0, 2*np.pi, 400)
+for n, color in [(1, '#4C78A8'), (2, '#F58518'), (3, '#54A24B')]:
+    r = n
+    ax.plot(r*np.cos(theta), r*np.sin(theta), lw=2.5, color=color, label=fr'$n={n}$')
+ax.scatter([0], [0], s=80, color='black', label='原子核')
+ax.set_aspect('equal')
+ax.set_title('主量子数 $n$：壳层尺度')
+ax.set_xlabel('$x$')
+ax.set_ylabel('$y$')
+ax.set_xlim(-3.4, 3.4)
+ax.set_ylim(-3.4, 3.4)
+ax.grid(alpha=0.25)
+ax.legend(loc='upper right')
+
+# 2. l: angular shapes, shown as polar probability sketches
+ax = axes[1]
+theta = np.linspace(0, 2*np.pi, 800)
+shapes = [
+    (np.ones_like(theta), '$l=0$ : s', '#4C78A8'),
+    (np.abs(np.cos(theta)), '$l=1$ : p', '#F58518'),
+    (np.abs(np.cos(2*theta)), '$l=2$ : d', '#54A24B'),
+]
+offsets = [-2.2, 0, 2.2]
+for (rho, label, color), x0 in zip(shapes, offsets):
+    x = x0 + rho*np.cos(theta)
+    y = rho*np.sin(theta)
+    ax.plot(x, y, lw=2.2, color=color)
+    ax.text(x0, -1.45, label, ha='center', fontsize=11)
+ax.set_aspect('equal')
+ax.set_title('角量子数 $l$：角向形状')
+ax.set_xlim(-3.6, 3.6)
+ax.set_ylim(-1.8, 1.8)
+ax.axis('off')
+
+# 3. m_l: discrete Lz projections for fixed l=2
+ax = axes[2]
+l = 2
+m_values = np.arange(-l, l + 1)
+for m in m_values:
+    ax.hlines(m, 0, 1.0, color='#4C78A8', lw=3)
+    ax.text(1.08, m, fr'$m_l={m}$', va='center', fontsize=11)
+ax.axvline(0, color='black', lw=1)
+ax.set_title(r'磁量子数 $m_l$：$L_z=m_l\hbar$')
+ax.set_xlim(-0.2, 1.9)
+ax.set_ylim(-2.6, 2.6)
+ax.set_xticks([])
+ax.set_yticks(m_values)
+ax.set_ylabel(r'$L_z/\hbar$')
+ax.grid(axis='y', alpha=0.25)
+
+plt.suptitle('三个空间量子数的物理图像', fontsize=15, fontweight='bold')
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## 交互式可视化
+
+下面这个交互图可以直接拖动 $n,l,m_l$，观察三者如何相互约束。它用三块图像分别表示壳层尺度、角向形状和角动量投影。
+
+<iframe src="../../tools/Quantum-Numbers-Interactive.html" width="100%" height="680" style="border:1px solid #d8dee9; border-radius:6px;"></iframe>
+
+如果 iframe 在当前 Obsidian 设置中没有渲染，可以直接打开：[[../../tools/Quantum-Numbers-Interactive.html|Quantum Numbers Interactive]]
+
+---
+
 ## 取值关系
 
 三个量子数的允许取值必须从外到内依次决定：

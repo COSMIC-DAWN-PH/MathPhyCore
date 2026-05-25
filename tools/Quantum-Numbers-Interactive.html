@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quantum Numbers Interactive</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #64748b;
+      --line: #d8dee9;
+      --panel: #f8fafc;
+      --blue: #3366aa;
+      --orange: #c96b1b;
+      --red: #b84644;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #fff;
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .controls {
+      padding: 18px;
+      border-right: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .subtitle {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .control { margin: 16px 0; }
+
+    label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .value {
+      color: var(--blue);
+      font-family: Consolas, monospace;
+      font-size: 14px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--blue);
+    }
+
+    .state {
+      margin-top: 18px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .formula {
+      font-family: Consolas, monospace;
+      color: #334155;
+      white-space: nowrap;
+    }
+
+    .canvas-wrap {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      min-width: 0;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .legend span::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+      border-radius: 50%;
+      vertical-align: -1px;
+      background: var(--c);
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+    }
+
+    @media (max-width: 760px) {
+      .app { grid-template-columns: 1fr; }
+      .controls {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      canvas { min-height: 620px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="controls" aria-label="量子数控制面板">
+      <h1>量子数交互图像</h1>
+      <p class="subtitle">调节 n, l, m<sub>l</sub>，观察壳层尺度、角向形状和角动量投影如何被层层约束。</p>
+
+      <div class="control">
+        <label for="nSlider">主量子数 n <span id="nValue" class="value"></span></label>
+        <input id="nSlider" type="range" min="1" max="5" step="1" value="3">
+      </div>
+
+      <div class="control">
+        <label for="lSlider">角量子数 l <span id="lValue" class="value"></span></label>
+        <input id="lSlider" type="range" min="0" max="2" step="1" value="1">
+      </div>
+
+      <div class="control">
+        <label for="mSlider">磁量子数 m<sub>l</sub> <span id="mValue" class="value"></span></label>
+        <input id="mSlider" type="range" min="-1" max="1" step="1" value="0">
+      </div>
+
+      <div class="state" id="stateText"></div>
+    </section>
+
+    <section class="canvas-wrap">
+      <div class="topbar">
+        <div>有效量子态：<span id="stateLabel" class="formula"></span></div>
+        <div class="legend">
+          <span style="--c: var(--blue)">n：壳层</span>
+          <span style="--c: var(--orange)">l：形状</span>
+          <span style="--c: var(--red)">m<sub>l</sub>：投影</span>
+        </div>
+      </div>
+      <canvas id="view" width="1200" height="720" aria-label="量子数物理图像"></canvas>
+    </section>
+  </main>
+
+  <script>
+    const canvas = document.getElementById("view");
+    const ctx = canvas.getContext("2d");
+    const nSlider = document.getElementById("nSlider");
+    const lSlider = document.getElementById("lSlider");
+    const mSlider = document.getElementById("mSlider");
+    const nValue = document.getElementById("nValue");
+    const lValue = document.getElementById("lValue");
+    const mValue = document.getElementById("mValue");
+    const stateText = document.getElementById("stateText");
+    const stateLabel = document.getElementById("stateLabel");
+
+    const colors = {
+      ink: "#1f2933",
+      muted: "#64748b",
+      line: "#d8dee9",
+      blue: "#3366aa",
+      orange: "#c96b1b",
+      red: "#b84644"
+    };
+    const orbitalNames = ["s", "p", "d", "f", "g"];
+
+    function clamp(value, min, max) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    function syncRanges() {
+      const n = Number(nSlider.value);
+      lSlider.max = String(n - 1);
+      lSlider.value = String(clamp(Number(lSlider.value), 0, n - 1));
+      const l = Number(lSlider.value);
+      mSlider.min = String(-l);
+      mSlider.max = String(l);
+      mSlider.value = String(clamp(Number(mSlider.value), -l, l));
+    }
+
+    function drawText(text, x, y, size = 15, color = colors.ink, align = "left", weight = "400") {
+      ctx.font = `${weight} ${size}px Microsoft YaHei, Segoe UI, Arial`;
+      ctx.fillStyle = color;
+      ctx.textAlign = align;
+      ctx.textBaseline = "middle";
+      ctx.fillText(text, x, y);
+    }
+
+    function panelTitle(title, x, y) {
+      drawText(title, x, y, 18, colors.ink, "center", "700");
+    }
+
+    function drawShellPanel(n, x, y, w, h) {
+      panelTitle("1. n 决定壳层尺度", x + w / 2, y + 24);
+      const cx = x + w / 2;
+      const cy = y + h / 2 + 12;
+      const maxR = Math.min(w, h) * 0.36;
+      for (let i = 1; i <= 5; i++) {
+        const r = maxR * i / 5;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        ctx.strokeStyle = i === n ? colors.blue : "#d7dde7";
+        ctx.lineWidth = i === n ? 3 : 1.2;
+        ctx.stroke();
+        if (i === n) {
+          ctx.fillStyle = "rgba(51,102,170,0.08)";
+          ctx.fill();
+        }
+      }
+      ctx.beginPath();
+      ctx.arc(cx, cy, 8, 0, Math.PI * 2);
+      ctx.fillStyle = "#111827";
+      ctx.fill();
+      drawText("原子核", cx, cy + 24, 12, colors.muted, "center");
+      drawText(`当前壳层：n = ${n}`, cx, y + h - 28, 14, colors.blue, "center", "700");
+    }
+
+    function shapeRadius(l, theta) {
+      if (l === 0) return 0.78;
+      if (l === 1) return 0.15 + 0.85 * Math.abs(Math.cos(theta));
+      if (l === 2) return 0.12 + 0.88 * Math.abs(Math.cos(2 * theta));
+      if (l === 3) return 0.10 + 0.90 * Math.abs(Math.cos(3 * theta));
+      return 0.10 + 0.90 * Math.abs(Math.cos(4 * theta));
+    }
+
+    function drawShapePanel(n, l, x, y, w, h) {
+      panelTitle("2. l 决定角向形状", x + w / 2, y + 24);
+      const cx = x + w / 2;
+      const cy = y + h / 2 + 12;
+      const scale = Math.min(w, h) * 0.32;
+      ctx.beginPath();
+      for (let i = 0; i <= 720; i++) {
+        const theta = i / 720 * Math.PI * 2;
+        const r = shapeRadius(l, theta) * scale;
+        const px = cx + r * Math.cos(theta);
+        const py = cy + r * Math.sin(theta);
+        if (i === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.closePath();
+      ctx.fillStyle = "rgba(201,107,27,0.13)";
+      ctx.strokeStyle = colors.orange;
+      ctx.lineWidth = 3;
+      ctx.fill();
+      ctx.stroke();
+      const name = orbitalNames[l] || `l=${l}`;
+      drawText(`子壳层：${n}${name}`, cx, y + h - 48, 15, colors.orange, "center", "700");
+      drawText(`角节点数 = l = ${l}`, cx, y + h - 24, 13, colors.muted, "center");
+    }
+
+    function drawProjectionPanel(l, m, x, y, w, h) {
+      panelTitle("3. m_l 决定 Lz 投影", x + w / 2, y + 24);
+      const cx = x + w / 2;
+      const top = y + 78;
+      const bottom = y + h - 58;
+      const axisX = cx - 28;
+      const maxAbs = Math.max(1, l);
+      ctx.strokeStyle = colors.line;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(axisX, top);
+      ctx.lineTo(axisX, bottom);
+      ctx.stroke();
+      for (let val = -l; val <= l; val++) {
+        const py = bottom - (val + maxAbs) / (2 * maxAbs) * (bottom - top);
+        ctx.strokeStyle = val === m ? colors.red : "#cbd5e1";
+        ctx.lineWidth = val === m ? 4 : 2;
+        ctx.beginPath();
+        ctx.moveTo(axisX - 42, py);
+        ctx.lineTo(axisX + 92, py);
+        ctx.stroke();
+        drawText(`m_l=${val}`, axisX + 106, py, 13, val === m ? colors.red : colors.muted);
+      }
+      const selectedY = bottom - (m + maxAbs) / (2 * maxAbs) * (bottom - top);
+      ctx.fillStyle = colors.red;
+      ctx.beginPath();
+      ctx.arc(axisX - 54, selectedY, 6, 0, Math.PI * 2);
+      ctx.fill();
+      const L = Math.sqrt(l * (l + 1));
+      drawText(`|L| = sqrt(${l}(${l}+1)) hbar = ${L.toFixed(2)} hbar`, cx, y + h - 32, 13, colors.muted, "center");
+      drawText(`Lz = ${m} hbar`, cx, y + h - 12, 14, colors.red, "center", "700");
+    }
+
+    function drawRelationBar(n, l, m, cssW, cssH) {
+      const y = cssH - 44;
+      ctx.fillStyle = "#f8fafc";
+      ctx.fillRect(0, y - 18, cssW, 62);
+      ctx.strokeStyle = colors.line;
+      ctx.beginPath();
+      ctx.moveTo(0, y - 18);
+      ctx.lineTo(cssW, y - 18);
+      ctx.stroke();
+      drawText(`约束链：n = ${n} -> l = 0...${n - 1} -> m_l = -${l}...${l}，当前态 (${n}, ${l}, ${m})`, cssW / 2, y + 4, 16, colors.ink, "center", "700");
+    }
+
+    function draw() {
+      syncRanges();
+      const n = Number(nSlider.value);
+      const l = Number(lSlider.value);
+      const m = Number(mSlider.value);
+      nValue.textContent = String(n);
+      lValue.textContent = `${l} (${orbitalNames[l] || ""})`;
+      mValue.textContent = String(m);
+      stateLabel.textContent = `(n,l,m_l)=(${n},${l},${m})`;
+      stateText.innerHTML = `
+        <div><b>当前空间态</b>：(${n}, ${l}, ${m})</div>
+        <div><span class="formula">l = 0,1,...,n-1</span>，当前 n 允许 l = 0 到 ${n - 1}。</div>
+        <div><span class="formula">m_l = -l,...,l</span>，当前子壳层有 ${2 * l + 1} 个空间取向。</div>
+        <div><span class="formula">L = sqrt(l(l+1)) hbar</span>，<span class="formula">Lz = m_l hbar</span>。</div>
+      `;
+
+      const ratio = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      const cssW = Math.max(900, Math.floor(rect.width));
+      const cssH = Math.max(560, Math.floor(rect.height));
+      const width = Math.floor(cssW * ratio);
+      const height = Math.floor(cssH * ratio);
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      ctx.clearRect(0, 0, cssW, cssH);
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, cssW, cssH);
+
+      const p = 32;
+      const g = 24;
+      const pw = (cssW - 2 * p - 2 * g) / 3;
+      const ph = cssH - 2 * p - 86;
+      for (let i = 0; i < 3; i++) {
+        const x = p + i * (pw + g);
+        ctx.strokeStyle = colors.line;
+        ctx.lineWidth = 1;
+        ctx.strokeRect(x, p, pw, ph);
+      }
+      drawShellPanel(n, p, p, pw, ph);
+      drawShapePanel(n, l, p + pw + g, p, pw, ph);
+      drawProjectionPanel(l, m, p + 2 * (pw + g), p, pw, ph);
+      drawRelationBar(n, l, m, cssW, cssH);
+    }
+
+    [nSlider, lSlider, mSlider].forEach((el) => el.addEventListener("input", draw));
+    window.addEventListener("resize", draw);
+    draw();
+  </script>
+</body>
+</html>
