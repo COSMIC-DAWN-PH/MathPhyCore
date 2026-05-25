@@ -151,3 +151,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+---
+
+## 相关概念
+
+- [[Quantum-Numbers|量子数]]
