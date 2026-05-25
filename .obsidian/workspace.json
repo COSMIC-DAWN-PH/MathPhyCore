@@ -11,10 +11,14 @@
             "id": "d9498ef721790e05",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Knowledge Point/Physics/Quantum-Numbers.md",
+                "mode": "preview",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Quantum-Numbers"
             }
           }
         ]
@@ -90,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bose-Einstein Distribution.md",
+                "file": "Knowledge Point/Physics/Quantum-Numbers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Bose-Einstein Distribution 的反向链接列表"
+              "title": "Quantum-Numbers 的反向链接列表"
             }
           },
           {
@@ -192,6 +196,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-custom-frames:Open Google Calendar": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -202,11 +207,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "51f4e5d7f6ccd435",
+  "active": "d9498ef721790e05",
   "lastOpenFiles": [
+    "Knowledge Point/Physics/Quantum-Numbers.md",
     "未命名.base",
     "tools/Quantum-Numbers-Interactive.html",
-    "Knowledge Point/Physics/Quantum-Numbers.md",
     "Knowledge Point/Physics/Azimuthal-Quantum-Number.md",
     "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
     "Knowledge Point/Physics/Magnetic-Quantum-Number.md",
