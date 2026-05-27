@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Knowledge Point/Physics/Magnetic-Moment.md",
+                "file": "Knowledge Point/Physics/Larmor-Precession.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Magnetic-Moment"
+              "title": "Larmor-Precession"
             }
           }
         ]
@@ -209,15 +209,15 @@
   },
   "active": "d9498ef721790e05",
   "lastOpenFiles": [
+    "Knowledge Point/Physics/Ising-Model.md",
     "Knowledge Point/Physics/Torque.md",
-    "Knowledge Point/Physics/Quantum-Numbers.md",
     "Knowledge Point/Physics/Spontaneous-Symmetry-Breaking.md",
-    "Knowledge Point/Physics/Magnetic-Moment.md",
-    "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
     "Knowledge Point/Physics/Larmor-Precession.md",
+    "Knowledge Point/Physics/Magnetic-Moment.md",
+    "Knowledge Point/Physics/Quantum-Numbers.md",
+    "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
     "Knowledge Point/Physics/Principal-Quantum-Number.md",
     "Knowledge Point/Physics/Magnetic-Quantum-Number.md",
-    "Knowledge Point/Physics/Ising-Model.md",
     "tools/Larmor-Precession-Interactive.html",
     "Knowledge Point/Physics/Azimuthal-Quantum-Number.md",
     "Knowledge Point/Math/Method-of-Separation-of-Variables.md",
