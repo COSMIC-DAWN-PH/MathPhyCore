@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Knowledge Point/Math/Method-of-Separation-of-Variables.md",
+                "file": "Knowledge Point/Physics/Magnetic-Moment.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Method-of-Separation-of-Variables"
+              "title": "Magnetic-Moment"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Gaussian  ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -207,20 +207,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "51f4e5d7f6ccd435",
+  "active": "d9498ef721790e05",
   "lastOpenFiles": [
-    "Knowledge Point/Math/Gaussian-Integral.md",
-    "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
+    "Knowledge Point/Physics/Torque.md",
+    "Knowledge Point/Physics/Principal-Quantum-Number.md",
     "Knowledge Point/Physics/Azimuthal-Quantum-Number.md",
+    "Knowledge Point/Math/Method-of-Separation-of-Variables.md",
+    "Knowledge Point/Math/Gaussian-Integral.md",
+    "Knowledge Point/Physics/Spontaneous-Symmetry-Breaking.md",
+    "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
     "Knowledge Point/Physics/Magnetic-Quantum-Number.md",
     "2026-05-25.md",
     "Knowledge Point/Physics/Ising-Model.md",
-    "Knowledge Point/Math/Method-of-Separation-of-Variables.md",
     "outputs_test_be/be_distribution.png",
     "outputs_test_be",
     "test_be_plots.py",
-    "Knowledge Point/Physics/Principal-Quantum-Number.md",
-    "Knowledge Point/Physics/Spontaneous-Symmetry-Breaking.md",
     "Knowledge Point/Physics/Quantum-Numbers.md",
     "未命名.base",
     "tools/Quantum-Numbers-Interactive.html",
