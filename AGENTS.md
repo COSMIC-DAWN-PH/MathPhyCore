@@ -185,6 +185,18 @@ plt.show()
 - 含数学公式的标签用 raw string + `$...$` 包裹（如 `r'能量差 $\varepsilon - \mu$'`）
 - 中文字体优先 `Microsoft YaHei`（Win11 自带）
 - 用 `plt.tight_layout()` 避免裁切
+- 如果使用 3D matplotlib（`projection='3d'` / `Axes3D`），Obsidian Execute Code 可能会在代码块后自动追加空的 `plt.plot()`；必须在 `plt.show()` 前把当前轴切回透明 2D 轴，避免触发 `Axes3D.plot()` 缺少 `xs`、`ys` 参数的错误。推荐模板：
+
+```python
+plt.tight_layout()
+
+# Obsidian Execute Code may append an empty plt.plot() after this block.
+# Keep a transparent 2D axes current so that appended call does not hit Axes3D.plot().
+compat_ax = fig.add_axes([0, 0, 1, 1], frameon=False)
+compat_ax.set_axis_off()
+plt.show()
+```
+
 - 图尽量能独立说明问题（标题、轴标签、图例完整）
 
 > 本 vault **不再使用 Mermaid 图表**，所有曲线图/分布图/统计图均由 Python 生成。

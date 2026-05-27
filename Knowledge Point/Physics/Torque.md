@@ -81,6 +81,7 @@ $$
 
 - [[Magnetic-Moment|磁矩]] — 磁矩在外磁场中受力矩作用
 - [[Magnetic-Quantum-Number|磁量子数]] — 与磁矩的磁场效应密切相关
+- [[Larmor-Precession|拉莫尔进动]] — 磁力矩改变角动量方向时形成的进动
 - [[Quantum-Numbers|量子数]]
 - [[Spontaneous-Symmetry-Breaking|自发对称性破缺]] — 角动量守恒与对称性的深层联系
 

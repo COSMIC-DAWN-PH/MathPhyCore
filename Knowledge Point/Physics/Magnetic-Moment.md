@@ -103,6 +103,7 @@ $$
 
 - [[Magnetic-Quantum-Number|磁量子数]] — 磁矩在 $z$ 方向的量子化投影
 - [[Torque|力矩]] — 磁矩在外磁场中受到的力矩
+- [[Larmor-Precession|拉莫尔进动]] — 磁矩和角动量在外磁场中的圆锥进动
 - [[Quantum-Numbers|量子数]]
 - [[Spontaneous-Symmetry-Breaking|自发对称性破缺]] — 对称性破缺与磁序
 

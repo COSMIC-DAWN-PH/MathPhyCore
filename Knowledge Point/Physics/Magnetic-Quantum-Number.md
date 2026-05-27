@@ -156,6 +156,7 @@ $$
 
 - [[Magnetic-Moment|磁矩]] — 磁量子数直接标记磁矩在 $z$ 方向的投影值
 - [[Torque|力矩]] — 磁矩在外磁场中受力矩 $\vec{\tau}=\vec{\mu}\times\vec{B}$，与磁量子数能级分裂相关
+- [[Larmor-Precession|拉莫尔进动]] — 外磁场中磁矩与角动量的经典进动图像
 - [[Quantum-Numbers|量子数]]
 - [[Principal-Quantum-Number|主量子数]]
 - [[Azimuthal-Quantum-Number|角量子数]]

@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Larmor Precession Interactive</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #64748b;
+      --line: #d8dee9;
+      --panel: #f8fafc;
+      --blue: #3366aa;
+      --orange: #c96b1b;
+      --red: #b84644;
+      --green: #2f855a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #fff;
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: 290px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .controls {
+      padding: 18px;
+      border-right: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .subtitle {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .control { margin: 16px 0; }
+
+    label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .value {
+      color: var(--blue);
+      font-family: Consolas, monospace;
+      font-size: 14px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--blue);
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    button {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover { border-color: var(--blue); }
+
+    .state {
+      margin-top: 18px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .formula {
+      font-family: Consolas, monospace;
+      color: #334155;
+      white-space: nowrap;
+    }
+
+    .canvas-wrap {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      min-width: 0;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .legend span::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+      border-radius: 50%;
+      vertical-align: -1px;
+      background: var(--c);
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+    }
+
+    @media (max-width: 780px) {
+      .app { grid-template-columns: 1fr; }
+      .controls {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      canvas { min-height: 620px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="controls" aria-label="拉莫尔进动控制面板">
+      <h1>拉莫尔进动</h1>
+      <p class="subtitle">观察角动量 J 在外磁场 B 中绕竖直方向进动。调节 B、γ 和夹角 θ，注意进动频率和方向的变化。</p>
+
+      <div class="control">
+        <label for="bSlider">磁场强度 B <span id="bValue" class="value"></span></label>
+        <input id="bSlider" type="range" min="0.2" max="3" step="0.1" value="1.4">
+      </div>
+
+      <div class="control">
+        <label for="gammaSlider">旋磁比 γ <span id="gammaValue" class="value"></span></label>
+        <input id="gammaSlider" type="range" min="-3" max="3" step="0.1" value="1">
+      </div>
+
+      <div class="control">
+        <label for="thetaSlider">初始夹角 θ <span id="thetaValue" class="value"></span></label>
+        <input id="thetaSlider" type="range" min="5" max="80" step="1" value="35">
+      </div>
+
+      <div class="buttons">
+        <button id="toggleBtn" type="button">暂停</button>
+        <button id="resetBtn" type="button">重置相位</button>
+      </div>
+
+      <div class="state" id="stateText"></div>
+    </section>
+
+    <section class="canvas-wrap">
+      <div class="topbar">
+        <div>当前关系：<span id="stateLabel" class="formula"></span></div>
+        <div class="legend">
+          <span style="--c: var(--red)">B：外磁场</span>
+          <span style="--c: var(--orange)">J：角动量</span>
+          <span style="--c: var(--blue)">轨迹圆</span>
+          <span style="--c: var(--green)">τ：瞬时力矩</span>
+        </div>
+      </div>
+      <canvas id="view" width="1200" height="720" aria-label="拉莫尔进动动态图"></canvas>
+    </section>
+  </main>
+
+  <script>
+    const canvas = document.getElementById("view");
+    const ctx = canvas.getContext("2d");
+    const bSlider = document.getElementById("bSlider");
+    const gammaSlider = document.getElementById("gammaSlider");
+    const thetaSlider = document.getElementById("thetaSlider");
+    const bValue = document.getElementById("bValue");
+    const gammaValue = document.getElementById("gammaValue");
+    const thetaValue = document.getElementById("thetaValue");
+    const stateText = document.getElementById("stateText");
+    const stateLabel = document.getElementById("stateLabel");
+    const toggleBtn = document.getElementById("toggleBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    const colors = {
+      ink: "#1f2933",
+      muted: "#64748b",
+      line: "#d8dee9",
+      blue: "#3366aa",
+      orange: "#c96b1b",
+      red: "#b84644",
+      green: "#2f855a"
+    };
+
+    let running = true;
+    let phase = 0;
+    let lastTime = performance.now();
+
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      const ratio = window.devicePixelRatio || 1;
+      canvas.width = Math.max(900, Math.floor(rect.width * ratio));
+      canvas.height = Math.max(560, Math.floor(rect.height * ratio));
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    }
+
+    function project(point, center, scale) {
+      const [x, y, z] = point;
+      const yaw = -0.65;
+      const pitch = 0.72;
+
+      const x1 = x * Math.cos(yaw) - y * Math.sin(yaw);
+      const y1 = x * Math.sin(yaw) + y * Math.cos(yaw);
+      const z1 = z;
+
+      const y2 = y1 * Math.cos(pitch) - z1 * Math.sin(pitch);
+      const z2 = y1 * Math.sin(pitch) + z1 * Math.cos(pitch);
+      const depth = 1 / (1 + 0.18 * z2);
+
+      return {
+        x: center.x + x1 * scale * depth,
+        y: center.y + y2 * scale * depth,
+        depth
+      };
+    }
+
+    function drawText(text, x, y, size = 14, color = colors.ink, align = "left", weight = "400") {
+      ctx.font = `${weight} ${size}px Microsoft YaHei, Segoe UI, Arial`;
+      ctx.fillStyle = color;
+      ctx.textAlign = align;
+      ctx.textBaseline = "middle";
+      ctx.fillText(text, x, y);
+    }
+
+    function drawLine3D(a, b, center, scale, color, width = 2, dash = []) {
+      const pa = project(a, center, scale);
+      const pb = project(b, center, scale);
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = width;
+      ctx.setLineDash(dash);
+      ctx.beginPath();
+      ctx.moveTo(pa.x, pa.y);
+      ctx.lineTo(pb.x, pb.y);
+      ctx.stroke();
+      ctx.restore();
+      return { pa, pb };
+    }
+
+    function drawArrow3D(a, b, center, scale, color, width = 3, label = "") {
+      const { pb } = drawLine3D(a, b, center, scale, color, width);
+      const pa = project(a, center, scale);
+      const angle = Math.atan2(pb.y - pa.y, pb.x - pa.x);
+      const head = 12;
+      ctx.save();
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(pb.x, pb.y);
+      ctx.lineTo(pb.x - head * Math.cos(angle - 0.45), pb.y - head * Math.sin(angle - 0.45));
+      ctx.lineTo(pb.x - head * Math.cos(angle + 0.45), pb.y - head * Math.sin(angle + 0.45));
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+      if (label) drawText(label, pb.x + 10, pb.y - 12, 15, color, "left", "700");
+      return pb;
+    }
+
+    function drawEllipse(points, center, scale, color, width = 2) {
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = width;
+      ctx.beginPath();
+      points.forEach((p, i) => {
+        const q = project(p, center, scale);
+        if (i === 0) ctx.moveTo(q.x, q.y);
+        else ctx.lineTo(q.x, q.y);
+      });
+      ctx.closePath();
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawScene(dt) {
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+      ctx.clearRect(0, 0, width, height);
+
+      const B = Number(bSlider.value);
+      const gamma = Number(gammaSlider.value);
+      const thetaDeg = Number(thetaSlider.value);
+      const theta = thetaDeg * Math.PI / 180;
+      const omega = -gamma * B;
+
+      if (running) phase += omega * dt * 0.9;
+
+      bValue.textContent = B.toFixed(1);
+      gammaValue.textContent = gamma.toFixed(1);
+      thetaValue.textContent = `${thetaDeg}°`;
+
+      const omegaText = omega >= 0 ? `+${omega.toFixed(2)}` : omega.toFixed(2);
+      stateLabel.textContent = `ω_L = -γB = ${omegaText}`;
+      stateText.innerHTML = `
+        <div><b>拉莫尔频率：</b><span class="formula">ω<sub>L</sub> = -γB = ${omegaText}</span></div>
+        <div><b>夹角：</b>理想无耗散时 θ 保持不变。</div>
+        <div><b>方向：</b>${omega === 0 ? "γ=0 时不进动" : omega > 0 ? "从上方看为逆时针进动" : "从上方看为顺时针进动"}</div>
+      `;
+
+      const center = { x: width * 0.52, y: height * 0.58 };
+      const scale = Math.min(width, height) * 0.29;
+      const radius = Math.sin(theta);
+      const z = Math.cos(theta);
+      const tip = [radius * Math.cos(phase), radius * Math.sin(phase), z];
+      const muTip = tip.map(v => v * Math.sign(gamma || 1) * 0.82);
+      const torque = [
+        gamma * (tip[1] * B),
+        -gamma * (tip[0] * B),
+        0
+      ];
+      const torqueNorm = Math.hypot(torque[0], torque[1]) || 1;
+      const torqueTip = [
+        tip[0] + 0.32 * torque[0] / torqueNorm,
+        tip[1] + 0.32 * torque[1] / torqueNorm,
+        tip[2]
+      ];
+
+      const circle = [];
+      for (let i = 0; i < 180; i++) {
+        const a = i / 180 * Math.PI * 2;
+        circle.push([radius * Math.cos(a), radius * Math.sin(a), z]);
+      }
+
+      drawText("Larmor Precession", 28, 34, 22, colors.ink, "left", "700");
+      drawText("dJ/dt = μ × B,   μ = γJ", 28, 62, 15, colors.muted);
+
+      drawEllipse(circle, center, scale, colors.blue, 2.4);
+
+      for (let i = 0; i < 24; i++) {
+        const a = i / 24 * Math.PI * 2;
+        drawLine3D([0, 0, 0], [radius * Math.cos(a), radius * Math.sin(a), z], center, scale, colors.line, 0.8);
+      }
+
+      drawArrow3D([0, 0, -0.1], [0, 0, 1.35], center, scale, colors.red, 4, "B");
+      drawArrow3D([0, 0, 0], tip, center, scale, colors.orange, 4, "J");
+      drawArrow3D([0, 0, 0], muTip, center, scale, "#8b5a2b", 2.5, "μ");
+      drawArrow3D(tip, torqueTip, center, scale, colors.green, 3, "τ");
+      drawLine3D([0, 0, 0], [0, 0, z], center, scale, colors.muted, 1.4, [5, 5]);
+
+      const base = project([0, 0, 0], center, scale);
+      const top = project([0, 0, 1], center, scale);
+      const tip2 = project(tip, center, scale);
+      ctx.save();
+      ctx.fillStyle = colors.orange;
+      ctx.beginPath();
+      ctx.arc(tip2.x, tip2.y, 5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+
+      drawText("进动轨迹", top.x + 60, top.y + 110, 14, colors.blue);
+      drawText("θ", (base.x + tip2.x) / 2 - 18, (base.y + tip2.y) / 2, 15, colors.muted, "center", "700");
+
+      ctx.save();
+      ctx.strokeStyle = colors.muted;
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.arc(base.x, base.y, 30, -Math.PI / 2, -Math.PI / 2 + theta * 0.9);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function animate(now) {
+      const dt = Math.min(0.05, (now - lastTime) / 1000);
+      lastTime = now;
+      drawScene(dt);
+      requestAnimationFrame(animate);
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      running = !running;
+      toggleBtn.textContent = running ? "暂停" : "继续";
+    });
+
+    resetBtn.addEventListener("click", () => {
+      phase = 0;
+    });
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>

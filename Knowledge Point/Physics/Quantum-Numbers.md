@@ -288,6 +288,7 @@ $$
 - [[Principal-Quantum-Number|主量子数]]
 - [[Azimuthal-Quantum-Number|角量子数]]
 - [[Magnetic-Quantum-Number|磁量子数]]
+- [[Larmor-Precession|拉莫尔进动]]
 - [[Method-of-Separation-of-Variables|分离变量法]]
 
 ---
