@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Knowledge Point/Physics/Larmor-Precession.md",
+                "file": "Knowledge Point/Physics/Magnetic-Moment.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Larmor-Precession"
+              "title": "Magnetic-Moment"
             }
           }
         ]
@@ -209,23 +209,23 @@
   },
   "active": "d9498ef721790e05",
   "lastOpenFiles": [
+    "Knowledge Point/Physics/Torque.md",
+    "Knowledge Point/Physics/Quantum-Numbers.md",
+    "Knowledge Point/Physics/Spontaneous-Symmetry-Breaking.md",
+    "Knowledge Point/Physics/Magnetic-Moment.md",
+    "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
+    "Knowledge Point/Physics/Larmor-Precession.md",
     "Knowledge Point/Physics/Principal-Quantum-Number.md",
     "Knowledge Point/Physics/Magnetic-Quantum-Number.md",
-    "Knowledge Point/Physics/Magnetic-Moment.md",
-    "Knowledge Point/Physics/Larmor-Precession.md",
     "Knowledge Point/Physics/Ising-Model.md",
-    "Knowledge Point/Physics/Torque.md",
-    "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
     "tools/Larmor-Precession-Interactive.html",
     "Knowledge Point/Physics/Azimuthal-Quantum-Number.md",
     "Knowledge Point/Math/Method-of-Separation-of-Variables.md",
     "Knowledge Point/Math/Gaussian-Integral.md",
-    "Knowledge Point/Physics/Spontaneous-Symmetry-Breaking.md",
     "2026-05-25.md",
     "outputs_test_be/be_distribution.png",
     "outputs_test_be",
     "test_be_plots.py",
-    "Knowledge Point/Physics/Quantum-Numbers.md",
     "未命名.base",
     "tools/Quantum-Numbers-Interactive.html",
     "AGENTS.md",
