@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780646012915-5vg0oxgou",
+  "providerId": "claude",
+  "title": "这段截图讨论的是原子物理中极其核心的**选择定则（Selection Rules）**与**反常塞曼...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780646012915,
+  "updatedAt": 1780648045871,
+  "lastResponseAt": 1780646712515,
+  "sessionId": "02ef7c1a-2a23-48a3-85b4-7c9e7b2149c9",
+  "providerState": {
+    "providerSessionId": "02ef7c1a-2a23-48a3-85b4-7c9e7b2149c9"
+  },
+  "currentNote": "Knowledge Point/Physics/Zeeman-Effect.md",
+  "usage": {
+    "model": "sonnet[1m]",
+    "inputTokens": 761,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 83008,
+    "contextWindow": 1000000,
+    "contextTokens": 83769,
+    "percentage": 8
+  }
+}

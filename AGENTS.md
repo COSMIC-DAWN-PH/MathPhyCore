@@ -302,6 +302,7 @@ plt.show()
 |---|---|---|
 | **knowledge-manager** | `.agents/skills/knowledge-manager/SKILL.md` | 创建/升级知识点笔记：frontmatter 规范、双向链接、公式摘要、理解程度追踪 |
 | **vault-upgrade** | `.agents/skills/vault-upgrade/SKILL.md` | "升级这个库"、"apply new standards"、"migrate to new format" |
+| **encoding-safety** | `.agents/skills/encoding-safety/SKILL.md` | Prevent mojibake when writing Markdown/HTML with Chinese/CJK text; validate UTF-8 and iframe tools |
 
 ## 🧠 智能体长期记忆与用户画像 (Agent Memory & User Profile)
 
@@ -337,3 +338,17 @@ AI 助理必须根据该画像中所记录的用户学业阶段与物理背景�
 
 - **Skills**: Type `/` in chat and select the skill name, or describe the task naturally
 - **File creation**: Use `create_file` for new markdown notes; follow the YAML frontmatter and section conventions from existing notes
+
+
+## Encoding Safety / Mojibake Prevention
+
+Critical project rule for all agents working in this vault:
+
+- Do not write Chinese/CJK text by embedding it directly inside PowerShell here-strings or shell command payloads. In this environment, that path can silently convert non-ASCII characters into `?`, causing mojibake in Markdown notes and HTML tools.
+- For any Markdown/HTML/JS file that needs CJK text, use one of these safe patterns: Python Unicode escapes, base64-decoded UTF-8 payloads, or transform existing UTF-8 text read from disk.
+- If CJK UI text is not essential in an interactive HTML tool, prefer ASCII/English labels to eliminate encoding risk.
+- Standalone HTML tools must include `<meta charset="utf-8">`.
+- After writing any file that may contain CJK text, re-read the edited region with UTF-8 and check for `three consecutive question marks`, unexpected long runs of `?`, and `U+FFFD` replacement characters before responding.
+- For HTML containing JavaScript, extract scripts and run `node --check` when possible.
+
+Project skill backup: `.agents/skills/encoding-safety/SKILL.md` contains the detailed workflow and must be used for future Markdown/HTML writes involving CJK text or iframe tools.

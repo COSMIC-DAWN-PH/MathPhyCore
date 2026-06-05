@@ -1,0 +1,4 @@
+interface:
+  display_name: "Encoding Safety"
+  short_description: "Prevent mojibake when writing Markdown or HTML in this vault."
+  default_prompt: "Use encoding-safety to create or edit UTF-8 Markdown/HTML without introducing garbled Chinese text."

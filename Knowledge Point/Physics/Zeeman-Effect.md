@@ -59,6 +59,48 @@ $$
 
 $\boldsymbol{\mu}$ 与 $\mathbf{B}$ 同向时能量最低（最稳定），反向时能量最高。由于角动量的投影是量子化的（$m$ 只能取离散值），能量劈开也是离散的。
 
+### 原子能量的完整拆解：内部磁场 vs 外部磁场
+
+这是理解塞曼效应的关键一步。原子中同时存在**两种磁场**，电子的自旋磁矩同时与两者发生相互作用：
+
+**① 无外磁场时的总能量——内部有效磁场的作用**
+
+电子的轨道运动在电子自身位置产生一个**内部有效磁场** $B_{\text{内}}$。这个内磁场的物理根源就是 [[Spin-Orbit-Coupling|自旋-轨道耦合]]——从电子的参考系看，带正电的原子核绕它运动，产生一个等效磁场。电子的自旋磁矩与这个内磁场相互作用，产生精细结构劈裂：
+
+$$
+E = E_{n,l} + \Delta E_{l,s} = E_{n,l} - g_S\, m_s\, \mu_B\, B_{\text{内}}
+$$
+
+- $E_{n,l}$ 是不考虑自旋时的库仑能级（主量子数 $n$ + 角量子数 $l$ 决定）
+- $\Delta E_{l,s} = -g_S\, m_s\, \mu_B\, B_{\text{内}}$ 是自旋磁矩与内磁场的相互作用能
+- 这个内磁场的数量级在 $10^{-1} \sim 10^{2}$ T——比大多数实验室能产生的外磁场**强得多**！
+
+> [!tip] 内磁场的量级直觉
+> 氢原子 $n=2$ 的内磁场约 $\sim 12.5$ T，重原子的内磁场可达 $10^{2}$ T 量级。这意味着实验室中的"弱磁场"（几特斯拉）相比内磁场确实很小，这也是为什么弱场极限如此常见。
+
+**② 有外磁场时的总能量——增加原子磁矩与外磁场的相互作用**
+
+加入外磁场 $B_{\text{外}}$ 后，原子的总磁矩 $\boldsymbol{\mu}_J$（由总角动量 $\mathbf{J} = \mathbf{L} + \mathbf{S}$ 产生的有效磁矩）与外磁场发生新的相互作用：
+
+$$
+E = E_{n,l} + \Delta E_{l,s} = E_{n,l} - g_S\, m_s\, \mu_B\, B_{\text{内}} - g_J\, m_J\, \mu_B\, B_{\text{外}}
+$$
+
+最后一项 $-g_J\, m_J\, \mu_B\, B_{\text{外}}$ 就是 Zeeman 相互作用——它在原有精细结构能级的基础上，额外按照 $m_j$ 进行劈开。
+
+**③ 弱磁场条件：为什么 $B_{\text{外}} \ll B_{\text{内}}$ 意味着自旋-轨道耦合不受影响？**
+
+当 $B_{\text{外}} \ll B_{\text{内}}$ 时，外磁场对电子自旋-轨道耦合的干扰可以忽略。此时：
+
+- $\mathbf{L}$ 和 $\mathbf{S}$ 仍然被内部有效磁场**强耦合**在一起，形成总角动量 $\mathbf{J} = \mathbf{L} + \mathbf{S}$
+- $\mathbf{J}$ 的大小（量子数 $j$）是一个**好量子数**
+- $\mathbf{L}$ 和 $\mathbf{S}$ 各自**快速地绕 $\mathbf{J}$ 进动**（由内部强磁场驱动），而 $\mathbf{J}$ 本身则**缓慢地绕外磁场 $\mathbf{B}_{\text{外}}$ 进动**（由较弱的外磁场驱动）
+
+> [!tip] 双重进动的图像
+> 想象一个陀螺：$\mathbf{L}$ 和 $\mathbf{S}$ 像陀螺的两个分量在内部力矩作用下高速绕 $\mathbf{J}$ 旋转（自旋-轨道耦合驱动），而 $\mathbf{J}$ 整体又像一个大陀螺缓慢绕外磁场方向旋转（Zeeman 效应驱动）。两层进动的速度差由 $B_{\text{内}}$ 和 $B_{\text{外}}$ 的比值决定——弱场下内层远快于外层。
+
+这正是下文"弱磁场极限"的物理图像：外场只是微扰，原有精细结构保持完整，能级按 $m_j$ 小心翼翼地劈开。
+
 > [!info] 历史背景
 > 1896 年，荷兰物理学家 Pieter Zeeman 观察到钠光谱线在磁场中变宽。Hendrik Lorentz 用经典电子论解释了这种"正常"三分裂现象。但很快人们发现，许多谱线的分裂模式比三分裂复杂得多——这些被称为"反常"塞曼效应（anomalous Zeeman effect）。"反常"之谜直到 1925 年 Goudsmit 和 Uhlenbeck 提出电子自旋后才得到解释。今天我们知道，所谓的"反常"其实才是普遍情况，"正常"三分裂只是一个特殊情况（当轨道角动量 $l = 0$ 或总角动量 $g$ 因子恰好为 1 时出现）。
 
@@ -147,18 +189,173 @@ $m_j = \pm 3/2, \pm 1/2$，四个能级：
 
 ### 选择定则与光谱线
 
-在电偶极跃迁中，塞曼分裂的子能级之间必须满足选择定则：
+#### 选择定则的物理根源：角动量守恒
+
+电偶极跃迁的本质是电子通过**发射或吸收一个光子**在能级间发生跳跃。物理学中有一条至高无上的铁律——**角动量守恒**。
+
+光子是自旋为 1 的玻色子（$s_{\text{photon}} = 1$），每个诞生或湮灭的光子都严格携带 $1\hbar$ 的角动量。光子在 $z$ 轴（磁场方向）上的投影只能取 $m = +1$（左旋圆偏振）、$m = -1$（右旋圆偏振），或者在特殊叠加态下投影为 $0$。
+
+因此，原子在跃迁前后总角动量投影的改变 $\Delta m_j = m_{j,\text{初}} - m_{j,\text{末}}$，必须严格等于光子所能提供的投影角动量变化：
 
 $$
-\Delta m_j = 0, \pm 1
+\boxed{\Delta m_j = 0, \ \pm 1}
 $$
 
-- $\Delta m_j = 0$：$\pi$ 偏振（沿磁场方向观测时不出现）
-- $\Delta m_j = +1$：$\sigma^+$ 偏振（左旋圆偏振）
-- $\Delta m_j = -1$：$\sigma^-$ 偏振（右旋圆偏振）
+> [!warning] 禁戒跃迁
+> 如果两个能级的 $m_j$ 差值为 $\pm 2, \pm 3, \ldots$（例如从 $m_j = +3/2$ 跳到 $m_j = -1/2$，$\Delta m_j = +2$），由于单个光子无法带走这么多投影角动量，这类跃迁在电偶极近似下是**严格禁止的**（称为"禁戒跃迁"）。
 
-> [!example] $2P_{3/2} \to 2S_{1/2}$ 的弱场 Zeeman 分裂
-> 从 $j = 3/2$（4 个子能级）到 $j = 1/2$（2 个子能级），满足 $\Delta m_j = 0, \pm 1$ 的跃迁共有 **6 条光谱线**（不是简单的 3 条）。这就是"反常"塞曼效应的典型特征。
+#### 偏振的几何图像：从不同方向看跃迁
+
+不同的 $\Delta m_j$ 对应不同的偏振态，而偏振态决定了从哪个方向能观测到哪条谱线。
+
+**$\Delta m_j = 0$：$\pi$ 偏振（线偏振光）**
+
+电子在 $z$ 轴方向的投影没有变化，这意味着原子的电偶极矩**沿着磁场方向（$z$ 轴）上下振荡**。根据经典电动力学，加速电荷产生的电磁波垂直于振荡方向传播。当你**沿着 $z$ 轴（磁场方向）**观察时，你正对着振荡轴线——而偶极子在自己的振荡轴方向上辐射的电磁波强度**严格为零**。因此，$\pi$ 线在**沿磁场方向看不到**，只有在**垂直于磁场方向**观察时才能看到（此时表现为沿 $\hat{z}$ 方向的线偏振光）。
+
+**$\Delta m_j = \pm 1$：$\sigma^{\pm}$ 偏振（圆偏振光）**
+
+电子在 $z$ 轴的投影发生了变化，这意味着原子的电偶极矩在 $xy$ 平面上做**顺时针或逆时针的圆周运动**。当你沿着磁场方向（$z$ 轴）观察时，正好能完整地看到这个圆周旋转，因此表现为**左旋（$\sigma^+$）或右旋（$\sigma^-$）圆偏振光**。
+
+> [!tip] 偏振与观测方向的对照
+> - **沿磁场方向（纵向）观测**：只能看到 $\sigma^+$ 和 $\sigma^-$（圆偏振），$\pi$ 线消失
+> - **垂直于磁场方向（横向）观测**：三条线都能看到——$\pi$ 线是沿 $\hat{z}$ 的线偏振光，$\sigma^{\pm}$ 线是沿 $\hat{x}$（或 $\hat{y}$）的线偏振光
+>
+> 这个几何关系正是当年 Zeeman 效应实验的关键判据：纵向观测只看到两条 $\sigma$ 线，横向观测看到三条线（$\pi + 2\sigma$）。
+
+#### 选择定则的完整分类
+
+| 跃迁类型 | $\Delta m_j$ | 偏振态 | 电偶极矩运动 | 沿磁场方向可观测 |
+|:--------:|:------------:|:------:|:----------:|:--------------:|
+| $\pi$ | $0$ | 线偏振 | 沿 $z$ 轴振荡 | ❌ |
+| $\sigma^+$ | $+1$ | 左旋圆偏振 | $xy$ 平面逆时针旋转 | ✅ |
+| $\sigma^-$ | $-1$ | 右旋圆偏振 | $xy$ 平面顺时针旋转 | ✅ |
+
+#### 实战数数：$2P_{3/2} \to 2S_{1/2}$ 的 6 条谱线
+
+弱磁场下，$2P_{3/2}$（$j = 3/2$，$g_j = 4/3$）劈成 4 个子能级，$2S_{1/2}$（$j = 1/2$，$g_j = 2/3$）劈成 2 个子能级。两个能级的朗德因子不同，导致分裂间距不对称——这是"反常"的关键。
+
+**所有子能级一览：**
+
+上能级 $2P_{3/2}$（$g_j = 4/3$）：
+
+- $m_j = +3/2$：$\Delta E = +2\mu_B B$
+- $m_j = +1/2$：$\Delta E = +\frac{2}{3}\mu_B B$
+- $m_j = -1/2$：$\Delta E = -\frac{2}{3}\mu_B B$
+- $m_j = -3/2$：$\Delta E = -2\mu_B B$
+
+下能级 $2S_{1/2}$（$g_j = 2/3$）：
+
+- $m_j = +1/2$：$\Delta E = +\frac{1}{3}\mu_B B$
+- $m_j = -1/2$：$\Delta E = -\frac{1}{3}\mu_B B$
+
+按照选择定则 $\Delta m_j = m_{j,\text{上}} - m_{j,\text{下}}$ 逐条连线：
+
+> [!example] 第一组：$\Delta m_j = 0$（$\pi$ 偏振，共 2 条）
+> 1. $m_j = +\frac{1}{2} \to +\frac{1}{2}$，$\Delta E = \frac{2}{3} - \frac{1}{3} = +\frac{1}{3}\,\mu_B B$
+> 2. $m_j = -\frac{1}{2} \to -\frac{1}{2}$，$\Delta E = -\frac{2}{3} - (-\frac{1}{3}) = -\frac{1}{3}\,\mu_B B$
+
+> [!example] 第二组：$\Delta m_j = +1$（$\sigma^+$ 偏振，共 2 条）
+> 3. $m_j = +\frac{3}{2} \to +\frac{1}{2}$，$\Delta E = 2 - \frac{1}{3} = +\frac{5}{3}\,\mu_B B$
+> 4. $m_j = +\frac{1}{2} \to -\frac{1}{2}$，$\Delta E = \frac{2}{3} - (-\frac{1}{3}) = +1\,\mu_B B$
+
+> [!example] 第三组：$\Delta m_j = -1$（$\sigma^-$ 偏振，共 2 条）
+> 5. $m_j = -\frac{1}{2} \to +\frac{1}{2}$，$\Delta E = -\frac{2}{3} - \frac{1}{3} = -1\,\mu_B B$
+> 6. $m_j = -\frac{3}{2} \to -\frac{1}{2}$，$\Delta E = -2 - (-\frac{1}{3}) = -\frac{5}{3}\,\mu_B B$
+
+**总计：$2 + 2 + 2 = 6$ 条合法的跃迁谱线。**
+
+注意 6 条线的频率偏移分别为 $+\frac{5}{3}, +1, +\frac{1}{3}, -\frac{1}{3}, -1, -\frac{5}{3}$（单位 $\mu_B B$），**每一条都错开了**——谁也没有重合！这正是因为上下能级的 $g_j$ 不同（$4/3$ vs $2/3$），导致分裂间距不对称。
+
+#### 为什么叫"反常"？
+
+历史上，洛伦兹用经典电子论（不考虑自旋）预言：无论怎么分裂，所有 $\Delta m_j = +1$ 的线会重合成一条，$\Delta m_j = -1$ 的线也会重合成一条，最终**只看到干净的 3 条线**（正常塞曼效应）。
+
+然而实验中却看到了 6 条线（甚至更多）。原因在于电子自旋的存在导致 $g_S \approx 2 \neq g_L = 1$，使得不同能级的朗德因子 $g_j$ 截然不同。由于分裂间距的不对称，原本在经典理论中应该重合的谱线全部错开了。这种因自旋导致的"谱线数大于 3"的现象被称为"反常"塞曼效应——它在历史上极为有力地证明了**电子自旋的存在**。
+
+> [!tip] "反常"才是普遍情况
+> "正常"三分裂只是一个特例（当 $s = 0$ 或 $g_j$ 恰好等于 1 时）。只要存在自旋贡献（$s \neq 0$），就一定是"反常"的。今天的我们应该把"反常"理解为常态，"正常"反而是特殊情况。
+
+### 正常塞曼三线的选择定则与偏振
+
+正常塞曼效应（normal Zeeman effect）可以看成一个最干净的特例：上下两个能级的有效 $g$ 因子相同，或者等效地说能量移动只正比于同一个磁量子数 $m$：
+
+$$
+\Delta E_m=\mu_B B\,m.
+$$
+
+如果一个跃迁的上、下能级分别记为 $m_u$ 与 $m_l$，那么光子的频率移动来自上下能级移动之差：
+
+$$
+h\Delta\nu
+=\Delta E_{m_u}-\Delta E_{m_l}
+=\mu_B B(m_u-m_l)
+=\mu_B B\,\Delta m.
+$$
+
+因此
+
+$$
+\Delta\nu=\frac{\mu_B B}{h}\Delta m.
+$$
+
+由于电偶极跃迁的 [[Selection-Rules|选择定则]] 是
+
+$$
+\Delta m=0,\pm 1,
+$$
+
+所以只会出现三组频率：
+
+$$
+\Delta\nu=0,\qquad
+\Delta\nu=+\frac{\mu_B B}{h},\qquad
+\Delta\nu=-\frac{\mu_B B}{h}.
+$$
+
+> [!tip] 为什么三条线间隔相等？
+> 因为正常塞曼效应中每个 $m$ 子能级的能量移动是等差数列：相邻 $m$ 之间差一个 $\mu_B B$。跃迁只允许 $\Delta m=0,\pm1$，所以光谱线只偏移 $0,\pm\mu_B B/h$，自然形成等间距三分裂。
+
+三条线的偏振性质为：
+
+- $\Delta m=0$：$\pi$ 线，线偏振（电场振动方向平行于外磁场方向）。
+- $\Delta m=+1$：$\sigma^+$ 线，沿磁场方向观察时表现为左旋圆偏振。
+- $\Delta m=-1$：$\sigma^-$ 线，沿磁场方向观察时表现为右旋圆偏振。
+
+> [!warning] 偏振描述依赖观察方向
+> 严格说，$\sigma^\pm$ 的“左旋/右旋圆偏振”是沿磁场方向观察时的说法；若从垂直于磁场方向观察，$\sigma$ 线会表现为线偏振，且电场振动方向垂直于磁场方向。$\pi$ 线沿磁场方向观察时通常看不到，因为它的电偶极辐射方向性在该方向上没有辐射强度。
+
+把玻尔磁子
+
+$$
+\mu_B=\frac{e\hbar}{2m_e}
+$$
+
+代入 $\Delta\nu=\mu_B B/h$，并使用 $h=2\pi\hbar$，得到 SI 制下的正常塞曼分裂间隔：
+
+$$
+\Delta\nu_L=\frac{\mu_B B}{h}
+=\frac{e\hbar B}{2m_e}\cdot\frac{1}{2\pi\hbar}
+=\frac{eB}{4\pi m_e}.
+$$
+
+在高斯 cgs 制中，由于磁矩定义多一个 $1/c$，常写为
+
+$$
+\Delta\nu_L=\frac{eB}{4\pi m_e c}.
+$$
+
+> [!info] 符号说明
+> 这个 $\Delta\nu_L$ 也常被称为 Larmor frequency（拉莫尔频率）对应的普通频率版本。若使用角频率，则 $\omega_L=2\pi\nu_L$。
+
+**正常塞曼效应的最终图像：**
+
+- 中间的 $\pi$ 线：$\Delta m=0$，不发生频率偏移；
+- 两侧的 $\sigma^+$ 与 $\sigma^-$ 线：$\Delta m=\pm1$，分别偏移 $\pm\Delta\nu_L$；
+- 三条线间隔相等，间隔大小为
+
+$$
+\Delta\nu_L=\frac{\mu_B B}{h}.
+$$
 
 ---
 
@@ -205,6 +402,19 @@ $$
 1. **弱场**（$B \to 0$）：精细结构主导，$j$ 是好量子数。$j = 1/2$ 劈成 2 线，$j = 3/2$ 劈成 4 线
 2. **中间场**：$j$ 不再严格是好量子数，能级出现"反交叉"（avoided crossing）
 3. **强场**（$B \to \infty$）：Zeeman 主导，$m_l, m_s$ 是好量子数。劈成 5 线（$m_l + 2m_s = -2, -1, 0, +1, +2$）
+
+---
+
+
+
+## HTML interactive demo: double precession picture
+
+This embedded tool explains the "double precession" picture above: $\mathbf{L}$ and $\mathbf{S}$ rapidly precess around $\mathbf{J}$ due to internal spin-orbit coupling, while $\mathbf{J}$ as a whole slowly precesses around the external magnetic field $\mathbf{B}_{\text{out}}$.
+
+<iframe src="file:///C:/Personal%20Profile/Profile/MathPhysCore/tools/Zeeman-Double-Precession-Interactive.html" width="100%" height="760" style="border:1px solid #d8dee9; border-radius:6px;"></iframe>
+
+> [!tip] How to read the animation
+> Focus on the two time scales: the inner motion $\mathbf{L},\mathbf{S}$ around $\mathbf{J}$ is fast, while the outer motion $\mathbf{J}$ around $\mathbf{B}_{\text{out}}$ is slow. The weak-field condition $B_{\text{out}} \ll B_{\text{in}}$ means that internal coupling locks $\mathbf{L}$ and $\mathbf{S}$ into $\mathbf{J}$ first; the external field can only slowly drag the whole $\mathbf{J}$.
 
 ---
 
@@ -498,6 +708,7 @@ $$
 - Paschen-Back 能量（强场）：$\Delta E = \mu_B B(m_l + 2m_s)$
 - Zeeman Hamiltonian：$\hat{H}_Z = -\boldsymbol{\mu}\cdot\mathbf{B} = \frac{\mu_B B}{\hbar}(g_L\hat{L}_z + g_S\hat{S}_z)$
 - 选择定则：$\Delta m_j = 0$（$\pi$ 偏振），$\Delta m_j = \pm 1$（$\sigma^{\pm}$ 偏振）
+- 正常塞曼三线间隔：$\Delta\nu_L=\frac{\mu_B B}{h}$（SI 制）；高斯 cgs 制中 $\Delta\nu_L=\frac{eB}{4\pi m_e c}$
 - 玻尔磁子：$\mu_B = \frac{e\hbar}{2m_e} \approx 9.274 \times 10^{-24}$ J/T
 
 | 符号 | 含义 | 备注 |
@@ -515,7 +726,11 @@ $$
 
 ## 📝 更新记录
 
+- 2026-06-05: 大幅扩充"选择定则与光谱线"小节：补充角动量守恒物理根源、$\pi$/$\sigma^\pm$ 偏振的几何图像与观测方向依赖、$2P_{3/2} \to 2S_{1/2}$ 六条谱线的逐条推导、以及"反常"命名的历史由来。
+- 2026-06-05: 新增"原子能量的完整拆解：内部磁场 vs 外部磁场"小节——明确区分内磁场（自旋-轨道耦合驱动，$B_{\text{内}} \sim 10^{-1} \sim 10^{2}$ T）与外磁场（实验施加）对原子能量的各自贡献，补充双重进动（$\mathbf{L}$、$\mathbf{S}$ 绕 $\mathbf{J}$ 快速进动 + $\mathbf{J}$ 绕 $\mathbf{B}_{\text{外}}$ 缓慢进动）的物理图像。
+- 2026-06-05: 补充正常塞曼效应中 $\Delta m=0,\pm1$ 对应的 $\pi,\sigma^+,\sigma^-$ 线、偏振方向与等间距分裂公式 $\Delta\nu_L=\mu_B B/h$。
 - 2026-06-05: 链接新建 [[Good-Quantum-Number|好量子数]] 笔记，明确弱场 Zeeman 中 $(n,l,j,m_j)$ 与强场 Paschen-Back 中 $(m_l,m_s)$ 的好量子数切换。
 - 2026-06-03: 创建初稿——物理图像（对称性破缺、磁矩-磁场相互作用）、Landé $g$ 因子推导与物理意义、弱场/强场极限公式与具体数值示例、选择定则、光谱线模式、正常 vs 反常塞曼效应对比、Python 可视化（能级分裂图 + 光谱线图）、典型应用
 - 2026-06-05: 修复 Python 可视化中 `rf-string` 的 `{=}` 语法错误，避免 Obsidian Execute Code 报错。
 - 2026-06-05: 补充“简并”定义说明，并新建 [[Degeneracy|简并]] 概念页，帮助理解磁场如何打破简并。
+- 2026-06-05: Added `tools/Zeeman-Double-Precession-Interactive.html`, an interactive HTML animation for the weak-field Zeeman double-precession picture.

@@ -167,6 +167,20 @@ compat_ax.set_axis_off()
 plt.show()
 ```
 
+
+### Encoding Safety / Mojibake Prevention
+
+Critical project rule:
+
+- Do not write Chinese/CJK text by embedding it directly inside PowerShell here-strings or shell command payloads; this can silently turn non-ASCII text into `?`.
+- For CJK Markdown/HTML/JS writes, use Python Unicode escapes, base64-decoded UTF-8 payloads, or transform existing UTF-8 text read from disk.
+- If CJK UI labels are not essential in `tools/*.html`, prefer ASCII/English labels.
+- Standalone HTML tools must include `<meta charset="utf-8">`.
+- After writing, re-read the edited region with UTF-8 and check for three consecutive question marks, long unexpected `?` runs, and `U+FFFD` replacement characters.
+- For HTML with JavaScript, run `node --check` on extracted scripts when possible.
+
+Use `.agents/skills/encoding-safety/SKILL.md` for the detailed workflow whenever editing Markdown/HTML that may contain CJK text.
+
 ### Interactive HTML Tools
 
 Embed interactive tools in notes using iframe with absolute `file:///` URL (spaces encoded as `%20`):
@@ -181,6 +195,7 @@ Embed interactive tools in notes using iframe with absolute `file:///` URL (spac
 | **knowledge-manager** | Creating/upgrading knowledge notes | 数理知识架构师 — frontmatter, bidirectional links, formula tables, comprehension tracking |
 | **roadmap-update** | "更新学习路径", "同步 roadmap" | 根据笔记 YAML frontmatter 和内容相关性自动同步 Study-Roadmap.md |
 | **vault-upgrade** | "升级这个库", "apply new standards" | Vault-wide scan, upgrade, and verification workflow |
+| **encoding-safety** | Markdown/HTML writes with Chinese/CJK text, iframe tools | Prevent mojibake; use safe UTF-8 write patterns and validation |
 
 ### Agent Memory & User Profile
 

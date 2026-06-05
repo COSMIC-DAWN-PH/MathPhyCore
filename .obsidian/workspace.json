@@ -15,7 +15,7 @@
               "state": {
                 "file": "Knowledge Point/Physics/Zeeman-Effect.md",
                 "mode": "preview",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Zeeman-Effect"
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Gaussian  ",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Knowledge Point/Physics/Zeeman-Effect.md",
+                "file": "2026-06-05.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Zeeman-Effect 的大纲"
+              "title": "2026-06-05 的大纲"
             }
           },
           {
@@ -202,7 +202,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 350.5
+    "width": 286.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -218,14 +218,33 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "51f4e5d7f6ccd435",
+  "active": "32d48f4660d910e2",
   "lastOpenFiles": [
+    "未命名 3.canvas",
+    "2026-06-05.md",
+    "未命名 2.canvas",
+    "未命名 1.canvas",
+    "未命名.canvas",
+    "Knowledge Point/Physics/Hyperfine-Structure.md",
+    "Knowledge Point/Physics/Zeeman-Effect.md",
+    "tmp_zeeman_check.js",
+    "Study-Roadmap.md",
+    "$tmp_zeeman_check.js",
+    "tools/Zeeman-Double-Precession-Interactive.html",
+    "Knowledge Point/Physics/Selection-Rules.md",
+    "Knowledge Point/Physics/Zeeman-Effect.md.tmp.21952.541153c581cd",
+    "Knowledge Point/Physics/Van-der-Waals-Interaction.md",
+    "Knowledge Point/Physics/Doppler-Cooling.md",
+    "Knowledge Point/Physics/Stern-Gerlach-Experiment.md",
+    "Knowledge Point/Physics/Torque.md",
+    "Knowledge Point/Physics/Spontaneous-Symmetry-Breaking.md",
+    "Knowledge Point/Physics/Spin-Orbit-Coupling.md",
+    "README.md",
+    "Quantum-Computing-Supplements.md",
+    "CLAUDE.md",
     "Knowledge Point/Physics/Good-Quantum-Number.md",
     "Knowledge Point/Physics/Degeneracy.md",
-    "Knowledge Point/Physics/Zeeman-Effect.md",
-    "Study-Roadmap.md",
     "Knowledge Point/Physics/Lande-g-Factor.md",
-    "Knowledge Point/Physics/Spin-Orbit-Coupling.md",
     "Study-Roadmap.md.tmp.22756.97ab6730dd96",
     "Study-Roadmap.md.tmp.22756.fbc201d7d16a",
     "Knowledge Point/Physics/Commutation-Relation.md",
@@ -233,29 +252,13 @@
     "AGENTS.md.tmp.496.8db85d936224",
     "CLAUDE.md.tmp.496.67fc1056ea05",
     "Study-Roadmap.md.tmp.496.7c83899aa4c8",
-    "Knowledge Point/Physics/Spin-Orbit-Coupling.md.tmp.496.27df02c8cfee",
-    "Knowledge Point/Physics/Spin-Orbit-Coupling.md.tmp.496.5c2a8fda958e",
     "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
     "Knowledge Point/Physics/Angular-Momentum-Coupling.md",
-    "Knowledge Point/Physics/Commutation-Relation.md.tmp.496.c0fc211f6545",
-    "Knowledge Point/Physics/Angular-Momentum-Coupling.md.tmp.496.1a3ee7b60b37",
-    "Knowledge Point/Physics/Stern-Gerlach-Experiment.md",
-    "Quantum-Computing-Supplements.md",
     "Rabi-Flopping.md",
-    "Knowledge Point/Physics/Van-der-Waals-Interaction.md",
     "Knowledge Point/Physics/Rydberg-Atom.md",
     "Knowledge Point/Physics/AC-Stark-Effect.md",
     "Knowledge Point/Physics/Optical-Tweezers.md",
-    "Knowledge Point/Physics/Doppler-Cooling.md",
-    "Knowledge Point/Physics/Selection-Rules.md",
     "Knowledge Point/Physics/Lamb-Shift.md",
-    "Knowledge Point/Physics/Alkali-Metal-Doublet.md",
-    "Knowledge Point/Physics/Electron-Spin.md",
-    "Knowledge Point/Physics/Perturbation-Theory.md",
-    "Knowledge Point/Physics/Fine-Structure.md",
-    "Knowledge Point/Physics/Larmor-Precession.md",
-    "Knowledge Point/Physics/Force-on-Magnetic-Dipole-in-Gradient-Field.md",
-    "Knowledge Point/Physics/Magnetic-Moment.md",
     "outputs_test_be/be_distribution.png"
   ]
 }

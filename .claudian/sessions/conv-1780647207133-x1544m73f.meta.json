@@ -1,0 +1,26 @@
+{
+  "id": "conv-1780647207133-x1544m73f",
+  "providerId": "codex",
+  "title": "搞一个html解释一下",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780647207134,
+  "updatedAt": 1780648095538,
+  "lastResponseAt": 1780648095538,
+  "sessionId": "019e96d8-2800-74b1-9ead-5043fdc20777",
+  "providerState": {
+    "threadId": "019e96d8-2800-74b1-9ead-5043fdc20777",
+    "sessionFilePath": "C:\\Users\\30505\\.codex\\sessions\\2026\\06\\05\\rollout-2026-06-05T16-13-33-019e96d8-2800-74b1-9ead-5043fdc20777.jsonl",
+    "transcriptRootPath": "C:\\Users\\30505\\.codex\\sessions"
+  },
+  "currentNote": "Knowledge Point/Physics/Zeeman-Effect.md",
+  "usage": {
+    "inputTokens": 82202,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 81280,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 82202,
+    "percentage": 32,
+    "model": "gpt-5.5"
+  }
+}
