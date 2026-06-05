@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Knowledge Point/Physics/Fine-Structure.md",
+                "file": "Knowledge Point/Physics/Zeeman-Effect.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Fine-Structure 的大纲"
+              "title": "Zeeman-Effect 的大纲"
             }
           },
           {
@@ -202,7 +202,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 519.5
+    "width": 350.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -220,6 +220,9 @@
   },
   "active": "51f4e5d7f6ccd435",
   "lastOpenFiles": [
+    "Knowledge Point/Physics/Good-Quantum-Number.md",
+    "Knowledge Point/Physics/Degeneracy.md",
+    "Knowledge Point/Physics/Zeeman-Effect.md",
     "Study-Roadmap.md",
     "Knowledge Point/Physics/Lande-g-Factor.md",
     "Knowledge Point/Physics/Spin-Orbit-Coupling.md",
@@ -234,7 +237,6 @@
     "Knowledge Point/Physics/Spin-Orbit-Coupling.md.tmp.496.5c2a8fda958e",
     "Knowledge Point/Physics/Bose-Einstein-Distribution.md",
     "Knowledge Point/Physics/Angular-Momentum-Coupling.md",
-    "Knowledge Point/Physics/Zeeman-Effect.md",
     "Knowledge Point/Physics/Commutation-Relation.md.tmp.496.c0fc211f6545",
     "Knowledge Point/Physics/Angular-Momentum-Coupling.md.tmp.496.1a3ee7b60b37",
     "Knowledge Point/Physics/Stern-Gerlach-Experiment.md",
@@ -254,8 +256,6 @@
     "Knowledge Point/Physics/Larmor-Precession.md",
     "Knowledge Point/Physics/Force-on-Magnetic-Dipole-in-Gradient-Field.md",
     "Knowledge Point/Physics/Magnetic-Moment.md",
-    "Knowledge Point/Physics/Magnetic-Quantum-Number.md",
-    "Knowledge Point/Physics/Hyperfine-Structure.md",
     "outputs_test_be/be_distribution.png"
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "id": "conv-1780643627602-fs9fwzvj9",
+  "providerId": "codex",
+  "title": "在原子物理和量子力学中，好量子数（Good Quantum Number）是一个非常高频且核心的概念...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780643627602,
+  "updatedAt": 1780644452611,
+  "lastResponseAt": 1780644452611,
+  "sessionId": "019e96a1-838a-7ea2-b740-587799b2da9a",
+  "providerState": {
+    "threadId": "019e96a1-838a-7ea2-b740-587799b2da9a",
+    "sessionFilePath": "C:\\Users\\30505\\.codex\\sessions\\2026\\06\\05\\rollout-2026-06-05T15-13-52-019e96a1-838a-7ea2-b740-587799b2da9a.jsonl",
+    "transcriptRootPath": "C:\\Users\\30505\\.codex\\sessions"
+  },
+  "currentNote": "Knowledge Point/Physics/Zeeman-Effect.md",
+  "usage": {
+    "inputTokens": 104854,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 104320,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 104854,
+    "percentage": 41,
+    "model": "gpt-5.5"
+  }
+}

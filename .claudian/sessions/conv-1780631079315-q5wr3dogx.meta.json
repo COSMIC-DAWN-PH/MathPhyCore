@@ -4,7 +4,7 @@
   "title": "/roadmap-update 帮我增加一下我学习过程中的疑问轨道与自旋耦合为啥合成的角动量是那几个...",
   "titleGenerationStatus": "failed",
   "createdAt": 1780631079315,
-  "updatedAt": 1780631512645,
+  "updatedAt": 1780642366022,
   "lastResponseAt": 1780631512645,
   "sessionId": "c9113ec9-aae0-4ae7-8503-856474ea1388",
   "providerState": {
@@ -18,6 +18,7 @@
     "cacheReadInputTokens": 55744,
     "contextWindow": 1000000,
     "contextTokens": 55958,
-    "percentage": 6
+    "percentage": 6,
+    "contextWindowIsAuthoritative": false
   }
 }

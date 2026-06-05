@@ -31,6 +31,11 @@ tags:
 
 塞曼效应（Zeeman Effect）是指原子光谱线在外加磁场中发生**分裂**的现象。它是角动量量子化、[[Magnetic-Moment|磁矩]]与外磁场相互作用的直接体现，也是历史上最早证实空间量子化（[[Magnetic-Quantum-Number|磁量子数]]）存在的实验之一。
 
+> [!info] 先搞懂“简并”
+> “简并”就是：**两个或更多不同的量子态，拥有同一个能量**。
+> 换句话说，能量不能把这些态区分开来。等到加入外磁场、晶体场或其他微扰时，这些原本同能量的态就可能被“拆开”成不同能级。
+> 更系统的定义见 [[Degeneracy|简并]]。
+
 > [!tip] 核心图像
 > 把原子中的电子想象成一个有角动量的小陀螺。这个陀螺有磁矩（因为电荷在运动），放进外磁场后，陀螺的轴（角动量方向）会[[Larmor-Precession|绕磁场进动]]。不同"倾斜角度"的进动状态对应不同能量——磁场把这些原本简并的能级劈开了。能级劈开的具体模式取决于外磁场强度与[[Spin-Orbit-Coupling|自旋-轨道耦合]]强度的相对大小。
 
@@ -79,7 +84,7 @@ $$
 
 ### Landé $g$ 因子
 
-在弱磁场极限下（自旋-轨道耦合远大于 Zeeman 相互作用），好量子数是 $(n, l, j, m_j)$。此时 Zeeman 能量修正可以用一个等效的 $g$ 因子表达：
+在弱磁场极限下（自旋-轨道耦合远大于 Zeeman 相互作用），[[Good-Quantum-Number|好量子数]]是指在当前哈密顿量下仍然能稳定用来标记一个量子态的量子数；这里好量子数是 $(n, l, j, m_j)$。此时 Zeeman 能量修正可以用一个等效的 $g$ 因子表达：
 
 $$
 \Delta E = g_j\,\mu_B\,m_j\,B
@@ -242,7 +247,7 @@ for mj_val, E_val in zip(mj_half, E_half):
     x_start = 2.5
     x_end = 3.5
     ax1.hlines(E_val, x_start, x_end, color=COLORS['blue'], linewidth=2.5)
-    ax1.text(x_end + 0.15, E_val, rf'$j{=}\frac{{1}}{{2}},\ m_j{mj_val:+.1f}$',
+    ax1.text(x_end + 0.15, E_val, rf'$j=\frac{{1}}{{2}},\ m_j={mj_val:+.1f}$',
              va='center', fontsize=9, color=COLORS['blue'])
 ax1.text(3.0, 1.05, r'$g_j = \frac{2}{3}$', fontsize=11, ha='center',
          color=COLORS['blue'], fontweight='bold')
@@ -256,7 +261,7 @@ for mj_val, E_val in zip(mj_three_half, E_three_half):
     x_end = 3.5
     ax1.hlines(E_val, x_start, x_end, color=COLORS['orange'], linewidth=2.5)
     ax1.text(x_end + 0.15, E_val,
-             rf'$j{=}\frac{{3}}{{2}},\ m_j{mj_val:+.1f}$',
+             rf'$j=\frac{{3}}{{2}},\ m_j={mj_val:+.1f}$',
              va='center', fontsize=9, color=COLORS['orange'])
 ax1.text(3.0, 2.3, r'$g_j = \frac{4}{3}$', fontsize=11, ha='center',
          color=COLORS['orange'], fontweight='bold')
@@ -460,6 +465,7 @@ $$
 - [[Magnetic-Moment|磁矩]] — 塞曼效应的物理根源：磁矩在磁场中的能量
 - [[Larmor-Precession|拉莫尔进动]] — Zeeman 分裂的经典图像：角动量绕磁场进动
 - [[Magnetic-Quantum-Number|磁量子数]] — 塞曼效应直接展示了空间量子化
+- [[Degeneracy|简并]] — 同一能量对应多个不同量子态
 - [[Fine-Structure|精细结构]] — Zeeman 分裂叠加在精细结构之上
 - [[Spin-Orbit-Coupling|自旋-轨道耦合]] — 弱场/强场极限的分界线
 - [[Quantum-Numbers|量子数]] — 塞曼效应改变了好量子数的选择
@@ -468,6 +474,7 @@ $$
 - [[Stern-Gerlach-Experiment|施特恩-格拉赫实验]] — 空间量子化的直接实验证据
 - [[Electron-Spin|电子自旋]] — 自旋磁矩对塞曼分裂的贡献
 - [[Lande-g-Factor|朗德 g 因子]] — 分裂间距的决定参数
+- [[Good-Quantum-Number|好量子数]] — 判断弱场 Zeeman 中为什么用 $(j,m_j)$、强场 Paschen-Back 中为什么改用 $(m_l,m_s)$ 的核心原则
 
 ---
 
@@ -508,4 +515,7 @@ $$
 
 ## 📝 更新记录
 
+- 2026-06-05: 链接新建 [[Good-Quantum-Number|好量子数]] 笔记，明确弱场 Zeeman 中 $(n,l,j,m_j)$ 与强场 Paschen-Back 中 $(m_l,m_s)$ 的好量子数切换。
 - 2026-06-03: 创建初稿——物理图像（对称性破缺、磁矩-磁场相互作用）、Landé $g$ 因子推导与物理意义、弱场/强场极限公式与具体数值示例、选择定则、光谱线模式、正常 vs 反常塞曼效应对比、Python 可视化（能级分裂图 + 光谱线图）、典型应用
+- 2026-06-05: 修复 Python 可视化中 `rf-string` 的 `{=}` 语法错误，避免 Obsidian Execute Code 报错。
+- 2026-06-05: 补充“简并”定义说明，并新建 [[Degeneracy|简并]] 概念页，帮助理解磁场如何打破简并。

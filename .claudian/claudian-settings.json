@@ -42,7 +42,7 @@
       "safeMode": "workspace-write",
       "cliPath": "",
       "cliPathsByHost": {},
-      "customModels": "gpt-5.5",
+      "customModels": "gpt-5.5\nGPT-5.4",
       "reasoningSummary": "detailed",
       "environmentVariables": "",
       "environmentHash": "",
@@ -83,7 +83,7 @@
   },
   "savedProviderEffort": {
     "claude": "max",
-    "codex": "high"
+    "codex": "medium"
   },
   "savedProviderServiceTier": {
     "codex": "default"

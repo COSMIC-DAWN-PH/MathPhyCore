@@ -73,6 +73,7 @@ tags:
 
 - [x] [[Commutation-Relation|对易关系]] — $[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}$，量子不确定性的代数根源
 - [x] [[Quantum-Numbers|量子数]] — $n, l, m_l, m_s, j, m_j$ 全景
+- [ ] [[Good-Quantum-Number|好量子数]] — 当前哈密顿量下能稳定标记量子态的量子数；用对易关系判断
 - [x] [[Principal-Quantum-Number|主量子数]] — 决定能级，$E_n \propto -1/n^2$
 - [x] [[Azimuthal-Quantum-Number|角量子数]] — 轨道角动量，$l=0,1,\ldots,n-1$
 - [x] [[Magnetic-Quantum-Number|磁量子数]] — 角动量投影，$m=-l,\ldots,l$
@@ -134,6 +135,9 @@ tags:
 > 学习过程中遇到的未解决问题。解决后打勾并移到底部"已解决"区域。
 
 **待解决**
+
+- [ ] **好量子数在不同哈密顿量下变好/变坏的对易子推导** — 为什么中心力场中 $l,m_l,s,m_s$ 都是好量子数；加入自旋-轨道耦合后 $m_l,m_s$ 变坏而 $j,m_j$ 变好；弱 Zeeman 场中 $m_j$ 严格好而 $j$ 只是近似好？
+  📎 相关：[[Good-Quantum-Number|好量子数]] · [[Commutation-Relation|对易关系]] · [[Spin-Orbit-Coupling|自旋-轨道耦合]] · [[Zeeman-Effect|塞曼效应]]
 
 - [ ] **角动量耦合取值规则的根源** — 轨道与自旋耦合后 $j$ 为什么只能取 $|l-s|, |l-s|+1, \ldots, l+s$ 这些值？三角不等式背后的量子力学推导是什么？
   📎 相关：[[Angular-Momentum-Coupling|角动量耦合]] · [[Spin-Orbit-Coupling|自旋-轨道耦合]]
@@ -199,6 +203,7 @@ tags:
 
 | 创建日期 | 笔记 | 学科 | 状态 | 理解 | 复习 |
 |---------|------|------|------|------|------|
+| 2026-06-05 | [[Good-Quantum-Number\|好量子数]] | Physics | Draft | vague | ⬜ 7天后 |
 | 2026-06-04 | [[AC-Stark-Effect\|AC Stark 效应]] | Physics | Draft | vague | ⬜ 7天后 |
 | 2026-06-04 | [[Alkali-Metal-Doublet\|碱金属双线结构]] | Physics | Draft | vague | ⬜ 7天后 |
 | 2026-06-04 | [[Angular-Momentum-Coupling\|角动量耦合]] | Physics | Draft | vague | ⬜ 7天后 |
@@ -237,6 +242,7 @@ tags:
 
 ## 📝 更新记录
 
+- 2026-06-05: 同步 roadmap — 新增 [[Good-Quantum-Number|好量子数]] 未勾选学习项；新增 1 条待解决学习疑问（好量子数对易子推导）；时间线新增 1 条。
 - 2026-06-05: 新增"学习疑问"追踪区 — 添加 2 条待解决疑问（角动量耦合取值规则 + 朗德 g 因子推导）；在 [[Spin-Orbit-Coupling|自旋-轨道耦合]] 和 [[Lande-g-Factor|朗德 g 因子]] 笔记中标注 `[!question]` callout
 - 2026-06-05: 基于原子物理第四章材料升级 5 篇笔记——[[Hydrogen-Atom-Model|氢原子模型]]（薛定谔方程五步推导）、[[Angular-Momentum-Coupling|角动量耦合]]（p 轨道算例 + 态数守恒 + 量子矢量模型）、[[Commutation-Relation|对易关系]]（升降算符完整谱构造）、[[Spin-Orbit-Coupling|自旋-轨道耦合]]（视角切换 + 磁铁类比 + 2P 劈裂计算）、[[Magnetic-Moment|磁矩]]（均匀场中运动行为 + 电动机原理）；LaTeX 表格违规修复 7 个文件 10 处；skills 镜像同步
 - 2026-06-04: 同步 roadmap — 新增 13 篇笔记收录、修正 6 条 wikilink、时间线更新 33 条（按创建时间排列）
