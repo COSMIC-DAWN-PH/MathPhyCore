@@ -7,6 +7,8 @@ aliases:
   - 伊辛模型
   - Ising模型
   - Ising Model
+source: "self-authored (统计物理)"
+comprehension: getting there
 status: Evergreen
 date: 2026-05-25
 tags:

@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780401501235-eu0zshe2g",
+  "providerId": "claude",
+  "title": "Implement this plan:",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780401501236,
+  "updatedAt": 1780403300936,
+  "lastResponseAt": 1780401957979,
+  "sessionId": "c22cbb89-7991-4bd2-8026-a79e7865cf94",
+  "providerState": {
+    "providerSessionId": "c22cbb89-7991-4bd2-8026-a79e7865cf94"
+  },
+  "currentNote": "Study-Roadmap.md",
+  "usage": {
+    "model": "opus[1m]",
+    "inputTokens": 166,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 113664,
+    "contextWindow": 1000000,
+    "contextTokens": 113830,
+    "percentage": 11
+  }
+}

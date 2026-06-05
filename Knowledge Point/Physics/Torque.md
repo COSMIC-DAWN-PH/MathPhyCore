@@ -7,7 +7,9 @@ aliases:
   - 力矩
   - torque
   - 转矩
-status: In-Progress
+source: "self-authored (经典力学)"
+comprehension: understood
+status: WIP
 date: 2026-05-27
 tags:
   - Physics

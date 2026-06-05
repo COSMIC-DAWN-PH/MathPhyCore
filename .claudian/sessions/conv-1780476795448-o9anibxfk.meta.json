@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780476795448-o9anibxfk",
+  "providerId": "claude",
+  "title": "为什么没有按照md要求的用python来图解问题或者html动态解释",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780476795448,
+  "updatedAt": 1780477984474,
+  "lastResponseAt": 1780477820631,
+  "sessionId": "541120c8-2114-424c-a1ce-ddf68ae26ad6",
+  "providerState": {
+    "providerSessionId": "541120c8-2114-424c-a1ce-ddf68ae26ad6"
+  },
+  "currentNote": "Knowledge Point/Physics/Hyperfine-Structure.md",
+  "usage": {
+    "model": "opus[1m]",
+    "inputTokens": 440,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 81664,
+    "contextWindow": 1000000,
+    "contextTokens": 82104,
+    "percentage": 8
+  }
+}

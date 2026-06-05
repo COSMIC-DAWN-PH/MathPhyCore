@@ -8,7 +8,9 @@ aliases:
   - Separation of Variables
   - 分离变量法
   - Fourier方法
-status: In-Progress
+source: "self-authored (数学物理方法课程整理)"
+comprehension: understood
+status: WIP
 date: 2026-05-25
 tags:
   - Math
@@ -272,12 +274,11 @@ plt.show()
 
 ## 📐 核心公式摘要
 
-| 方程类型 | PDE | 空间 ODE | 时间 ODE | 本征函数 |
-|----------|-----|----------|----------|----------|
-| 热方程 | $u_t = \alpha u_{xx}$ | $X'' + \lambda X = 0$ | $T' + \alpha\lambda T = 0$ | $\sin,\cos$ |
-| 波动方程 | $u_{tt} = c^2 u_{xx}$ | $X'' + \lambda X = 0$ | $T'' + c^2\lambda T = 0$ | $\sin,\cos$ |
-| Laplace (直角) | $u_{xx} + u_{yy} = 0$ | $X'' + \lambda X = 0$ | $Y'' - \lambda Y = 0$ | $\sin,\cos;\ \sinh,\cosh$ |
-| Laplace (极坐标) | $u_{rr} + \frac{1}{r}u_r + \frac{1}{r^2}u_{\theta\theta} = 0$ | 径向: Euler/Bessel | 角度: $\Theta'' + n^2\Theta = 0$ | $\sin,\cos;\ r^n,\ J_n$ |
+**各类型方程对比：**
+- **热方程**：PDE $u_t = \alpha u_{xx}$，空间 ODE $X'' + \lambda X = 0$，时间 ODE $T' + \alpha\lambda T = 0$，本征函数 $\sin,\cos$
+- **波动方程**：PDE $u_{tt} = c^2 u_{xx}$，空间 ODE $X'' + \lambda X = 0$，时间 ODE $T'' + c^2\lambda T = 0$，本征函数 $\sin,\cos$
+- **Laplace (直角)**：PDE $u_{xx} + u_{yy} = 0$，$X'' + \lambda X = 0$，$Y'' - \lambda Y = 0$，本征函数 $\sin,\cos;\ \sinh,\cosh$
+- **Laplace (极坐标)**：径向 Euler/Bessel，角度 $\Theta'' + n^2\Theta = 0$，本征函数 $\sin,\cos;\ r^n,\ J_n$
 
 **本征值**（Dirichlet 边界）：$\lambda_n = (n\pi/L)^2$，$n = 1, 2, 3, \dots$
 

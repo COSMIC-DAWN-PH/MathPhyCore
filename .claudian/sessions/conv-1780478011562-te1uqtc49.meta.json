@@ -1,0 +1,22 @@
+{
+  "id": "conv-1780478011562-te1uqtc49",
+  "providerId": "claude",
+  "title": "Zeeman-Effect（塞曼效应）讲解一下Fine-Structure（精细结构） 这两个文档都...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780478011562,
+  "updatedAt": 1780535041549,
+  "lastResponseAt": 1780478911606,
+  "sessionId": "f7978d28-55b3-4913-abed-8d8e815d41d2",
+  "providerState": {
+    "providerSessionId": "f7978d28-55b3-4913-abed-8d8e815d41d2"
+  },
+  "usage": {
+    "model": "opus[1m]",
+    "inputTokens": 354,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 92928,
+    "contextWindow": 1000000,
+    "contextTokens": 93282,
+    "percentage": 9
+  }
+}

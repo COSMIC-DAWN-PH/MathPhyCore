@@ -8,7 +8,9 @@ aliases:
   - 方位量子数
   - 轨道角动量量子数
   - Azimuthal quantum number
-status: In-Progress
+source: "self-authored (量子力学基础)"
+comprehension: understood
+status: WIP
 date: 2026-05-25
 tags:
   - Physics
@@ -129,9 +131,11 @@ $$
 ## 相关概念
 
 - [[Quantum-Numbers|量子数]]
+- [[Hydrogen-Atom-Model|氢原子模型]]
 - [[Principal-Quantum-Number|主量子数]]
 - [[Magnetic-Quantum-Number|磁量子数]]
 - [[Method-of-Separation-of-Variables|分离变量法]]
+- [[Spin-Orbit-Coupling|自旋-轨道耦合]] — $l$ 决定自旋-轨道耦合的有无与强度
 
 ---
 

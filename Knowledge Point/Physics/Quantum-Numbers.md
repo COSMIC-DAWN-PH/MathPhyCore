@@ -8,7 +8,9 @@ aliases:
   - 氢原子量子数
   - 原子轨道量子数
   - Quantum numbers
-status: In-Progress
+source: "self-authored (量子力学基础)"
+comprehension: understood
+status: WIP
 date: 2026-05-25
 tags:
   - Physics
@@ -249,7 +251,7 @@ $$
 
 ## 与角动量算符的关系
 
-这三个量子数来自定态薛定谔方程在球坐标下的分离变量。对中心势：
+这三个量子数来自定态薛定谔方程在球坐标下的分离变量，其深层代数根源是角动量 [[Commutation-Relation|对易关系]]。对中心势：
 
 $$
 \psi_{nlm}(r,\theta,\phi)=R_{nl}(r)Y_l^m(\theta,\phi)
@@ -286,10 +288,15 @@ $$
 ## 相关概念
 
 - [[Principal-Quantum-Number|主量子数]]
+- [[Hydrogen-Atom-Model|氢原子模型]]
 - [[Azimuthal-Quantum-Number|角量子数]]
 - [[Magnetic-Quantum-Number|磁量子数]]
+- [[Commutation-Relation|对易关系]] — 角动量量子数的代数根源
 - [[Larmor-Precession|拉莫尔进动]]
 - [[Method-of-Separation-of-Variables|分离变量法]]
+- [[Spin-Orbit-Coupling|自旋-轨道耦合]] — 好量子数集合从 $(n,l,m_l,m_s)$ 变为 $(n,l,j,m_j)$
+- [[Fine-Structure|精细结构]] — 精细结构进一步细分同一 $n$ 下的能级，引入 $j$ 作为好量子数
+- [[Zeeman-Effect|塞曼效应]] — 外磁场中不同磁量子数的能级分裂
 
 ---
 
@@ -310,5 +317,6 @@ $$
 
 ## 📝 更新记录
 
+- 2026-06-02: 添加反向链接至 [[Commutation-Relation|对易关系]] — 角动量量子数的代数根源
 - 2026-05-25: 添加交互式 HTML 可视化，用滑块展示 $n,l,m_l$ 的取值约束与物理图像。
 - 2026-05-25: 创建初稿，整理主量子数、角量子数、磁量子数的层级关系与取值约束。

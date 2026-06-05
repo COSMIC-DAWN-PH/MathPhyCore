@@ -8,7 +8,9 @@ aliases:
   - Gaussian Integral
   - 概率积分
   - Gauss积分
-status: In-Progress
+source: "self-authored (数学物理方法课程整理)"
+comprehension: understood
+status: WIP
 date: 2026-05-25
 tags:
   - Math
@@ -127,7 +129,7 @@ $$\boxed{\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}\mathbf{x}^T A \mathbf{x} + \
 
 | 领域 | 应用 | 形式 |
 |------|------|------|
-| 量子力学 | 谐振子基态归一化 | $\int |\psi_0|^2 dx \propto \int e^{-m\omega x^2/\hbar} dx$ |
+| 量子力学 | 谐振子基态归一化 | $\int \lvert\psi_0\rvert^2 dx \propto \int e^{-m\omega x^2/\hbar} dx$ |
 | 统计物理 | Maxwell 速度分布 | $\int e^{-mv^2/2k_BT} d^3v$ |
 | 统计物理 | 配分函数动能部分 | $\int e^{-\beta p^2/2m} d^3p$ |
 | 概率论 | 正态分布归一化 | $\int e^{-(x-\mu)^2/2\sigma^2} dx = \sigma\sqrt{2\pi}$ |
@@ -207,6 +209,7 @@ plt.show()
 - [[Ising-Model|Ising Model (伊辛模型)]] — 平均场理论和配分函数中频繁用到高斯积分
 - [[Bose-Einstein-Distribution|Bose-Einstein Distribution (玻色-爱因斯坦分布)]] — 动量空间的积分本质上就是高斯积分
 - [[Method-of-Separation-of-Variables|Separation of Variables (分离变量法)]] — 分离出的空间部分常得到 Hermite 多项式，其权重函数 $e^{-x^2/2}$ 的归一化依赖高斯积分
+- [[Unitary-Matrix|Unitary Matrix (酉矩阵)]] — 多变量高斯积分中对协方差矩阵做酉对角化
 
 ---
 

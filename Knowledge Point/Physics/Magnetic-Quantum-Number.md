@@ -8,7 +8,9 @@ aliases:
   - 磁量子数 ml
   - 轨道磁量子数
   - Magnetic quantum number
-status: In-Progress
+source: "self-authored (量子力学基础)"
+comprehension: understood
+status: WIP
 date: 2026-05-25
 tags:
   - Physics
@@ -158,9 +160,14 @@ $$
 - [[Torque|力矩]] — 磁矩在外磁场中受力矩 $\vec{\tau}=\vec{\mu}\times\vec{B}$，与磁量子数能级分裂相关
 - [[Larmor-Precession|拉莫尔进动]] — 外磁场中磁矩与角动量的经典进动图像
 - [[Quantum-Numbers|量子数]]
+- [[Hydrogen-Atom-Model|氢原子模型]]
 - [[Principal-Quantum-Number|主量子数]]
 - [[Azimuthal-Quantum-Number|角量子数]]
 - [[Method-of-Separation-of-Variables|分离变量法]]
+- [[Spin-Orbit-Coupling|自旋-轨道耦合]] — 耦合后 $m_l$ 不再是好量子数
+- [[Force-on-Magnetic-Dipole-in-Gradient-Field|磁矩在梯度磁场中的受力]] — 不同 $m_l$ 对应的 $\mu_z$ 差异导致斯特恩-盖拉赫实验中的束分裂
+- [[Zeeman-Effect|塞曼效应]] — 外磁场中不同 $m_l$ 的能级分裂，磁量子数的直接物理体现
+- [[Fine-Structure|精细结构]] — 精细结构打破了同一 $n$ 下不同 $l$ 的简并
 
 ---
 

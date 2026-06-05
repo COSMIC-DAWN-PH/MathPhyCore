@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780403238018-43wtfswr4",
+  "providerId": "claude",
+  "title": "/vault-upgrade",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780403238019,
+  "updatedAt": 1780403886095,
+  "lastResponseAt": 1780403386831,
+  "sessionId": "75d2c79c-15af-46dc-9108-c1125eeb684c",
+  "providerState": {
+    "providerSessionId": "75d2c79c-15af-46dc-9108-c1125eeb684c"
+  },
+  "currentNote": "Study-Roadmap.md",
+  "usage": {
+    "model": "opus[1m]",
+    "inputTokens": 510,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 96256,
+    "contextWindow": 1000000,
+    "contextTokens": 96766,
+    "percentage": 10
+  }
+}

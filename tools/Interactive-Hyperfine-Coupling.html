@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hyperfine Angular Momentum Coupling Interactive</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #64748b;
+      --line: #d8dee9;
+      --panel: #f8fafc;
+      --blue: #3366aa;
+      --orange: #c96b1b;
+      --red: #b84644;
+      --green: #2f855a;
+      --purple: #6b4fa0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #fff;
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .controls {
+      padding: 18px;
+      border-right: 1px solid var(--line);
+      background: var(--panel);
+      overflow-y: auto;
+    }
+
+    h1 { margin: 0 0 4px; font-size: 18px; line-height: 1.3; }
+    .subtitle { margin: 0 0 16px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      margin: 16px 0 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .preset-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .preset-btn {
+      padding: 6px 8px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 12px;
+      text-align: center;
+      transition: all 0.15s;
+    }
+    .preset-btn:hover { border-color: var(--blue); background: #eef4ff; }
+    .preset-btn.active { border-color: var(--blue); background: #dbeafe; font-weight: 700; }
+
+    .control-group { margin: 12px 0; }
+
+    .control-group label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .value {
+      color: var(--blue);
+      font-family: Consolas, monospace;
+      font-size: 14px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--blue);
+    }
+
+    .info-panel {
+      margin-top: 16px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .info-panel h3 {
+      font-size: 13px;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 3px 0;
+      font-size: 13px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-label { color: var(--muted); }
+    .info-value { font-family: Consolas, monospace; font-weight: 600; }
+
+    .f-list {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .f-chip {
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .main {
+      padding: 20px 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .viz-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .viz-subtitle {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    svg { width: 100%; height: auto; }
+
+    .level-line {
+      stroke-width: 3;
+      stroke-linecap: round;
+    }
+
+    .level-label {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .sublevel-line {
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    .sublevel-label {
+      font-size: 11px;
+    }
+
+    .bracket-line {
+      stroke: var(--muted);
+      stroke-width: 1.5;
+    }
+
+    .bracket-text {
+      font-size: 12px;
+      fill: var(--muted);
+    }
+
+    .total-box {
+      margin-top: 16px;
+      padding: 10px 14px;
+      border: 2px dashed var(--line);
+      border-radius: 8px;
+      text-align: center;
+      font-size: 14px;
+      background: var(--panel);
+    }
+
+    .total-box .num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--blue);
+      display: block;
+      line-height: 1.2;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+      padding: 8px 12px;
+      background: var(--panel);
+      border-radius: 6px;
+      font-size: 12px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-swatch {
+      width: 20px;
+      height: 3px;
+      border-radius: 2px;
+    }
+
+    .formula-box {
+      margin-top: 12px;
+      padding: 10px 14px;
+      background: #fffbeb;
+      border: 1px solid #fbbf24;
+      border-radius: 6px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .formula-box code {
+      font-family: Consolas, monospace;
+      background: rgba(0,0,0,0.05);
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 700px) {
+      .app { grid-template-columns: 1fr; }
+      .controls { border-right: none; border-bottom: 1px solid var(--line); }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="controls">
+      <h1>超精细角动量耦合</h1>
+      <p class="subtitle">探索 $\mathbf{F} = \mathbf{J} + \mathbf{I}$ 的耦合模式<br>选择预设原子或自定义 $J$ 和 $I$</p>
+
+      <div class="section-title">原子预设</div>
+      <div class="preset-grid" id="presetGrid">
+        <button class="preset-btn active" data-j="0.5" data-i="0.5" data-name="H (1S)">H (1S)</button>
+        <button class="preset-btn" data-j="0.5" data-i="1.5" data-name="⁸⁷Rb (5S)">⁸⁷Rb (5S)</button>
+        <button class="preset-btn" data-j="0.5" data-i="2.5" data-name="²³Na (3S)">²³Na (3S)</button>
+        <button class="preset-btn" data-j="1.5" data-i="1.5" data-name="⁷Li (2P)">⁷Li (2P)</button>
+        <button class="preset-btn" data-j="1.5" data-i="3.5" data-name="¹³³Cs (6S)">¹³³Cs (6S)</button>
+        <button class="preset-btn" data-j="2.5" data-i="1.5" data-name="自定义">自定义</button>
+      </div>
+
+      <div class="section-title">量子数设置</div>
+      <div class="control-group">
+        <label>电子总角动量 $J$ <span class="value" id="jValue">1/2</span></label>
+        <input type="range" id="jSlider" min="0.5" max="5" step="0.5" value="0.5">
+      </div>
+      <div class="control-group">
+        <label>核自旋 $I$ <span class="value" id="iValue">1/2</span></label>
+        <input type="range" id="iSlider" min="0.5" max="7" step="0.5" value="0.5">
+      </div>
+
+      <div class="info-panel">
+        <h3>耦合结果</h3>
+        <div class="info-row">
+          <span class="info-label">F 取值个数</span>
+          <span class="info-value" id="fCount">2</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">总子态数</span>
+          <span class="info-value" id="totalStates">4</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">验证 $(2J+1)(2I+1)$</span>
+          <span class="info-value" id="verifyStates">4</span>
+        </div>
+        <div class="f-list" id="fChips"></div>
+      </div>
+
+      <div class="formula-box">
+        <strong>耦合规则：</strong><br>
+        <code>F = |J−I|, |J−I|+1, ..., J+I</code><br>
+        每个 $F$ 有 <code>2F+1</code> 个 $m_F$ 子态<br>
+        总态数守恒：<code>Σ(2F+1) = (2J+1)(2I+1)</code>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="viz-title">超精细能级结构图</div>
+      <div class="viz-subtitle">每个 F 能级展开为 m_F 子态 · 颜色编码简并度</div>
+
+      <svg id="svg" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"></svg>
+
+      <div class="legend">
+        <div class="legend-item"><div class="legend-swatch" style="background:#4C78A8"></div>F=0 (单态)</div>
+        <div class="legend-item"><div class="legend-swatch" style="background:#F58518"></div>F=1 (三重态)</div>
+        <div class="legend-item"><div class="legend-swatch" style="background:#54A24B"></div>F=2 (五重态)</div>
+        <div class="legend-item"><div class="legend-swatch" style="background:#E45756"></div>F=3</div>
+        <div class="legend-item"><div class="legend-swatch" style="background:#72B7B2"></div>F≥4</div>
+      </div>
+
+      <div class="total-box">
+        总子态数：<span class="num" id="totalDisplay">4</span>
+        <span id="totalFormula">(2×1/2+1)(2×1/2+1) = 2×2 = 4</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const COLORS = ['#4C78A8', '#F58518', '#54A24B', '#E45756', '#72B7B2', '#EECA3B', '#B279A2', '#FF9DA6', '#9D755D', '#BAB0AC'];
+
+    function fracStr(v) {
+      if (v === Math.floor(v)) return String(v);
+      const whole = Math.floor(v);
+      const frac = v - whole;
+      const fracs = {0.5: '½', 0.25: '¼', 0.75: '¾'};
+      if (fracs[frac]) return whole > 0 ? whole + fracs[frac] : fracs[frac];
+      return String(v);
+    }
+
+    function getFValues(j, i) {
+      const fMin = Math.abs(j - i);
+      const fMax = j + i;
+      const fs = [];
+      for (let f = fMin; f <= fMax + 0.001; f += 1) {
+        fs.push(Math.round(f * 10) / 10);
+      }
+      return fs;
+    }
+
+    function update() {
+      const j = parseFloat(document.getElementById('jSlider').value);
+      const i = parseFloat(document.getElementById('iSlider').value);
+
+      document.getElementById('jValue').textContent = fracStr(j);
+      document.getElementById('iValue').textContent = fracStr(i);
+
+      const fs = getFValues(j, i);
+      const totalFromF = fs.reduce((s, f) => s + (2 * f + 1), 0);
+      const totalDirect = (2 * j + 1) * (2 * i + 1);
+
+      document.getElementById('fCount').textContent = fs.length;
+      document.getElementById('totalStates').textContent = totalFromF;
+      document.getElementById('verifyStates').textContent = totalDirect;
+      document.getElementById('totalDisplay').textContent = totalFromF;
+
+      const jPart = j === Math.floor(j) ? (2*j+1) : `(${fracStr(2*j+1)})`;
+      const iPart = i === Math.floor(i) ? (2*i+1) : `(${fracStr(2*i+1)})`;
+      document.getElementById('totalFormula').textContent =
+        `(2×${fracStr(j)}+1)(2×${fracStr(i)}+1) = ${2*j+1} × ${2*i+1} = ${totalDirect}`;
+
+      // F chips
+      const chipsEl = document.getElementById('fChips');
+      chipsEl.innerHTML = '';
+      fs.forEach((f, idx) => {
+        const deg = 2 * f + 1;
+        const chip = document.createElement('span');
+        chip.className = 'f-chip';
+        chip.style.background = COLORS[idx % COLORS.length];
+        chip.textContent = `F=${fracStr(f)} (${deg})`;
+        chipsEl.appendChild(chip);
+      });
+
+      // Clear highlight on preset buttons
+      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+
+      drawSVG(fs, j, i);
+    }
+
+    function drawSVG(fs, j, i) {
+      const svg = document.getElementById('svg');
+      const W = 800, H = 500;
+      svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+
+      // Calculate layout
+      const nF = fs.length;
+      const maxDeg = Math.max(...fs.map(f => 2 * f + 1));
+      const totalSubLevels = fs.reduce((s, f) => s + (2 * f + 1), 0);
+
+      const margin = { top: 40, bottom: 50, left: 60, right: 60 };
+      const plotW = W - margin.left - margin.right;
+      const plotH = H - margin.top - margin.bottom;
+
+      // Vertical layout: each F group gets a band
+      const groupGap = 20;
+      const bandHeight = (plotH - (nF - 1) * groupGap) / nF;
+
+      // Horizontal layout: distribute m_F values evenly within each band
+      const subLevelH = 3;
+
+      let html = '';
+
+      // Title / header
+      html += `<text x="${W/2}" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2933">`;
+      html += `J = ${fracStr(j)},  I = ${fracStr(i)}  →  F = `;
+      html += fs.map(f => fracStr(f)).join(', ');
+      html += `</text>`;
+
+      // Draw each F group
+      fs.forEach((f, fIdx) => {
+        const deg = 2 * f + 1;
+        const color = COLORS[fIdx % COLORS.length];
+
+        const groupTop = margin.top + fIdx * (bandHeight + groupGap);
+        const groupMid = groupTop + bandHeight / 2;
+
+        // Background band
+        html += `<rect x="${margin.left}" y="${groupTop}" width="${plotW}" height="${bandHeight}" `;
+        html += `fill="${color}" opacity="0.04" rx="6"/>`;
+
+        // Draw each m_F sublevel
+        const subW = plotW / (deg + 1);
+        for (let mIdx = 0; mIdx < deg; mIdx++) {
+          const mf = -f + mIdx;
+          const x = margin.left + subW * (mIdx + 0.5);
+          const xEnd = x + subW * 0.8;
+
+          // Sublevel line
+          html += `<line x1="${x}" y1="${groupMid}" x2="${xEnd}" y2="${groupMid}" `;
+          html += `stroke="${color}" class="sublevel-line" opacity="0.7"/>`;
+
+          // m_F label below
+          html += `<text x="${(x + xEnd) / 2}" y="${groupMid + 16}" text-anchor="middle" `;
+          html += `class="sublevel-label" fill="${color}" opacity="0.8">`;
+          html += `${mf >= 0 ? '+' : ''}${fracStr(mf)}`;
+          html += `</text>`;
+        }
+
+        // F label on the left
+        html += `<text x="${margin.left - 10}" y="${groupMid + 5}" text-anchor="end" `;
+        html += `class="level-label" fill="${color}">F=${fracStr(f)}</text>`;
+
+        // Bracket / group indicator on the right
+        const bracketX = margin.left + plotW + 10;
+        html += `<line x1="${bracketX}" y1="${groupTop + 8}" x2="${bracketX}" y2="${groupTop + bandHeight - 8}" `;
+        html += `stroke="${color}" stroke-width="1.5"/>`;
+        html += `<line x1="${bracketX - 4}" y1="${groupTop + 8}" x2="${bracketX}" y2="${groupTop + 8}" `;
+        html += `stroke="${color}" stroke-width="1.5"/>`;
+        html += `<line x1="${bracketX - 4}" y1="${groupTop + bandHeight - 8}" x2="${bracketX}" y2="${groupTop + bandHeight - 8}" `;
+        html += `stroke="${color}" stroke-width="1.5"/>`;
+        html += `<text x="${bracketX + 8}" y="${groupMid + 4}" font-size="11" fill="${color}" font-weight="600">`;
+        html += `${deg}重态</text>`;
+
+        // Energy arrow (proportional to F)
+        const arrowLen = (f / (fs[fs.length - 1] || 1)) * (bandHeight * 0.3);
+        if (fIdx > 0) {
+          html += `<line x1="${margin.left + plotW / 2 - 25}" y1="${groupTop}" `;
+          html += `x2="${margin.left + plotW / 2 - 25}" y2="${groupTop - groupGap + 5}" `;
+          html += `stroke="#999" stroke-width="1" marker-end="url(#arrowhead)"/>`;
+        }
+      });
+
+      // Arrow marker definition
+      html = `<defs><marker id="arrowhead" markerWidth="6" markerHeight="4" refX="3" refY="2" orient="auto">`;
+      html += `<polygon points="0 0, 6 2, 0 4" fill="#999"/></marker></defs>` + html;
+
+      // Energy axis label
+      html += `<text x="${margin.left - 45}" y="${H / 2}" text-anchor="middle" `;
+      html += `transform="rotate(-90, ${margin.left - 45}, ${H / 2})" `;
+      html += `font-size="13" fill="#64748b">能量 →</text>`;
+
+      svg.innerHTML = html;
+    }
+
+    // Preset buttons
+    document.querySelectorAll('.preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const j = parseFloat(btn.dataset.j);
+        const i = parseFloat(btn.dataset.i);
+        document.getElementById('jSlider').value = j;
+        document.getElementById('iSlider').value = i;
+        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        update();
+      });
+    });
+
+    document.getElementById('jSlider').addEventListener('input', update);
+    document.getElementById('iSlider').addEventListener('input', update);
+
+    // Initial draw
+    update();
+  </script>
+</body>
+</html>

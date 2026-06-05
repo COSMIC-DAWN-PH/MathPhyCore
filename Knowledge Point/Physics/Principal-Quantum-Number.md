@@ -7,7 +7,9 @@ aliases:
   - 主量子数
   - 主量子数 n
   - Principal quantum number
-status: In-Progress
+source: "self-authored (量子力学基础)"
+comprehension: understood
+status: WIP
 date: 2026-05-25
 tags:
   - Physics
@@ -65,6 +67,44 @@ $$
 
 > [!warning] 氢原子与多电子原子不同
 > 氢原子的能量只依赖 $n$ 是一个特殊结果。多电子原子中，由于电子间相互作用和屏蔽效应，同一 $n$ 下不同 $l$ 的能量通常不再相同。
+
+### 能量公式从哪里来
+
+这个 $1/n^2$ 结构可以先从 [[Hydrogen-Atom-Model|氢原子模型]] 的 Bohr 假设看出来。核心假设是：原子存在不辐射的定态轨道，允许轨道满足角动量量子化 $m_evr=n\hbar$，不同定态之间跃迁时满足 $h\nu=E_i-E_f$。
+
+具体推导路线是：
+
+1. 库仑力提供向心力：
+
+$$
+\frac{1}{4\pi\varepsilon_0}\frac{e^2}{r^2}=\frac{m_ev^2}{r}
+$$
+
+2. 电子轨道角动量被量子化：
+
+$$
+m_evr=n\hbar
+$$
+
+3. 两式联立得到允许半径：
+
+$$
+r_n=a_0n^2
+$$
+
+4. 总能量为动能加库仑势能：
+
+$$
+E=K+V=-\frac{1}{2}\frac{1}{4\pi\varepsilon_0}\frac{e^2}{r}
+$$
+
+代入 $r_n\propto n^2$，就得到
+
+$$
+E_n\propto-\frac{1}{n^2}
+$$
+
+更完整的推导见 [[Hydrogen-Atom-Model|氢原子模型]]。在现代量子力学中，这个能级不是来自电子真的沿圆轨道运动，而是来自库仑势下定态薛定谔方程的束缚态本征值；Bohr 假设是通向正确结果的半经典桥梁。
 
 ---
 
@@ -134,9 +174,11 @@ $$
 ## 相关概念
 
 - [[Quantum-Numbers|量子数]]
+- [[Hydrogen-Atom-Model|氢原子模型]]
 - [[Azimuthal-Quantum-Number|角量子数]]
 - [[Magnetic-Quantum-Number|磁量子数]]
 - [[Method-of-Separation-of-Variables|分离变量法]]
+- [[Spin-Orbit-Coupling|自旋-轨道耦合]] — 精细结构打破纯 $n$ 简并
 
 ---
 
@@ -155,4 +197,5 @@ $$
 
 ## 📝 更新记录
 
+- 2026-05-27: 补充氢原子能级公式的来源，并链接到 [[Hydrogen-Atom-Model|氢原子模型]] 专题笔记。
 - 2026-05-25: 创建初稿，说明主量子数的取值、能级意义、壳层容量与其他量子数的关系。

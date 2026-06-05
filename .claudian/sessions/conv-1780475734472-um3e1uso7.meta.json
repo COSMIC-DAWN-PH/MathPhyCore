@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780475734472-um3e1uso7",
+  "providerId": "claude",
+  "title": "/mmx 详细结合$^{87}\\text{Rb}$ 中 $\\vert 0\\rangle = \\ver...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780475734472,
+  "updatedAt": 1780477157175,
+  "lastResponseAt": 1780476953809,
+  "sessionId": "fdb88c65-3925-4c50-92df-939617502af7",
+  "providerState": {
+    "providerSessionId": "fdb88c65-3925-4c50-92df-939617502af7"
+  },
+  "currentNote": "Knowledge Point/Physics/Hyperfine-Structure.md",
+  "usage": {
+    "model": "opus[1m]",
+    "inputTokens": 860,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 70720,
+    "contextWindow": 1000000,
+    "contextTokens": 71580,
+    "percentage": 7
+  }
+}

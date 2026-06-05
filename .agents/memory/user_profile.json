@@ -1,0 +1,95 @@
+{
+  "user_metadata": {
+    "name": "Sihao",
+    "education_level": "大学二年级下学期 (Sophomore Spring)",
+    "major": "物理学 (Physics)",
+    "university": "未标注",
+    "vault_focus": "数理核心基础 (Math & Physics Core Knowledge)"
+  },
+  "math_background": {
+    "completed": [
+      "Gaussian-Integral (高斯积分)",
+      "Unitary-Matrix (酉矩阵)",
+      "Method-of-Separation-of-Variables (分离变量法)"
+    ],
+    "in_progress": [],
+    "planned": [
+      "Multivariable-Calculus (多元微积分)",
+      "Complex-Analysis (复变函数)",
+      "Fourier-Analysis (Fourier 分析)",
+      "Eigenvalues-Eigenvectors (特征值与特征向量)",
+      "Hermitian-Matrix (Hermitian 矩阵)",
+      "Matrix-Diagonalization (矩阵对角化)",
+      "Tensor-Product (张量积)",
+      "Green-Function (Green 函数)",
+      "Sturm-Liouville-Theory (Sturm-Liouville 理论)",
+      "Special-Functions (特殊函数)"
+    ]
+  },
+  "physics_background": {
+    "classical_mechanics": {
+      "completed": ["Torque (力矩)"],
+      "planned": ["Lagrangian-Mechanics", "Hamiltonian-Mechanics", "Normal-Mode-Analysis", "Central-Force-Motion"]
+    },
+    "electrodynamics": {
+      "completed": ["Magnetic-Moment (磁矩)"],
+      "planned": ["Maxwells-Equations", "Electromagnetic-Wave", "Radiation"]
+    },
+    "atomic_physics": {
+      "completed": [
+        "Quantum-Numbers (量子数)",
+        "Principal-Quantum-Number (主量子数)",
+        "Azimuthal-Quantum-Number (角量子数)",
+        "Magnetic-Quantum-Number (磁量子数)",
+        "Hydrogen-Atom-Model (氢原子模型)",
+        "Larmor-Precession (拉莫尔进动)",
+        "Force-on-Magnetic-Dipole-in-Gradient-Field (磁矩在梯度磁场中的受力)",
+        "Fine-Structure (精细结构)",
+        "Zeeman-Effect (塞曼效应)"
+      ],
+      "planned": [
+        "Schrödinger-Equation",
+        "Spin-Orbit-Coupling",
+        "Hyperfine-Structure (超精细结构, 笔记已建)",
+        "Perturbation-Theory",
+        "Variational-Method",
+        "Scattering-Theory",
+        "Angular-Momentum-Coupling"
+      ]
+    },
+    "statistical_physics": {
+      "completed": [
+        "Bose-Einstein-Distribution (玻色-爱因斯坦分布)",
+        "Ising-Model (伊辛模型)",
+        "Spontaneous-Symmetry-Breaking (自发对称性破缺)"
+      ],
+      "planned": ["Boltzmann-Distribution", "Partition-Function", "Phase-Transition", "Fermi-Dirac-Distribution"]
+    },
+    "information_theory": {
+      "completed": [],
+      "planned": ["Shannon-Entropy", "Channel-Capacity", "Quantum-Information"]
+    }
+  },
+  "vault_preferences": {
+    "language": "中文叙述 + 英文术语，笔记正文用中文，专业术语首次出现附英文",
+    "matplotlib_style": {
+      "font_sans_serif": ["Microsoft YaHei", "SimHei"],
+      "axes_unicode_minus": false,
+      "note": "本库允许中文标注（与 Quantum Computing 科研库的全英文标注不同），因为学习型笔记用中文更直观"
+    },
+    "formula_presentation": "KaTeX inline $...$ and block $$...$$",
+    "note_structure": "物理直觉 → 核心定义与公式 → 关键性质 → 应用 → 公式摘要 → 更新记录",
+    "bidirectional_linking": true,
+    "callout_preference": "[!tip] 用于物理直觉和类比, [!warning] 用于易错点, [!info] 用于补充背景",
+    "roadmap_checkbox_rule": {
+      "critical": true,
+      "rule": "Study-Roadmap.md 中的 [x]/[ ] 只反映用户的学习状态，不代表笔记是否已创建。笔记是否存在由 wikilink 有无体现。NEVER auto-check [ ] → [x] just because a note file exists. Only the user controls checkbox state.",
+      "implication": "roadmap-update skill 的差异 B（笔记存在但未勾选）不应自动勾选，而应仅确保 wikilink 存在。勾选操作完全由用户在 Obsidian 中手动完成。"
+    },
+    "comprehension_field_rule": {
+      "critical": true,
+      "rule": "comprehension 字段的值只能由用户（Sihao）手动修改。NEVER auto-modify comprehension in any note's YAML frontmatter — not during creation, not during upgrade, not during any operation. AI 认为用户的理解程度变化不影响此规则。",
+      "implication": "AI 创建新笔记时，comprehension 必须设为默认值 vague。AI 升级笔记时，只检查 comprehension 字段是否存在，绝不修改其值。理解程度是用户对自己学习状态的主观判断，AI 无权代替。"
+    }
+  }
+}

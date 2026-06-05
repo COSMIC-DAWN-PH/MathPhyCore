@@ -9,6 +9,8 @@ aliases:
   - 对称性破缺
   - Spontaneous Symmetry Breaking
   - Symmetry Breaking
+source: "self-authored (统计物理)"
+comprehension: getting there
 status: Evergreen
 date: 2026-05-25
 tags:

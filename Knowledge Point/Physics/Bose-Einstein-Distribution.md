@@ -8,6 +8,8 @@ aliases:
   - 爱因斯坦分布
   - 玻色子分布
   - Bose-Einstein distribution
+source: "self-authored (统计物理)"
+comprehension: getting there
 status: Evergreen
 date: 2026-05-18
 tags:

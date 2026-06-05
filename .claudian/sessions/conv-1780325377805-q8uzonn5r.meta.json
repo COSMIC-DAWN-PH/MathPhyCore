@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780325377805-q8uzonn5r",
+  "providerId": "claude",
+  "title": "Create detailed note on unitary matrices",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780325377806,
+  "updatedAt": 1780400850607,
+  "lastResponseAt": 1780399914617,
+  "sessionId": "b3a0fa96-d437-4bc3-9c3f-6b67c1caf38f",
+  "providerState": {
+    "providerSessionId": "b3a0fa96-d437-4bc3-9c3f-6b67c1caf38f"
+  },
+  "usage": {
+    "model": "opus[1m]",
+    "inputTokens": 259,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 50304,
+    "contextWindow": 1000000,
+    "contextTokens": 50563,
+    "percentage": 5,
+    "contextWindowIsAuthoritative": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780631079315-q5wr3dogx",
+  "providerId": "claude",
+  "title": "/roadmap-update 帮我增加一下我学习过程中的疑问轨道与自旋耦合为啥合成的角动量是那几个...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780631079315,
+  "updatedAt": 1780631512645,
+  "lastResponseAt": 1780631512645,
+  "sessionId": "c9113ec9-aae0-4ae7-8503-856474ea1388",
+  "providerState": {
+    "providerSessionId": "c9113ec9-aae0-4ae7-8503-856474ea1388"
+  },
+  "currentNote": "Study-Roadmap.md",
+  "usage": {
+    "model": "sonnet[1m]",
+    "inputTokens": 214,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 55744,
+    "contextWindow": 1000000,
+    "contextTokens": 55958,
+    "percentage": 6
+  }
+}

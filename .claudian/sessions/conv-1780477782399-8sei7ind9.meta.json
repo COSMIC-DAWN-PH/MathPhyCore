@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780477782399-8sei7ind9",
+  "providerId": "claude",
+  "title": "/knowledge-manager 这段推导其实是在解决一个非常经典且核心的物理问题：**在一个非...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780477782399,
+  "updatedAt": 1780478623359,
+  "lastResponseAt": 1780478028606,
+  "sessionId": "199c85f6-91e1-4857-b769-21f80d1e679f",
+  "providerState": {
+    "providerSessionId": "199c85f6-91e1-4857-b769-21f80d1e679f"
+  },
+  "currentNote": "Knowledge Point/Physics/Magnetic-Quantum-Number.md",
+  "usage": {
+    "model": "opus[1m]",
+    "inputTokens": 139,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 48000,
+    "contextWindow": 1000000,
+    "contextTokens": 48139,
+    "percentage": 5
+  }
+}

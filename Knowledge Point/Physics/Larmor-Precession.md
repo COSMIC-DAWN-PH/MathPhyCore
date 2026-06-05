@@ -9,7 +9,9 @@ aliases:
   - Larmor precession
   - Larmor frequency
   - 拉莫尔频率
-status: In-Progress
+source: Gemini 对话整理 (原子物理)
+comprehension: getting there
+status: WIP
 date: 2026-05-27
 tags:
   - Physics
@@ -191,6 +193,12 @@ $$
 - [[Torque|力矩]] — 外磁场对磁矩施加力矩，导致角动量方向变化
 - [[Magnetic-Quantum-Number|磁量子数]] — 外磁场方向上的角动量投影量子化
 - [[Quantum-Numbers|量子数]] — 描述原子量子态的一组离散标签
+- [[Unitary-Matrix|Unitary Matrix (酉矩阵)]] — 自旋在外磁场中的时间演化算符 $U(t) = e^{-i\omega t\sigma_z/2}$ 是 $SU(2)$ 酉变换的经典实例
+- [[Study-Roadmap|Study Roadmap (学习路径)]] — 拉莫尔进动是超精细结构与塞曼效应的物理基础
+- [[Spin-Orbit-Coupling|自旋-轨道耦合]] — 自旋在轨道运动产生的等效磁场中进动
+- [[Force-on-Magnetic-Dipole-in-Gradient-Field|磁矩在梯度磁场中的受力]] — 进动平均消除横向力项，是该受力简化公式的关键物理机制
+- [[Zeeman-Effect|塞曼效应]] — 弱场极限下角动量绕外磁场做拉莫尔进动，产生 Zeeman 分裂
+- [[Fine-Structure|精细结构]] — 拉莫尔进动的经典图像是理解自旋-轨道耦合（精细结构来源之一）的基础
 
 ---
 

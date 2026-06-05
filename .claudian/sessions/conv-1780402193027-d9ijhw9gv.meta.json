@@ -1,0 +1,676 @@
+{
+  "id": "conv-1780402193027-d9ijhw9gv",
+  "providerId": "claude",
+  "title": "/knowledge-manager",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780402193027,
+  "updatedAt": 1780405605855,
+  "lastResponseAt": 1780405342561,
+  "sessionId": "39f09d5f-cc37-4a3c-b2b3-b0a32e0d8710",
+  "providerState": {
+    "providerSessionId": "39f09d5f-cc37-4a3c-b2b3-b0a32e0d8710",
+    "subagentData": {
+      "call_1be61d3011274fe6a8f02cec": {
+        "id": "call_1be61d3011274fe6a8f02cec",
+        "description": "Search commutation relation notes",
+        "prompt": "In the vault at C:\\Personal Profile\\Profile\\MathPhysCore, search for any existing notes related to commutation relations (对易关系, commutator, Commutation-Relation). Also find notes about angular momentum, quantum mechanics operators, Heisenberg uncertainty, and canonical commutation that might be related. Search broadly — check file names, grep for \"对易\", \"commutat\", \"Heisenberg\", \"canonical commutation\", and also list all files under \"Knowledge Point/Physics/\" to see what already exists. Report all findings with file paths.",
+        "status": "completed",
+        "toolCalls": [
+          {
+            "id": "call_608d6703f76c4dfcb6bf3df8",
+            "name": "Glob",
+            "input": {
+              "pattern": "**/*[Cc]ommut*",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_1182af2f32ba403c99047563",
+            "name": "Glob",
+            "input": {
+              "pattern": "**/*对易*",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_02876d21114a48a2a7015174",
+            "name": "Glob",
+            "input": {
+              "pattern": "**/*Heisenberg*",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_df05691cfc4b4692ad5f6b72",
+            "name": "Glob",
+            "input": {
+              "pattern": "**/*[Aa]ngular*[Mm]omentum*",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_30a705c3e6f24407ba45b849",
+            "name": "Glob",
+            "input": {
+              "pattern": "**/*不确定性*",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_d2853853b3f143909b20e015",
+            "name": "Glob",
+            "input": {
+              "pattern": "Knowledge Point/Physics/**/*",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Knowledge Point\\Physics\\Torque.md\nKnowledge Point\\Physics\\Magnetic-Moment.md\nKnowledge Point\\Physics\\Quantum-Numbers.md\nKnowledge Point\\Physics\\Azimuthal-Quantum-Number.md\nKnowledge Point\\Physics\\Magnetic-Quantum-Number.md\nKnowledge Point\\Physics\\Principal-Quantum-Number.md\nKnowledge Point\\Physics\\Hydrogen-Atom-Model.md\nKnowledge Point\\Physics\\Larmor-Precession.md\nKnowledge Point\\Physics\\Bose-Einstein-Distribution.md\nKnowledge Point\\Physics\\Ising-Model.md\nKnowledge Point\\Physics\\Spontaneous-Symmetry-Breaking.md\nKnowledge Point\\Physics\\Hyperfine-Structure.md"
+          },
+          {
+            "id": "call_a794704e445147689516a356",
+            "name": "Grep",
+            "input": {
+              "pattern": "对易",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "output_mode": "files_with_matches"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 1 file\n.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json"
+          },
+          {
+            "id": "call_78fdf7bd5cea4ac99ff9f9f4",
+            "name": "Grep",
+            "input": {
+              "pattern": "commutat",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "output_mode": "files_with_matches",
+              "-i": true
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 1 file\n.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json"
+          },
+          {
+            "id": "call_93cbde670d9447fab4a2b2d5",
+            "name": "Grep",
+            "input": {
+              "pattern": "Heisenberg",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "output_mode": "files_with_matches"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_00ac89d154c24ea98ff77f11",
+            "name": "Grep",
+            "input": {
+              "pattern": "canonical commutation",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "output_mode": "files_with_matches",
+              "-i": true
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_50e5500d507947a093f6c67a",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "quantum mechanics",
+              "-i": true
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 11 files\nKnowledge Point\\Physics\\Hyperfine-Structure.md\nKnowledge Point\\Physics\\Hydrogen-Atom-Model.md\nKnowledge Point\\Physics\\Principal-Quantum-Number.md\nKnowledge Point\\Physics\\Magnetic-Quantum-Number.md\nKnowledge Point\\Physics\\Azimuthal-Quantum-Number.md\nKnowledge Point\\Physics\\Quantum-Numbers.md\nAGENTS.md\nCLAUDE.md\n.claude\\skills\\knowledge-manager\\SKILL.md\n.agents\\skills\\knowledge-manager\\SKILL.md\n.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json"
+          },
+          {
+            "id": "call_b7e94bcb5c5342cdb7d7fbcf",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "算符"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 7 files\nKnowledge Point\\Physics\\Ising-Model.md\nKnowledge Point\\Physics\\Larmor-Precession.md\nKnowledge Point\\Physics\\Magnetic-Quantum-Number.md\nKnowledge Point\\Physics\\Azimuthal-Quantum-Number.md\nKnowledge Point\\Physics\\Quantum-Numbers.md\nKnowledge Point\\Math\\Unitary-Matrix.md\n.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json"
+          },
+          {
+            "id": "call_0b37fe0ba18246c5bd2e00b8",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "角动量"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 13 files\nKnowledge Point\\Physics\\Hyperfine-Structure.md\nKnowledge Point\\Physics\\Larmor-Precession.md\nKnowledge Point\\Physics\\Hydrogen-Atom-Model.md\nKnowledge Point\\Physics\\Principal-Quantum-Number.md\nKnowledge Point\\Physics\\Magnetic-Quantum-Number.md\nKnowledge Point\\Physics\\Azimuthal-Quantum-Number.md\nKnowledge Point\\Physics\\Quantum-Numbers.md\nKnowledge Point\\Physics\\Magnetic-Moment.md\nKnowledge Point\\Physics\\Torque.md\n.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json\nStudy-Roadmap.md\ntools\\Larmor-Precession-Interactive.html\ntools\\Quantum-Numbers-Interactive.html"
+          },
+          {
+            "id": "call_673a794e2b4f43ad9bb57655",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "uncertainty",
+              "-i": true
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_bb367d73fec44d9396698ab2",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "operator",
+              "-i": true
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 5 files\nKnowledge Point\\Math\\Unitary-Matrix.md\nKnowledge Point\\Math\\Gaussian-Integral.md\n.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json\n.obsidian\\plugins\\realclaudian\\main.js\n.obsidian\\plugins\\execute-code\\main.js"
+          },
+          {
+            "id": "call_b4a91bc29be5483e96aef0c7",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "量子力学"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 15 files\nKnowledge Point\\Physics\\Bose-Einstein-Distribution.md\nKnowledge Point\\Physics\\Larmor-Precession.md\nKnowledge Point\\Physics\\Hydrogen-Atom-Model.md\nKnowledge Point\\Physics\\Principal-Quantum-Number.md\nKnowledge Point\\Physics\\Magnetic-Quantum-Number.md\nKnowledge Point\\Physics\\Azimuthal-Quantum-Number.md\nKnowledge Point\\Physics\\Quantum-Numbers.md\nKnowledge Point\\Physics\\Magnetic-Moment.md\nKnowledge Point\\Math\\Method-of-Separation-of-Variables.md\nKnowledge Point\\Math\\Unitary-Matrix.md\nKnowledge Point\\Math\\Gaussian-Integral.md\nAGENTS.md\n.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json\nStudy-Roadmap.md\nREADME.md"
+          },
+          {
+            "id": "call_b6f87fb1f5764cc38dc5ee59",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "不对易"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_89ba2e89ade445bb84fa69f0",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "Poisson bracket|泊松括号"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 1 file\n.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json"
+          },
+          {
+            "id": "call_3e7b28f6825d4bde8daa586d",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "Dirac notation|Dirac notation|狄拉克"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 3 files\nKnowledge Point\\Physics\\Bose-Einstein-Distribution.md\n.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json\nStudy-Roadmap.md"
+          },
+          {
+            "id": "call_c0be16fa4e1d46ceb982b3e3",
+            "name": "Grep",
+            "input": {
+              "output_mode": "content",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore\\.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json",
+              "pattern": "对易|commutat|Heisenberg",
+              "-C": 2
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "125-            \"status\": \"completed\",\n126-            \"isExpanded\": false,\n127:[Omitted long matching line]\n128-          },\n129-          {\n--\n135-            \"status\": \"completed\",\n136-            \"isExpanded\": false,\n137:[Omitted long matching line]\n138-          },\n139-          {\n--\n145-            \"status\": \"completed\",\n146-            \"isExpanded\": false,\n147:[Omitted long matching line]\n148-          },\n149-          {\n--\n492-            \"status\": \"completed\",\n493-            \"isExpanded\": false,\n494:[Omitted long matching line]\n495-          },\n496-          {\n--\n502-            \"status\": \"completed\",\n503-            \"isExpanded\": false,\n504:[Omitted long matching line]\n505-          },\n506-          {\n--\n670-            \"status\": \"completed\",\n671-            \"isExpanded\": false,\n672:[Omitted long matching line]\n673-          },\n674-          {"
+          },
+          {
+            "id": "call_d63bd6686ffd4a95a8df3b47",
+            "name": "Grep",
+            "input": {
+              "output_mode": "content",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Study-Roadmap.md",
+              "pattern": "对易|commutat|Heisenberg|angular momentum|角动量|不确定性|算符",
+              "-i": true,
+              "-C": 2
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "62-| 状态  | 知识点                                | 说明                   |\n63-| --- | ---------------------------------- | -------------------- |\n64:| ✅   | [[Torque\\|力矩]]                     | 角动量变化的驱动者            |\n65-| ⬜   | Lagrangian-Mechanics（Lagrange 力学）  | 最小作用量原理，广义坐标，分析力学的入口 |\n66-| ⬜   | Hamiltonian-Mechanics（Hamilton 力学） | 相空间、正则方程，经典→量子的桥梁    |\n--\n83-| ✅ | [[Quantum-Numbers\\|量子数]] | $n, l, m_l, m_s, j, m_j$ 全景 |\n84-| ✅ | [[Principal-Quantum-Number\\|主量子数]] | 决定能级，$E_n \\propto -1/n^2$ |\n85:| ✅ | [[Azimuthal-Quantum-Number\\|角量子数]] | 轨道角动量，$l=0,1,\\ldots,n-1$ |\n86:| ✅ | [[Magnetic-Quantum-Number\\|磁量子数]] | 角动量投影，$m=-l,\\ldots,l$ |\n87-| ✅ | [[Hydrogen-Atom-Model\\|氢原子模型]] | 最简单的原子，量子力学的\"果蝇\" |\n88-| ✅ | [[Larmor-Precession\\|拉莫尔进动]] | 磁矩在外磁场中的经典进动 |\n--\n90-| ⬜ | Spin-Orbit-Coupling（自旋-轨道耦合）| 精细结构的来源，$\\Delta E \\propto \\mathbf{L}\\cdot\\mathbf{S}$ |\n91-| ⬜ | Fine-Structure（精细结构）| 自旋-轨道耦合 + 相对论修正，$\\sim 10^{-3}$ eV |\n92:| ⬜ | [[Hyperfine-Structure\\|超精细结构]] | 核自旋与电子角动量耦合，21 cm 线，原子钟 |\n93-| ⬜ | [[Zeeman-Effect\\|塞曼效应]] | 外磁场中能级分裂，正常/反常/Paschen-Back |\n94-| ⬜ | Perturbation-Theory（微扰论）| 定态/含时微扰，计算能级修正与跃迁概率 |\n95-| ⬜ | Variational-Method（变分法）| 基态能量估算，Hartree-Fock 的起点 |\n96-| ⬜ | Scattering-Theory（散射理论）| Born 近似、分波法，实验与理论的接口 |\n97:| ⬜ | Angular-Momentum-Coupling（角动量耦合）| Clebsch-Gordan 系数，$\\mathbf{J}=\\mathbf{J}_1+\\mathbf{J}_2$ |\n98-\n99-### 统计物理 Statistical Physics"
+          },
+          {
+            "id": "call_8e187eee13d14ef98ee4e43e",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Quantum-Numbers.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Quantum Mechanics\n6\taliases:\n7\t  - 量子数\n8\t  - 氢原子量子数\n9\t  - 原子轨道量子数\n10\t  - Quantum numbers\n11\tsource: \"self-authored (量子力学基础)\"\n12\tcomprehension: understood\n13\tstatus: In-Progress\n14\tdate: 2026-05-25\n15\ttags:\n16\t  - Physics\n17\t  - Quantum_Mechanics\n18\t  - Atomic_Physics\n19\t  - Quantum_Numbers\n20\t---\n21\t\n22\t# Quantum Numbers\n23\t\n24\t量子数（quantum numbers）是一组用来标记原子中电子量子态的离散标签。对中心势场，尤其是氢原子问题，最常用的一组空间量子数是：[[Principal-Quantum-Number|主量子数]] $n$、[[Azimuthal-Quantum-Number|角量子数]] $l$、[[Magnetic-Quantum-Number|磁量子数]] $m_l$。\n25\t\n26\t> [!info] 核心图像\n27\t> $n$ 决定电子波函数的整体能量尺度与径向大小；$l$ 决定轨道角动量大小与轨道形状；$m_l$ 决定角动量在选定 $z$ 轴上的投影方向。三者不是平级随便选的标签，而是有严格嵌套关系。\n28\t\n29\t---\n30\t\n31\t## 物理直觉：三层标签\n32\t\n33\t可以把三种量子数理解成对同一个电子态的三层描述：\n34\t\n35\t1. **第 1 层：壳层大小与能量**  \n36\t   [[Principal-Quantum-Number|主量子数]] $n$ 标记电子属于第几层壳层。$n$ 越大，典型半径越大，氢原子能级越接近 $0$。\n37\t\n38\t2. **第 2 层：轨道形状与角动量大小**  \n39\t   在固定 $n$ 后，[[Azimuthal-Quantum-Number|角量子数]] $l$ 标记子壳层，例如 $s,p,d,f$。它决定轨道角动量大小：\n40\t   $$\n41\t   L=\\sqrt{l(l+1)}\\hbar\n42\t   $$\n43\t\n44\t3. **第 3 层：空间取向**  \n45\t   在固定 $l$ 后，[[Magnetic-Quantum-Number|磁量子数]] $m_l$ 标记角动量沿 $z$ 轴的投影：\n46\t   $$\n47\t   L_z=m_l\\hbar\n48\t   $$\n49\t\n50\t---\n51\t\n52\t## 物理图像：从壳层到投影\n53\t\n54\t最直接的图像是：\n55\t\n56\t- $n$ 像“半径层级”：决定电子云主要分布在多大的尺度上；\n57\t- $l$ 像“形状类型”：决定电子云是球对称的 $s$ 型，还是有方向性的 $p,d,f$ 型；\n58\t- $m_l$ 像“投影刻度”：在选定 $z$ 轴后，角动量投影只能落在若干个离散刻度上。\n59\t\n60\t> [!tip] 一个有用的心像\n61\t> 先想象一组同心壳层，这是 $n$；每个壳层里有不同形状的波函数花纹，这是 $l$；当外部磁场或测量轴选定一个方向时，这些角动量状态沿该方向只能有离散投影，这是 $m_l$。\n62\t\n63\t更严格地说，电子不是沿经典轨道绕核运动的小球，所谓“轨道”是波函数概率云。量子数描述的是波函数的允许形状和角动量本征值，而不是一条确定的运动轨迹。\n64\t\n65\t```python\n66\timport matplotlib.pyplot as plt\n67\timport numpy as np\n68\t\n69\tplt.rcParams['font.sans-serif'] = ['Microsoft YaHei', 'SimHei']\n70\tplt.rcParams['axes.unicode_minus'] = False\n71\t\n72\tfig, axes = plt.subplots(1, 3, figsize=(13, 4))\n73\t\n74\t# 1. n: shell scale\n75\tax = axes[0]\n76\ttheta = np.linspace(0, 2*np.pi, 400)\n77\tfor n, color in [(1, '#4C78A8'), (2, '#F58518'), (3, '#54A24B')]:\n78\t    r = n\n79\t    ax.plot(r*np.cos(theta), r*np.sin(theta), lw=2.5, color=color, label=fr'$n={n}$')\n80\tax.scatter([0], [0], s=80, color='black', label='原子核')\n81\tax.set_aspect('equal')\n82\tax.set_title('主量子数 $n$：壳层尺度')\n83\tax.set_xlabel('$x$')\n84\tax.set_ylabel('$y$')\n85\tax.set_xlim(-3.4, 3.4)\n86\tax.set_ylim(-3.4, 3.4)\n87\tax.grid(alpha=0.25)\n88\tax.legend(loc='upper right')\n89\t\n90\t# 2. l: angular shapes, shown as polar probability sketches\n91\tax = axes[1]\n92\ttheta = np.linspace(0, 2*np.pi, 800)\n93\tshapes = [\n94\t    (np.ones_like(theta), '$l=0$ : s', '#4C78A8'),\n95\t    (np.abs(np.cos(theta)), '$l=1$ : p', '#F58518'),\n96\t    (np.abs(np.cos(2*theta)), '$l=2$ : d', '#54A24B'),\n97\t]\n98\toffsets = [-2.2, 0, 2.2]\n99\tfor (rho, label, color), x0 in zip(shapes, offsets):\n100\t    x = x0 + rho*np.cos(theta)\n101\t    y = rho*np.sin(theta)\n102\t    ax.plot(x, y, lw=2.2, color=color)\n103\t    ax.text(x0, -1.45, label, ha='center', fontsize=11)\n104\tax.set_aspect('equal')\n105\tax.set_title('角量子数 $l$：角向形状')\n106\tax.set_xlim(-3.6, 3.6)\n107\tax.set_ylim(-1.8, 1.8)\n108\tax.axis('off')\n109\t\n110\t# 3. m_l: discrete Lz projections for fixed l=2\n111\tax = axes[2]\n112\tl = 2\n113\tm_values = np.arange(-l, l + 1)\n114\tfor m in m_values:\n115\t    ax.hlines(m, 0, 1.0, color='#4C78A8', lw=3)\n116\t    ax.text(1.08, m, fr'$m_l={m}$', va='center', fontsize=11)\n117\tax.axvline(0, color='black', lw=1)\n118\tax.set_title(r'磁量子数 $m_l$：$L_z=m_l\\hbar$')\n119\tax.set_xlim(-0.2, 1.9)\n120\tax.set_ylim(-2.6, 2.6)\n121\tax.set_xticks([])\n122\tax.set_yticks(m_values)\n123\tax.set_ylabel(r'$L_z/\\hbar$')\n124\tax.grid(axis='y', alpha=0.25)\n125\t\n126\tplt.suptitle('三个空间量子数的物理图像', fontsize=15, fontweight='bold')\n127\tplt.tight_layout()\n128\tplt.show()\n129\t```\n130\t\n131\t---\n132\t\n133\t## 交互式可视化\n134\t\n135\t下面这个交互图可以直接拖动 $n,l,m_l$，观察三者如何相互约束。它用三块图像分别表示壳层尺度、角向形状和角动量投影。\n136\t\n137\t<iframe src=\"file:///C:/Personal%20Profile/Profile/MathPhysCore/tools/Quantum-Numbers-Interactive.html\" width=\"100%\" height=\"680\" style=\"border:1px solid #d8dee9; border-radius:6px;\"></iframe>\n138\t\n139\t如果 iframe 在当前 Obsidian 设置中没有渲染，可以直接打开：[Quantum Numbers Interactive](../../tools/Quantum-Numbers-Interactive.html)\n140\t\n141\t---\n142\t\n143\t## 取值关系\n144\t\n145\t三个量子数的允许取值必须从外到内依次决定：\n146\t\n147\t$$\n148\tn=1,2,3,\\cdots\n149\t$$\n150\t\n151\t给定 $n$ 后：\n152\t\n153\t$$\n154\tl=0,1,2,\\cdots,n-1\n155\t$$\n156\t\n157\t给定 $l$ 后：\n158\t\n159\t$$\n160\tm_l=-l,-l+1,\\cdots,0,\\cdots,l-1,l\n161\t$$\n162\t\n163\t> [!warning] 常见错误\n164\t> 不能先随便选 $m_l$ 再选 $l$，也不能让 $l=n$。正确关系是 $n$ 限制 $l$，$l$ 再限制 $m_l$。\n165\t\n166\t---\n167\t\n168\t## 轨道字母与量子数\n169\t\n170\t化学与原子物理中常用字母表示 $l$：\n171\t\n172\t| $l$ | 子壳层符号 | 常见名称 | $m_l$ 个数 |\n173\t|---:|:---:|:---|---:|\n174\t| 0 | $s$ | s 轨道 | 1 |\n175\t| 1 | $p$ | p 轨道 | 3 |\n176\t| 2 | $d$ | d 轨道 | 5 |\n177\t| 3 | $f$ | f 轨道 | 7 |\n178\t| 4 | $g$ | g 轨道 | 9 |\n179\t\n180\t一般地，固定 $l$ 时，磁量子数有：\n181\t\n182\t$$\n183\t2l+1\n184\t$$\n185\t\n186\t个可能取值，因此同一个子壳层包含 $2l+1$ 个空间轨道。\n187\t\n188\t---\n189\t\n190\t## 例子：前几层壳层\n191\t\n192\t### $n=1$\n193\t\n194\t允许：\n195\t\n196\t$$\n197\tl=0,\\quad m_l=0\n198\t$$\n199\t\n200\t所以只有 $1s$ 一个空间轨道。\n201\t\n202\t### $n=2$\n203\t\n204\t允许：\n205\t\n206\t$$\n207\tl=0,1\n208\t$$\n209\t\n210\t- $l=0$：$2s$，$m_l=0$，1 个轨道\n211\t- $l=1$：$2p$，$m_l=-1,0,1$，3 个轨道\n212\t\n213\t所以 $n=2$ 壳层共有 $1+3=4$ 个空间轨道。\n214\t\n215\t### $n=3$\n216\t\n217\t允许：\n218\t\n219\t$$\n220\tl=0,1,2\n221\t$$\n222\t\n223\t- $3s$：1 个轨道\n224\t- $3p$：3 个轨道\n225\t- $3d$：5 个轨道\n226\t\n227\t所以 $n=3$ 壳层共有 $1+3+5=9$ 个空间轨道。\n228\t\n229\t---\n230\t\n231\t## 简并度关系\n232\t\n233\t固定 $n$ 时，所有可能的 $(l,m_l)$ 组合数为：\n234\t\n235\t$$\n236\t\\sum_{l=0}^{n-1}(2l+1)=n^2\n237\t$$\n238\t\n239\t这说明第 $n$ 层壳层有 $n^2$ 个空间轨道。如果再考虑电子自旋量子数 $m_s=\\pm \\frac{1}{2}$，每个空间轨道可容纳两个自旋态，于是最多可容纳：\n240\t\n241\t$$\n242\t2n^2\n243\t$$\n244\t\n245\t个电子。\n246\t\n247\t> [!info] 氢原子中的特殊简并\n248\t> 对非相对论氢原子，能量只依赖 $n$，所以同一 $n$ 下不同 $l,m_l$ 的状态能量相同。这是库仑势的特殊对称性导致的。对多电子原子，屏蔽效应和电子间相互作用会让能量明显依赖 $l$。\n249\t\n250\t---\n251\t\n252\t## 与角动量算符的关系\n253\t\n254\t这三个量子数来自定态薛定谔方程在球坐标下的分离变量。对中心势：\n255\t\n256\t$$\n257\t\\psi_{nlm}(r,\\theta,\\phi)=R_{nl}(r)Y_l^m(\\theta,\\phi)\n258\t$$\n259\t\n260\t其中：\n261\t\n262\t- $n$ 主要来自径向方程与束缚态边界条件；\n263\t- $l$ 来自角向方程，是 $\\hat L^2$ 的本征值标签；\n264\t- $m_l$ 来自方位角 $\\phi$ 方程，是 $\\hat L_z$ 的本征值标签。\n265\t\n266\t对应本征方程是：\n267\t\n268\t$$\n269\t\\hat L^2 Y_l^m=l(l+1)\\hbar^2Y_l^m\n270\t$$\n271\t\n272\t$$\n273\t\\hat L_zY_l^m=m_l\\hbar Y_l^m\n274\t$$\n275\t\n276\t---\n277\t\n278\t## 典型应用场景\n279\t\n280\t- 标记氢原子波函数：$\\psi_{nlm}(r,\\theta,\\phi)$\n281\t- 判断原子轨道种类：$1s,2p,3d,\\cdots$\n282\t- 计算壳层与子壳层可容纳态数\n283\t- 理解塞曼效应中能级在磁场中的分裂\n284\t- 理解角动量量子化与球谐函数 [[Method-of-Separation-of-Variables|分离变量法]] 的联系\n285\t\n286\t---\n287\t\n288\t## 相关概念\n289\t\n290\t- [[Principal-Quantum-Number|主量子数]]\n291\t- [[Hydrogen-Atom-Model|氢原子模型]]\n292\t- [[Azimuthal-Quantum-Number|角量子数]]\n293\t- [[Magnetic-Quantum-Number|磁量子数]]\n294\t- [[Larmor-Precession|拉莫尔进动]]\n295\t- [[Method-of-Separation-of-Variables|分离变量法]]\n296\t\n297\t---\n298\t\n299\t## 📐 核心公式摘要\n300\t\n301\t| 符号 | 含义 | 公式 |\n302\t|------|------|------|\n303\t| $n$ | 主量子数 | $n=1,2,3,\\cdots$ |\n304\t| $l$ | 角量子数 | $l=0,1,\\cdots,n-1$ |\n305\t| $m_l$ | 磁量子数 | $m_l=-l,-l+1,\\cdots,l$ |\n306\t| $L$ | 轨道角动量大小 | $L=\\sqrt{l(l+1)}\\hbar$ |\n307\t| $L_z$ | 轨道角动量 $z$ 分量 | $L_z=m_l\\hbar$ |\n308\t| 子壳层轨道数 | 固定 $l$ 的 $m_l$ 数量 | $2l+1$ |\n309\t| 第 $n$ 层空间轨道数 | 固定 $n$ 的 $(l,m_l)$ 数量 | $n^2$ |\n310\t| 第 $n$ 层最多电子数 | 考虑自旋后 | $2n^2$ |\n311\t\n312\t---\n313\t\n314\t## 📝 更新记录\n315\t\n316\t- 2026-05-25: 添加交互式 HTML 可视化，用滑块展示 $n,l,m_l$ 的取值约束与物理图像。\n317\t- 2026-05-25: 创建初稿，整理主量子数、角量子数、磁量子数的层级关系与取值约束。\n318\t"
+          },
+          {
+            "id": "call_48484bafcc8e4d45baae0292",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Hydrogen-Atom-Model.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Quantum Mechanics\n6\t  - Atomic Physics\n7\taliases:\n8\t  - 氢原子模型\n9\t  - Hydrogen atom model\n10\t  - Bohr model\n11\t  - Bohr atom\n12\t  - 氢原子能级\n13\tsource: \"Gemini 对话整理 + Griffiths QM\"\n14\tcomprehension: getting there\n15\tstatus: In-Progress\n16\tdate: 2026-05-27\n17\ttags:\n18\t  - Physics\n19\t  - Quantum_Mechanics\n20\t  - Atomic_Physics\n21\t  - Quantum_Numbers\n22\t  - Hydrogen_Atom\n23\t---\n24\t\n25\t# Hydrogen Atom Model\n26\t\n27\t氢原子模型解释了为什么氢原子的束缚态能量是离散的，以及为什么非相对论近似下能量只依赖[[Principal-Quantum-Number|主量子数]] $n$：\n28\t\n29\t$$\n30\tE_n=-\\frac{13.6\\ \\mathrm{eV}}{n^2}\n31\t$$\n32\t\n33\t最重要的物理图像是：电子被质子的库仑吸引束缚住，经典力学允许任意轨道能量，但量子条件只允许一组离散驻波状态。主量子数 $n$ 就是这些离散能级的壳层编号。\n34\t\n35\t---\n36\t\n37\t## 模型设定\n38\t\n39\t把氢原子近似为一个电子在质子产生的库仑势中运动。若暂时把质子看作固定在原点，电子势能为\n40\t\n41\t$$\n42\tV(r)=-\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r}\n43\t$$\n44\t\n45\t电子总能量由动能和势能组成：\n46\t\n47\t$$\n48\tE=K+V\n49\t$$\n50\t\n51\t> [!info] 更精确的质量\n52\t> 严格地说，电子和质子都绕共同质心运动，因此电子质量 $m_e$ 应替换为约化质量 $\\mu_r=\\frac{m_em_p}{m_e+m_p}$。入门推导常先用 $m_e$，误差很小。\n53\t\n54\t---\n55\t\n56\t## Bohr 假设\n57\t\n58\tBohr 原子模型的关键不是把电子想成普通行星，而是在经典圆轨道上强行加入量子条件。它的基本假设通常写成三条：\n59\t\n60\t### 1. 定态轨道假设\n61\t\n62\t电子只能在某些允许轨道上运动。在这些轨道上，电子虽然有加速度，但不连续辐射电磁波，原子能量保持稳定。\n63\t\n64\t> [!warning] 和经典电磁学的冲突\n65\t> 经典电磁学认为加速电荷应当连续辐射并损失能量。Bohr 的定态假设正是为了解释氢原子为什么稳定存在，它本身不是经典理论能推出的结论。\n66\t\n67\t### 2. 角动量量子化假设\n68\t\n69\t允许轨道必须满足\n70\t\n71\t$$\n72\tm_evr=n\\hbar,\\qquad n=1,2,3,\\cdots\n73\t$$\n74\t\n75\t也就是轨道角动量只能取 $\\hbar$ 的整数倍。这个整数 $n$ 后来发展为[[Principal-Quantum-Number|主量子数]]。\n76\t\n77\t### 3. 跃迁频率假设\n78\t\n79\t电子只在两个定态之间跃迁时吸收或发射光子，光子频率由能量差决定：\n80\t\n81\t$$\n82\th\\nu=E_i-E_f\n83\t$$\n84\t\n85\t因此，一旦得到定态能级 $E_n$，就能推出氢原子光谱线：\n86\t\n87\t$$\n88\t\\frac{1}{\\lambda}=R_H\\left(\\frac{1}{n_f^2}-\\frac{1}{n_i^2}\\right),\\qquad n_i>n_f\n89\t$$\n90\t\n91\t这就是 Bohr 模型在原子物理中的核心成功：它不仅解释能级离散，还解释了氢原子光谱的 Rydberg 公式。\n92\t\n93\t---\n94\t\n95\t## Bohr 模型的半经典推导\n96\t\n97\tBohr 模型不是现代量子力学的完整理论，但它非常适合看清能量公式中的 $1/n^2$ 从哪里来。推导路线是：用经典库仑力确定圆轨道动力学，再用 Bohr 的角动量量子化假设筛选允许半径。\n98\t\n99\t### 1. 库仑力提供向心力\n100\t\n101\t假设电子绕质子做半径为 $r$ 的圆周运动。库仑吸引力提供向心力：\n102\t\n103\t$$\n104\t\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r^2}=\\frac{m_ev^2}{r}\n105\t$$\n106\t\n107\t两边乘以 $r$：\n108\t\n109\t$$\n110\tm_ev^2=\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r}\n111\t$$\n112\t\n113\t因此动能为\n114\t\n115\t$$\n116\tK=\\frac{1}{2}m_ev^2=\\frac{1}{2}\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r}\n117\t$$\n118\t\n119\t势能为\n120\t\n121\t$$\n122\tV=-\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r}\n123\t$$\n124\t\n125\t所以总能量是\n126\t\n127\t$$\n128\tE=K+V=-\\frac{1}{2}\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r}\n129\t$$\n130\t\n131\t> [!tip] 束缚态为什么能量为负\n132\t> 取 $r\\to\\infty$ 时 $E=0$ 作为自由电子的能量零点。氢原子中的电子被束缚在质子附近，所以总能量低于自由态，即 $E<0$。\n133\t\n134\t### 2. 代入 Bohr 角动量量子化\n135\t\n136\t由 Bohr 第二假设，电子轨道角动量只能取\n137\t\n138\t$$\n139\tm_evr=n\\hbar,\\qquad n=1,2,3,\\cdots\n140\t$$\n141\t\n142\t这一步把原本连续可取的轨道半径变成离散值。由\n143\t\n144\t$$\n145\tv=\\frac{n\\hbar}{m_er}\n146\t$$\n147\t\n148\t代回向心力条件：\n149\t\n150\t$$\n151\tm_e\\left(\\frac{n\\hbar}{m_er}\\right)^2=\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r}\n152\t$$\n153\t\n154\t整理得到允许半径\n155\t\n156\t$$\n157\tr_n=\\frac{4\\pi\\varepsilon_0\\hbar^2}{m_ee^2}n^2\n158\t$$\n159\t\n160\t定义 Bohr 半径\n161\t\n162\t$$\n163\ta_0=\\frac{4\\pi\\varepsilon_0\\hbar^2}{m_ee^2}\n164\t$$\n165\t\n166\t于是\n167\t\n168\t$$\n169\tr_n=a_0n^2\n170\t$$\n171\t\n172\t这解释了为什么 $n$ 越大，电子典型尺度越大。\n173\t\n174\t### 3. 代回总能量\n175\t\n176\t把 $r_n=a_0n^2$ 代入总能量\n177\t\n178\t$$\n179\tE=-\\frac{1}{2}\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r}\n180\t$$\n181\t\n182\t得到\n183\t\n184\t$$\n185\tE_n=-\\frac{m_ee^4}{2(4\\pi\\varepsilon_0)^2\\hbar^2}\\frac{1}{n^2}\n186\t$$\n187\t\n188\t数值上\n189\t\n190\t$$\n191\tE_n=-\\frac{13.6\\ \\mathrm{eV}}{n^2}\n192\t$$\n193\t\n194\t> [!example] 前几个能级\n195\t> $E_1=-13.6\\ \\mathrm{eV}$，$E_2=-3.40\\ \\mathrm{eV}$，$E_3=-1.51\\ \\mathrm{eV}$。随着 $n$ 增大，能级越来越密，并逐渐逼近电离极限 $E=0$。\n196\t\n197\t### 4. 由能级差得到光谱线\n198\t\n199\t由 Bohr 第三假设，从高能级 $n_i$ 跃迁到低能级 $n_f$ 时发射光子：\n200\t\n201\t$$\n202\th\\nu=E_{n_i}-E_{n_f}\n203\t$$\n204\t\n205\t由于\n206\t\n207\t$$\n208\tE_n=-\\frac{13.6\\ \\mathrm{eV}}{n^2}\n209\t$$\n210\t\n211\t所以\n212\t\n213\t$$\n214\th\\nu=13.6\\ \\mathrm{eV}\\left(\\frac{1}{n_f^2}-\\frac{1}{n_i^2}\\right)\n215\t$$\n216\t\n217\t再用 $\\nu=c/\\lambda$，得到氢原子谱线的 Rydberg 形式：\n218\t\n219\t$$\n220\t\\frac{1}{\\lambda}=R_H\\left(\\frac{1}{n_f^2}-\\frac{1}{n_i^2}\\right)\n221\t$$\n222\t\n223\t其中 $n_i>n_f$。例如 $n_f=2$ 的一系列跃迁对应 Balmer 系，在可见光谱中最常见。\n224\t\n225\t---\n226\t\n227\t## 类氢离子\n228\t\n229\t对核电荷数为 $Z$、只含一个电子的类氢离子，库仑势变为\n230\t\n231\t$$\n232\tV(r)=-\\frac{1}{4\\pi\\varepsilon_0}\\frac{Ze^2}{r}\n233\t$$\n234\t\n235\t同样推导可得\n236\t\n237\t$$\n238\tr_n=\\frac{a_0}{Z}n^2\n239\t$$\n240\t\n241\t能级变为\n242\t\n243\t$$\n244\tE_n=-\\frac{Z^2\\,13.6\\ \\mathrm{eV}}{n^2}\n245\t$$\n246\t\n247\t核电荷越大，电子束缚越强，轨道尺度越小，能级绝对值越大。\n248\t\n249\t---\n250\t\n251\t## 薛定谔方程中的来源\n252\t\n253\t现代量子力学中，氢原子能级来自定态薛定谔方程：\n254\t\n255\t$$\n256\t\\left[-\\frac{\\hbar^2}{2m_e}\\nabla^2-\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r}\\right]\\psi=E\\psi\n257\t$$\n258\t\n259\t由于库仑势只依赖 $r$，问题具有球对称性。用球坐标分离变量：\n260\t\n261\t$$\n262\t\\psi_{nlm}(r,\\theta,\\phi)=R_{nl}(r)Y_l^m(\\theta,\\phi)\n263\t$$\n264\t\n265\t其中 $Y_l^m$ 给出角向部分，径向方程给出能量本征值。要求波函数有限、归一化，并在无穷远处衰减，会强迫能量只能取\n266\t\n267\t$$\n268\tE_n=-\\frac{13.6\\ \\mathrm{eV}}{n^2}\n269\t$$\n270\t\n271\t而量子数满足\n272\t\n273\t$$\n274\tn=1,2,3,\\cdots\n275\t$$\n276\t\n277\t$$\n278\tl=0,1,\\cdots,n-1\n279\t$$\n280\t\n281\t$$\n282\tm=-l,-l+1,\\cdots,l\n283\t$$\n284\t\n285\t这就是[[Quantum-Numbers|量子数]]层级关系的来源之一。\n286\t\n287\t> [!warning] Bohr 模型只是半经典图像\n288\t> Bohr 模型能给出氢原子能级和 Bohr 半径，但不能正确描述轨道形状、角动量精细结构、选择定则和多电子原子。真正的轨道来自薛定谔方程的波函数解，而不是电子沿确定圆轨道运动。\n289\t\n290\t---\n291\t\n292\t## 为什么能量只依赖 n\n293\t\n294\t在非相对论氢原子中，能量只依赖 $n$，而不依赖[[Azimuthal-Quantum-Number|角量子数]] $l$ 和[[Magnetic-Quantum-Number|磁量子数]] $m$。这不是一般中心势的普遍结论，而是库仑势 $V(r)\\propto -1/r$ 的特殊对称性导致的。\n295\t\n296\t因此，同一 $n$ 下不同 $l,m$ 的状态在理想氢原子中简并。加入外磁场、自旋轨道耦合、相对论修正或 Lamb 位移后，这些简并会被部分打破。\n297\t\n298\t---\n299\t\n300\t## Python 图表\n301\t\n302\t下面的图展示氢原子能级随 $n$ 增大逐渐逼近 $0$ 的结构。\n303\t\n304\t```python\n305\timport matplotlib.pyplot as plt\n306\timport numpy as np\n307\t\n308\tplt.rcParams['font.sans-serif'] = ['Microsoft YaHei', 'SimHei']\n309\tplt.rcParams['axes.unicode_minus'] = False\n310\t\n311\tn = np.arange(1, 8)\n312\tE = -13.6 / n**2\n313\t\n314\tplt.figure(figsize=(7, 4.5))\n315\tfor ni, Ei in zip(n, E):\n316\t    plt.hlines(Ei, 0.15, 0.85, color='#3366aa', linewidth=2.5)\n317\t    plt.text(0.9, Ei, rf'$n={ni}$', va='center', fontsize=10)\n318\t\n319\tplt.axhline(0, color='#b84644', linestyle='--', linewidth=1.5, label='ionization limit')\n320\tplt.xlim(0, 1.25)\n321\tplt.ylim(-14.5, 1)\n322\tplt.xticks([])\n323\tplt.ylabel('Energy (eV)')\n324\tplt.title('Hydrogen Atom Energy Levels')\n325\tplt.grid(axis='y', alpha=0.25)\n326\tplt.legend()\n327\tplt.tight_layout()\n328\tplt.show()\n329\t```\n330\t\n331\t---\n332\t\n333\t## 相关概念\n334\t\n335\t- [[Principal-Quantum-Number|主量子数]] — 氢原子能级的主要编号\n336\t- [[Quantum-Numbers|量子数]] — 氢原子束缚态的完整标签\n337\t- [[Azimuthal-Quantum-Number|角量子数]] — 由角向方程与径向方程共同限制\n338\t- [[Magnetic-Quantum-Number|磁量子数]] — 角动量在选定方向上的投影\n339\t- [[Method-of-Separation-of-Variables|分离变量法]] — 求解氢原子薛定谔方程的关键数学方法\n340\t\n341\t---\n342\t\n343\t## 📐 核心公式摘要\n344\t\n345\t| 符号 | 含义 | 公式 |\n346\t|------|------|------|\n347\t| $V(r)$ | 氢原子库仑势 | $V(r)=-\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r}$ |\n348\t| $L_n$ | Bohr 角动量量子化 | $m_evr=n\\hbar$ |\n349\t| $a_0$ | Bohr 半径 | $a_0=\\frac{4\\pi\\varepsilon_0\\hbar^2}{m_ee^2}$ |\n350\t| $r_n$ | Bohr 模型允许半径 | $r_n=a_0n^2$ |\n351\t| $E_n$ | 氢原子能级 | $E_n=-\\frac{13.6\\ \\mathrm{eV}}{n^2}$ |\n352\t| $E_n$ | 类氢离子能级 | $E_n=-\\frac{Z^2\\,13.6\\ \\mathrm{eV}}{n^2}$ |\n353\t| $h\\nu$ | Bohr 跃迁频率条件 | $h\\nu=E_i-E_f$ |\n354\t| $\\lambda$ | 氢原子谱线 | $\\frac{1}{\\lambda}=R_H\\left(\\frac{1}{n_f^2}-\\frac{1}{n_i^2}\\right)$ |\n355\t| $\\psi_{nlm}$ | 氢原子定态波函数 | $\\psi_{nlm}=R_{nl}Y_l^m$ |\n356\t\n357\t---\n358\t\n359\t## 📝 更新记录\n360\t\n361\t- 2026-05-27: 补充 Bohr 三条假设、由能级差推出 Rydberg 光谱公式，并修复 Python 图表字符串闭合错误。\n362\t- 2026-05-27: 创建氢原子模型笔记，补充 Bohr 半经典推导、类氢离子推广、薛定谔方程来源和能级图。\n363\t"
+          },
+          {
+            "id": "call_dc4dae8997ca45b19ce3f1e6",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Larmor-Precession.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Atomic Physics\n6\t  - Electromagnetism\n7\taliases:\n8\t  - 拉莫尔进动\n9\t  - Larmor precession\n10\t  - Larmor frequency\n11\t  - 拉莫尔频率\n12\tsource: \"Gemini 对话整理 (原子物理)\"\n13\tcomprehension: getting there\n14\tstatus: In-Progress\n15\tdate: 2026-05-27\n16\ttags:\n17\t  - Physics\n18\t  - Atomic_Physics\n19\t  - Electromagnetism\n20\t  - Magnetic_Moment\n21\t  - Angular_Momentum\n22\t  - Precession\n23\t---\n24\t\n25\t# Larmor Precession\n26\t\n27\t拉莫尔进动（Larmor Precession）描述的是：带有[[Magnetic-Moment|磁矩]]和角动量的系统放进外磁场后，角动量矢量不会简单地倒向磁场方向，而是绕着磁场方向做圆锥形旋转。\n28\t\n29\t最核心的图像是：外磁场 $\\mathbf{B}$ 对磁矩 $\\boldsymbol{\\mu}$ 施加[[Torque|力矩]]，力矩改变角动量 $\\mathbf{J}$ 的方向，但在理想无耗散情况下不改变 $\\mathbf{J}$ 的大小，于是 $\\mathbf{J}$ 的端点沿圆周运动。\n30\t\n31\t---\n32\t\n33\t## 物理图像\n34\t\n35\t设磁矩与总角动量满足\n36\t\n37\t$$\n38\t\\boldsymbol{\\mu} = \\gamma \\mathbf{J}\n39\t$$\n40\t\n41\t其中 $\\gamma$ 是旋磁比（gyromagnetic ratio）。外磁场给磁矩的力矩为\n42\t\n43\t$$\n44\t\\boldsymbol{\\tau} = \\boldsymbol{\\mu} \\times \\mathbf{B}\n45\t$$\n46\t\n47\t而力矩又等于角动量变化率：\n48\t\n49\t$$\n50\t\\frac{d\\mathbf{J}}{dt} = \\boldsymbol{\\tau}\n51\t$$\n52\t\n53\t合并可得\n54\t\n55\t$$\n56\t\\frac{d\\mathbf{J}}{dt} = \\gamma \\mathbf{J} \\times \\mathbf{B}\n57\t$$\n58\t\n59\t这说明 $\\mathbf{J}$ 的变化方向总是同时垂直于 $\\mathbf{J}$ 和 $\\mathbf{B}$。所以它不是把 $\\mathbf{J}$ 拉长或压短，而是不断把 $\\mathbf{J}$ 的方向“侧向推开”，形成绕 $\\mathbf{B}$ 的进动。\n60\t\n61\t> [!tip] 直觉记忆\n62\t> 拉莫尔进动像一个倾斜陀螺的轴绕竖直方向转圈。这里“重力力矩”换成了磁力矩，竖直方向换成了外磁场方向。\n63\t\n64\t---\n65\t\n66\t## 拉莫尔频率\n67\t\n68\t若外磁场取为\n69\t\n70\t$$\n71\t\\mathbf{B} = B \\hat{\\mathbf{z}}\n72\t$$\n73\t\n74\t则角动量绕 $z$ 轴以角频率\n75\t\n76\t$$\n77\t\\omega_L = -\\gamma B\n78\t$$\n79\t\n80\t进动。很多教材也写作大小形式：\n81\t\n82\t$$\n83\t|\\omega_L| = |\\gamma|B\n84\t$$\n85\t\n86\t符号决定旋转方向：正旋磁比和负旋磁比的进动方向相反。\n87\t\n88\t> [!warning] 符号约定容易混\n89\t> 有些书把进动方程写成 $\\frac{d\\mathbf{J}}{dt}=\\boldsymbol{\\Omega}\\times\\mathbf{J}$，此时 $\\boldsymbol{\\Omega}=-\\gamma\\mathbf{B}$。如果只记大小，容易在判断顺时针或逆时针时出错。\n90\t\n91\t---\n92\t\n93\t## 为什么不是直接对齐磁场\n94\t\n95\t磁矩在磁场中的能量是\n96\t\n97\t$$\n98\tU = -\\boldsymbol{\\mu}\\cdot\\mathbf{B}\n99\t$$\n100\t\n101\t从能量看，磁矩确实“想要”和磁场同向。但在没有阻尼或弛豫机制时，力矩只负责改变角动量方向，系统不会自动损失能量，于是夹角保持不变，只发生进动。\n102\t\n103\t真正的对齐需要耗散过程。例如在核磁共振、电子顺磁共振或自旋动力学中，常用纵向弛豫、横向弛豫来描述磁化强度如何逐渐回到平衡方向。\n104\t\n105\t> [!info] 和量子态的关系\n106\t> 在量子力学里，外磁场选定了一个特殊的量子化方向。角动量投影由[[Magnetic-Quantum-Number|磁量子数]]标记，能级因磁矩与磁场相互作用而分裂。拉莫尔进动可以看作相位随时间演化在经典极限下的矢量图像。\n107\t\n108\t---\n109\t\n110\t## 交互式动态图\n111\t\n112\t下面的动态图把外磁场固定在竖直方向，角动量矢量 $\\mathbf{J}$ 绕磁场做圆锥进动。可以调节磁场强度 $B$、旋磁比 $\\gamma$ 和初始夹角 $\\theta$。\n113\t\n114\t<iframe src=\"file:///C:/Personal%20Profile/Profile/MathPhysCore/tools/Larmor-Precession-Interactive.html\" width=\"100%\" height=\"700\" style=\"border:1px solid #d8dee9; border-radius:6px;\"></iframe>\n115\t\n116\t如果 iframe 在当前 Obsidian 设置中没有渲染，可以直接打开：[Larmor Precession Interactive](../../tools/Larmor-Precession-Interactive.html)\n117\t\n118\t---\n119\t\n120\t## Python 静态图\n121\t\n122\t下面这段 Python 代码用于画出进动圆锥和角动量端点轨迹，适合在 Obsidian Execute Code 中直接运行。\n123\t\n124\t```python\n125\timport matplotlib.pyplot as plt\n126\timport numpy as np\n127\t\n128\tplt.rcParams['font.sans-serif'] = ['Microsoft YaHei', 'SimHei']\n129\tplt.rcParams['axes.unicode_minus'] = False\n130\t\n131\ttheta = np.deg2rad(35)\n132\tJ = 1.0\n133\tphi = np.linspace(0, 2 * np.pi, 240)\n134\t\n135\tx = J * np.sin(theta) * np.cos(phi)\n136\ty = J * np.sin(theta) * np.sin(phi)\n137\tz = np.full_like(phi, J * np.cos(theta))\n138\t\n139\tfig = plt.figure(figsize=(7, 6))\n140\tax = fig.add_subplot(111, projection='3d')\n141\t\n142\tax.plot(x, y, z, color='#3366aa', lw=2, label='precession path')\n143\tax.plot([0, x[35]], [0, y[35]], [0, z[35]], color='#c96b1b', lw=3, label=r'angular momentum $\\mathbf{J}$')\n144\tax.quiver(0, 0, 0, 0, 0, 1.25, color='#b84644', linewidth=2.5, arrow_length_ratio=0.12, label=r'magnetic field $\\mathbf{B}$')\n145\t\n146\tfor a in np.linspace(0, 2 * np.pi, 32):\n147\t    ax.plot([0, J * np.sin(theta) * np.cos(a)],\n148\t            [0, J * np.sin(theta) * np.sin(a)],\n149\t            [0, J * np.cos(theta)],\n150\t            color='#d8dee9', lw=0.6, alpha=0.7)\n151\t\n152\tax.set_xlabel('$J_x$')\n153\tax.set_ylabel('$J_y$')\n154\tax.set_zlabel('$J_z$')\n155\tax.set_title('Larmor Precession Cone')\n156\tax.legend()\n157\tax.set_box_aspect((1, 1, 1))\n158\tax.view_init(elev=22, azim=35)\n159\tplt.tight_layout()\n160\t\n161\t# Obsidian Execute Code may append an empty plt.plot() after this block.\n162\t# Keep a transparent 2D axes current so that appended call does not hit Axes3D.plot().\n163\tcompat_ax = fig.add_axes([0, 0, 1, 1], frameon=False)\n164\tcompat_ax.set_axis_off()\n165\tplt.show()\n166\t```\n167\t\n168\t---\n169\t\n170\t## 典型应用\n171\t\n172\t### 核磁共振与磁共振成像\n173\t\n174\t原子核自旋在静磁场中以拉莫尔频率进动。若施加频率匹配的射频场，就能发生共振吸收，这正是 NMR 和 MRI 的基本物理图像。\n175\t\n176\t$$\n177\t\\omega_0 = |\\gamma|B_0\n178\t$$\n179\t\n180\t### 电子顺磁共振\n181\t\n182\t未成对电子的磁矩也会在外磁场中进动。因为电子的旋磁比远大于多数原子核，电子顺磁共振通常工作在更高频率范围。\n183\t\n184\t### 原子能级分裂\n185\t\n186\t在外磁场中，不同磁量子数对应的能量不同。这与[[Quantum-Numbers|量子数]]、[[Magnetic-Quantum-Number|磁量子数]]和磁矩相互作用密切相关。\n187\t\n188\t---\n189\t\n190\t## 相关概念\n191\t\n192\t- [[Magnetic-Moment|磁矩]] — 拉莫尔进动的主体是磁矩与角动量耦合的系统\n193\t- [[Torque|力矩]] — 外磁场对磁矩施加力矩，导致角动量方向变化\n194\t- [[Magnetic-Quantum-Number|磁量子数]] — 外磁场方向上的角动量投影量子化\n195\t- [[Quantum-Numbers|量子数]] — 描述原子量子态的一组离散标签\n196\t- [[Unitary-Matrix|Unitary Matrix (酉矩阵)]] — 自旋在外磁场中的时间演化算符 $U(t) = e^{-i\\omega t\\sigma_z/2}$ 是 $SU(2)$ 酉变换的经典实例\n197\t- [[Study-Roadmap|Study Roadmap (学习路径)]] — 拉莫尔进动是超精细结构与塞曼效应的物理基础\n198\t\n199\t---\n200\t\n201\t## 📐 核心公式摘要\n202\t\n203\t| 符号 | 含义 | 公式 |\n204\t|------|------|------|\n205\t| $\\boldsymbol{\\mu}$ | 磁矩 | $\\boldsymbol{\\mu}=\\gamma\\mathbf{J}$ |\n206\t| $\\boldsymbol{\\tau}$ | 磁场对磁矩的力矩 | $\\boldsymbol{\\tau}=\\boldsymbol{\\mu}\\times\\mathbf{B}$ |\n207\t| $\\mathbf{J}$ | 角动量 | $\\frac{d\\mathbf{J}}{dt}=\\boldsymbol{\\tau}$ |\n208\t| $\\omega_L$ | 拉莫尔角频率 | $\\omega_L=-\\gamma B$ |\n209\t| $U$ | 磁矩在磁场中的能量 | $U=-\\boldsymbol{\\mu}\\cdot\\mathbf{B}$ |\n210\t\n211\t---\n212\t\n213\t## 📝 更新记录\n214\t\n215\t- 2026-05-27: 创建拉莫尔进动笔记，加入物理图像、拉莫尔频率、应用、Python 静态图和交互式动态图。\n216\t"
+          },
+          {
+            "id": "call_d795aecb3a484a29913384e9",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Hyperfine-Structure.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Atomic Physics\n6\t  - Quantum Mechanics\n7\tsource: \"Griffiths QM, Ch.6 + 原子物理课程\"\n8\tcomprehension: vague\n9\taliases:\n10\t  - 超精细结构\n11\t  - 超精细相互作用\n12\t  - Hyperfine structure\n13\t  - 21 cm line\n14\tstatus: Draft\n15\tdate: 2026-06-02\n16\ttags:\n17\t  - Physics\n18\t  - Atomic_Physics\n19\t  - Quantum_Mechanics\n20\t  - Angular_Momentum\n21\t  - Hyperfine_Structure\n22\t  - Atomic_Clock\n23\t---\n24\t\n25\t# Hyperfine Structure (超精细结构)\n26\t\n27\t超精细结构（Hyperfine Structure）是原子能级的一种细微分裂，源自**原子核自旋**与**电子总角动量**之间的磁相互作用。它的能量量级约为 $10^{-4}$–$10^{-5}$ eV，比[[Hydrogen-Atom-Model|氢原子]]的精细结构（$\\sim 10^{-3}$ eV）还要小约两个数量级。\n28\t\n29\t> [!tip] 核心图像\n30\t> 把原子核想象成一个微型条形磁铁（核自旋磁矩），把电子云想象成另一个磁场分布。两个磁场叠加后，\"同向\"和\"反向\"排列的总能量略有不同，这就是超精细分裂的物理根源。\n31\t\n32\t---\n33\t\n34\t## 物理直觉：核自旋与电子的磁\"对话\"\n35\t\n36\t原子核不只是一个点电荷——它有自旋角动量 $\\mathbf{I}$（$I$ 是核自旋量子数），因此也有一个核磁矩：\n37\t\n38\t$$\n39\t\\boldsymbol{\\mu}_I = g_I \\mu_N \\mathbf{I}\n40\t$$\n41\t\n42\t其中 $\\mu_N = \\frac{e\\hbar}{2m_p}$ 是核磁子（nuclear magneton），比玻尔磁子 $\\mu_B$ 小约 1836 倍（因为质子质量远大于电子质量）。$g_I$ 是核 $g$ 因子。\n43\t\n44\t电子方面，原子中电子的总角动量 $\\mathbf{J} = \\mathbf{L} + \\mathbf{S}$ 也产生一个磁场。核磁矩 $\\boldsymbol{\\mu}_I$ 处在这个磁场中，会因取向不同而具有不同能量——就像[[Magnetic-Moment|磁矩]]在外磁场中的[[Larmor-Precession|拉莫尔进动]]一样。\n45\t\n46\t> [!info] 为什么叫\"超精细\"\n47\t> 原子光谱中，能级分裂的精细程度按能量排列为：\n48\t> - **粗结构**（Gross Structure）：$\\sim$ eV 量级，来自不同 $n$ 的能级差\n49\t> - **精细结构**（Fine Structure）：$\\sim 10^{-3}$ eV，来自自旋-轨道耦合和相对论修正\n50\t> - **超精细结构**（Hyperfine Structure）：$\\sim 10^{-4}$–$10^{-5}$ eV，来自核自旋与电子的相互作用\n51\t\n52\t---\n53\t\n54\t## 总角动量 $\\mathbf{F}$\n55\t\n56\t核自旋 $\\mathbf{I}$ 和电子总角动量 $\\mathbf{J}$ 耦合形成总角动量：\n57\t\n58\t$$\n59\t\\mathbf{F} = \\mathbf{J} + \\mathbf{I}\n60\t$$\n61\t\n62\t$\\mathbf{F}$ 是好量子数（在没有外场时）。$\\mathbf{F}$ 的取值遵循[[Quantum-Numbers|角动量耦合]]规则：\n63\t\n64\t$$\n65\tF = |J - I|, |J - I| + 1, \\cdots, J + I\n66\t$$\n67\t\n68\t每个 $F$ 值对应 $2F+1$ 个 $m_F$ 子态。\n69\t\n70\t> [!warning] 容易混淆的符号\n71\t> - $\\mathbf{J}$：电子总角动量（轨道 + 自旋），不含核自旋\n72\t> - $\\mathbf{I}$：核自旋角动量\n73\t> - $\\mathbf{F}$：原子总角动量（电子 + 核），$F$ 是好量子数\n74\t> - 外加磁场时，$\\mathbf{F}$ 可能不再是好量子数，需要用更精细的处理\n75\t\n76\t---\n77\t\n78\t## 氢原子基态超精细分裂\n79\t\n80\t### 氢原子基态的 $\\mathbf{F}$ 值\n81\t\n82\t氢原子基态 $1s$ 的电子角动量为 $J = 1/2$（只有自旋，没有轨道角动量 $l=0$）。质子的核自旋为 $I = 1/2$。因此：\n83\t\n84\t$$\n85\tF = |1/2 - 1/2|, 1/2 + 1/2 = 0, 1\n86\t$$\n87\t\n88\t- $F = 1$：三重态（$m_F = -1, 0, +1$），电子自旋和核自旋**平行**\n89\t- $F = 0$：单态（$m_F = 0$），电子自旋和核自旋**反平行**\n90\t\n91\t### 能量差\n92\t\n93\t超精细分裂的能量由核磁矩与电子在核处产生的磁场之间的相互作用决定。对氢原子 $1s$ 态，精确结果为：\n94\t\n95\t$$\n96\t\\Delta E_{\\mathrm{HFS}} = \\frac{4}{3} g_p \\frac{m_e}{m_p} \\alpha^4 m_e c^2 \\approx 5.88 \\times 10^{-6}\\ \\mathrm{eV}\n97\t$$\n98\t\n99\t对应的跃迁频率为：\n100\t\n101\t$$\n102\t\\nu = \\frac{\\Delta E}{h} \\approx 1420.405751\\ \\mathrm{MHz}\n103\t$$\n104\t\n105\t对应的波长为：\n106\t\n107\t$$\n108\t\\lambda = \\frac{c}{\\nu} \\approx 21.1\\ \\mathrm{cm}\n109\t$$\n110\t\n111\t> [!example] 21 厘米线：天文学的眼睛\n112\t> 氢原子超精细跃迁发出的 21 cm 电磁波是射电天文学最重要的谱线之一。宇宙中中性氢原子无处不在，通过探测 21 cm 线，天文学家可以绘制银河系的氢气分布图、测量星系旋转曲线（暗物质存在的早期证据之一）、研究宇宙早期的再电离过程。\n113\t\n114\t---\n115\t\n116\t## 超精细结构的物理来源\n117\t\n118\t超精细相互作用的哈密顿量可以近似为接触相互作用（Fermi contact interaction），只在 $l=0$（$s$ 态）时非零：\n119\t\n120\t$$\n121\t\\hat{H}_{\\mathrm{HFS}} = \\frac{2}{3} g_p \\mu_B \\mu_N \\frac{8\\pi}{3} |\\psi(0)|^2 \\hat{\\mathbf{S}} \\cdot \\hat{\\mathbf{I}}\n122\t$$\n123\t\n124\t其中 $|\\psi(0)|^2$ 是电子在核处的概率密度（只有 $s$ 态的波函数在原点不为零）。\n125\t\n126\t能量修正的通用形式为：\n127\t\n128\t$$\n129\t\\Delta E_{\\mathrm{HFS}} = \\frac{A}{2}\\Big[F(F+1) - J(J+1) - I(I+1)\\Big]\n130\t$$\n131\t\n132\t其中 $A$ 是超精细结构常数（hyperfine structure constant），取决于具体的原子态。\n133\t\n134\t---\n135\t\n136\t## 与精细结构的对比\n137\t\n138\t| 性质 | 精细结构 (Fine Structure) | 超精细结构 (Hyperfine Structure) |\n139\t|------|--------------------------|--------------------------------|\n140\t| 能量量级 | $\\sim 10^{-3}$ eV | $\\sim 10^{-4}$–$10^{-5}$ eV |\n141\t| 物理来源 | 自旋-轨道耦合 + 相对论修正 + Darwin 项 | 核自旋与电子磁矩相互作用 |\n142\t| 好量子数 | $\\mathbf{J} = \\mathbf{L} + \\mathbf{S}$ | $\\mathbf{F} = \\mathbf{J} + \\mathbf{I}$ |\n143\t| 分裂比例 | $\\sim \\alpha^2$ | $\\sim (m_e/m_p) \\alpha^2$ |\n144\t\n145\t---\n146\t\n147\t## 典型应用\n148\t\n149\t### 原子钟\n150\t\n151\t超精细跃迁的频率极其稳定（对环境扰动不敏感），因此被选为时间标准。国际单位制（SI）中，**一秒**被定义为铯-133 原子基态超精细跃迁辐射周期的 9,192,631,770 倍。\n152\t\n153\t### 氢脉泽（Hydrogen Maser）\n154\t\n155\t利用氢原子 21 cm 超精细跃迁实现极高频率稳定度的原子钟，广泛用于深空导航和射电天文。\n156\t\n157\t### 射电天文\n158\t\n159\t21 cm 线是探测宇宙中性氢的主要手段，对理解星系结构和宇宙学至关重要。\n160\t\n161\t---\n162\t\n163\t## 相关概念\n164\t\n165\t- [[Quantum-Numbers|量子数]] — 超精细结构引入新的好量子数 $F$\n166\t- [[Principal-Quantum-Number|主量子数]] — 粗结构的来源\n167\t- [[Azimuthal-Quantum-Number|角量子数]] — 轨道角动量 $\\mathbf{L}$\n168\t- [[Magnetic-Quantum-Number|磁量子数]] — $m_F$ 子态\n169\t- [[Hydrogen-Atom-Model|氢原子模型]] — 21 cm 线的起点\n170\t- [[Magnetic-Moment|磁矩]] — 核磁矩与电子磁矩\n171\t- [[Larmor-Precession|拉莫尔进动]] — 磁矩在外磁场中的进动\n172\t\n173\t---\n174\t\n175\t## 📐 核心公式摘要\n176\t\n177\t**核心公式：**\n178\t- 总角动量耦合：$\\mathbf{F} = \\mathbf{J} + \\mathbf{I}$，$F = |J-I|, \\cdots, J+I$\n179\t- 氢原子超精细分裂能量：$\\Delta E \\approx 5.88 \\times 10^{-6}$ eV\n180\t- 21 cm 跃迁频率：$\\nu \\approx 1420.406$ MHz\n181\t- 21 cm 波长：$\\lambda \\approx 21.1$ cm\n182\t- 能量修正通用形式：$\\Delta E = \\frac{A}{2}[F(F+1) - J(J+1) - I(I+1)]$\n183\t- Fermi 接触相互作用：$\\hat{H} \\propto g_p \\mu_B \\mu_N |\\psi(0)|^2 \\hat{\\mathbf{S}} \\cdot \\hat{\\mathbf{I}}$\n184\t\n185\t---\n186\t\n187\t## 📝 更新记录\n188\t\n189\t- 2026-06-02: 创建超精细结构笔记初稿，涵盖物理直觉、总角动量耦合、氢原子 21 cm 线、精细结构对比、原子钟和射电天文应用。\n190\t"
+          },
+          {
+            "id": "call_f38fef5eb1674eb393cda422",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Azimuthal-Quantum-Number.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Quantum Mechanics\n6\taliases:\n7\t  - 角量子数\n8\t  - 方位量子数\n9\t  - 轨道角动量量子数\n10\t  - Azimuthal quantum number\n11\tsource: \"self-authored (量子力学基础)\"\n12\tcomprehension: understood\n13\tstatus: In-Progress\n14\tdate: 2026-05-25\n15\ttags:\n16\t  - Physics\n17\t  - Quantum_Mechanics\n18\t  - Atomic_Physics\n19\t  - Angular_Momentum\n20\t  - Quantum_Numbers\n21\t---\n22\t\n23\t# Azimuthal Quantum Number\n24\t\n25\t角量子数（azimuthal quantum number），也常叫轨道角动量量子数，记为 $l$。它决定电子轨道角动量的大小、原子轨道的角向形状，并限制[[Magnetic-Quantum-Number|磁量子数]] $m_l$ 的可取值。\n26\t\n27\t> [!info] 核心图像\n28\t> $l$ 描述的不是电子像小球一样绕核运动的经典轨道半径，而是波函数角向结构的复杂程度。$l=0$ 的 $s$ 态没有轨道角动量；$l$ 越大，角向节点和方向性越明显。\n29\t\n30\t---\n31\t\n32\t## 定义与取值\n33\t\n34\t给定[[Principal-Quantum-Number|主量子数]] $n$ 后，角量子数只能取：\n35\t\n36\t$$\n37\tl=0,1,2,\\cdots,n-1\n38\t$$\n39\t\n40\t因此 $l$ 永远不能等于或大于 $n$。\n41\t\n42\t角量子数对应轨道角动量算符平方 $\\hat L^2$ 的本征值：\n43\t\n44\t$$\n45\t\\hat L^2Y_l^m=l(l+1)\\hbar^2Y_l^m\n46\t$$\n47\t\n48\t所以轨道角动量大小为：\n49\t\n50\t$$\n51\tL=\\sqrt{l(l+1)}\\hbar\n52\t$$\n53\t\n54\t---\n55\t\n56\t## 轨道字母\n57\t\n58\t角量子数和轨道符号的对应关系为：\n59\t\n60\t| $l$ | 轨道符号 | 名称 | 角动量大小 |\n61\t|---:|:---:|:---|:---|\n62\t| 0 | $s$ | sharp | $0$ |\n63\t| 1 | $p$ | principal | $\\sqrt{2}\\hbar$ |\n64\t| 2 | $d$ | diffuse | $\\sqrt{6}\\hbar$ |\n65\t| 3 | $f$ | fundamental | $\\sqrt{12}\\hbar$ |\n66\t| 4 | $g$ | 后续按字母延伸 | $\\sqrt{20}\\hbar$ |\n67\t\n68\t因此 $n=3,l=2$ 对应 $3d$ 子壳层；$n=2,l=1$ 对应 $2p$ 子壳层。\n69\t\n70\t---\n71\t\n72\t## 角节点\n73\t\n74\t角量子数还决定角节点数：\n75\t\n76\t$$\n77\tN_{\\mathrm{angular}}=l\n78\t$$\n79\t\n80\t角节点是波函数角向部分为零的面或锥面，会影响轨道形状：\n81\t\n82\t- $s$ 轨道：$l=0$，无角节点，角向分布球对称；\n83\t- $p$ 轨道：$l=1$，1 个角节点，呈现方向性；\n84\t- $d$ 轨道：$l=2$，2 个角节点，角向结构更复杂。\n85\t\n86\t> [!tip] 记忆方式\n87\t> $l$ 可以看成“角向复杂度计数器”：$l$ 越大，球面上的波函数花纹越复杂，角节点越多。\n88\t\n89\t---\n90\t\n91\t## 与磁量子数的关系\n92\t\n93\t给定 $l$ 后，磁量子数必须满足：\n94\t\n95\t$$\n96\tm_l=-l,-l+1,\\cdots,0,\\cdots,l-1,l\n97\t$$\n98\t\n99\t所以每个 $l$ 子壳层包含：\n100\t\n101\t$$\n102\t2l+1\n103\t$$\n104\t\n105\t个不同的 $m_l$ 状态，也就是 $2l+1$ 个空间轨道。\n106\t\n107\t例如：\n108\t\n109\t- $l=0$：$m_l=0$，1 个 $s$ 轨道；\n110\t- $l=1$：$m_l=-1,0,1$，3 个 $p$ 轨道；\n111\t- $l=2$：$m_l=-2,-1,0,1,2$，5 个 $d$ 轨道。\n112\t\n113\t---\n114\t\n115\t## 与主量子数的关系\n116\t\n117\t主量子数 $n$ 限制角量子数 $l$，因此不同壳层能容纳的子壳层不同：\n118\t\n119\t| $n$ | 允许的 $l$ | 子壳层 |\n120\t|---:|:---|:---|\n121\t| 1 | 0 | $1s$ |\n122\t| 2 | 0, 1 | $2s,2p$ |\n123\t| 3 | 0, 1, 2 | $3s,3p,3d$ |\n124\t| 4 | 0, 1, 2, 3 | $4s,4p,4d,4f$ |\n125\t\n126\t> [!danger] 常见严重错误\n127\t> 不要把 $l$ 理解成“第几个轨道”。$l$ 是角动量大小的量子数；轨道的完整空间标签至少需要 $(n,l,m_l)$。\n128\t\n129\t---\n130\t\n131\t## 相关概念\n132\t\n133\t- [[Quantum-Numbers|量子数]]\n134\t- [[Hydrogen-Atom-Model|氢原子模型]]\n135\t- [[Principal-Quantum-Number|主量子数]]\n136\t- [[Magnetic-Quantum-Number|磁量子数]]\n137\t- [[Method-of-Separation-of-Variables|分离变量法]]\n138\t\n139\t---\n140\t\n141\t## 📐 核心公式摘要\n142\t\n143\t| 符号 | 含义 | 公式 |\n144\t|------|------|------|\n145\t| $l$ | 角量子数 | $l=0,1,\\cdots,n-1$ |\n146\t| $\\hat L^2$ | 轨道角动量平方本征值 | $\\hat L^2Y_l^m=l(l+1)\\hbar^2Y_l^m$ |\n147\t| $L$ | 轨道角动量大小 | $L=\\sqrt{l(l+1)}\\hbar$ |\n148\t| $N_{\\mathrm{angular}}$ | 角节点数 | $l$ |\n149\t| 子壳层轨道数 | 固定 $l$ 的 $m_l$ 个数 | $2l+1$ |\n150\t\n151\t---\n152\t\n153\t## 📝 更新记录\n154\t\n155\t- 2026-05-25: 创建初稿，说明角量子数的物理意义、轨道字母、角节点和与 $n,m_l$ 的关系。\n156\t"
+          },
+          {
+            "id": "call_de087e4456114f10bdedd763",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Magnetic-Quantum-Number.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Quantum Mechanics\n6\taliases:\n7\t  - 磁量子数\n8\t  - 磁量子数 ml\n9\t  - 轨道磁量子数\n10\t  - Magnetic quantum number\n11\tsource: \"self-authored (量子力学基础)\"\n12\tcomprehension: understood\n13\tstatus: In-Progress\n14\tdate: 2026-05-25\n15\ttags:\n16\t  - Physics\n17\t  - Quantum_Mechanics\n18\t  - Atomic_Physics\n19\t  - Angular_Momentum\n20\t  - Quantum_Numbers\n21\t---\n22\t\n23\t# Magnetic Quantum Number\n24\t\n25\t磁量子数（magnetic quantum number）记为 $m_l$，用于标记轨道角动量在某个选定方向（通常是 $z$ 轴）上的投影。它决定同一[[Azimuthal-Quantum-Number|角量子数]] $l$ 下不同空间取向的量子态。\n26\t\n27\t> [!info] 核心图像\n28\t> $m_l$ 不是说轨道真的像刚体一样指向某个确定方向，而是说角动量在测量轴上的投影只能取离散值。外加磁场选定一个方向后，不同 $m_l$ 状态会表现出不同能量，这就是塞曼效应的基础。\n29\t\n30\t---\n31\t\n32\t## 定义与取值\n33\t\n34\t给定角量子数 $l$ 后，磁量子数只能取整数：\n35\t\n36\t$$\n37\tm_l=-l,-l+1,\\cdots,0,\\cdots,l-1,l\n38\t$$\n39\t\n40\t因此固定 $l$ 时共有：\n41\t\n42\t$$\n43\t2l+1\n44\t$$\n45\t\n46\t个可能的 $m_l$ 值。\n47\t\n48\t磁量子数对应轨道角动量 $z$ 分量算符 $\\hat L_z$ 的本征值：\n49\t\n50\t$$\n51\t\\hat L_zY_l^m=m_l\\hbar Y_l^m\n52\t$$\n53\t\n54\t因此：\n55\t\n56\t$$\n57\tL_z=m_l\\hbar\n58\t$$\n59\t\n60\t---\n61\t\n62\t## 为什么叫“磁”量子数\n63\t\n64\t在没有外加磁场时，空间没有优先方向，同一 $l$ 下不同 $m_l$ 往往能量相同。但一旦加入沿 $z$ 方向的磁场 $\\mathbf B$，磁场选定了空间方向，轨道磁矩和磁场相互作用，不同 $m_l$ 的能量会分裂。\n65\t\n66\t轨道磁矩与角动量关系为：\n67\t\n68\t$$\n69\t\\boldsymbol{\\mu}_L=-\\frac{e}{2m_e}\\mathbf L\n70\t$$\n71\t\n72\t对应 $z$ 分量：\n73\t\n74\t$$\n75\t\\mu_{L,z}=-\\mu_B m_l\n76\t$$\n77\t\n78\t其中 $\\mu_B$ 是玻尔磁子：\n79\t\n80\t$$\n81\t\\mu_B=\\frac{e\\hbar}{2m_e}\n82\t$$\n83\t\n84\t这就是 $m_l$ 与磁场中能级分裂直接相关的原因。\n85\t\n86\t---\n87\t\n88\t## 与轨道取向的关系\n89\t\n90\t固定 $l$ 时，不同 $m_l$ 表示同一角动量大小下不同的投影值：\n91\t\n92\t$$\n93\tL=\\sqrt{l(l+1)}\\hbar,\\qquad L_z=m_l\\hbar\n94\t$$\n95\t\n96\t例如 $l=1$ 的 $p$ 子壳层有：\n97\t\n98\t$$\n99\tm_l=-1,0,1\n100\t$$\n101\t\n102\t三个状态，通常对应三个 $p$ 轨道方向。需要注意，真实球谐函数 $Y_l^m$ 是复函数；化学中常用的 $p_x,p_y,p_z$ 是由 $m_l=\\pm1,0$ 的复球谐函数线性组合得到的实轨道。\n103\t\n104\t> [!warning] 常见错误\n105\t> $m_l$ 的最大值是 $l$，不是 $n$。例如 $n=3,l=1$ 时，$m_l$ 只能是 $-1,0,1$，不能取 $\\pm2$。\n106\t\n107\t---\n108\t\n109\t## 与主量子数和角量子数的关系\n110\t\n111\t完整取值链条为：\n112\t\n113\t$$\n114\tn=1,2,3,\\cdots\n115\t$$\n116\t\n117\t$$\n118\tl=0,1,\\cdots,n-1\n119\t$$\n120\t\n121\t$$\n122\tm_l=-l,-l+1,\\cdots,l\n123\t$$\n124\t\n125\t所以 $m_l$ 是最内层的标签，必须先知道 $n$ 和 $l$ 才能判断它能取哪些值。\n126\t\n127\t---\n128\t\n129\t## 典型例子\n130\t\n131\t### $s$ 子壳层\n132\t\n133\t$$\n134\tl=0,\\quad m_l=0\n135\t$$\n136\t\n137\t只有 1 个空间轨道。\n138\t\n139\t### $p$ 子壳层\n140\t\n141\t$$\n142\tl=1,\\quad m_l=-1,0,1\n143\t$$\n144\t\n145\t共有 3 个空间轨道。\n146\t\n147\t### $d$ 子壳层\n148\t\n149\t$$\n150\tl=2,\\quad m_l=-2,-1,0,1,2\n151\t$$\n152\t\n153\t共有 5 个空间轨道。\n154\t\n155\t---\n156\t\n157\t## 相关概念\n158\t\n159\t- [[Magnetic-Moment|磁矩]] — 磁量子数直接标记磁矩在 $z$ 方向的投影值\n160\t- [[Torque|力矩]] — 磁矩在外磁场中受力矩 $\\vec{\\tau}=\\vec{\\mu}\\times\\vec{B}$，与磁量子数能级分裂相关\n161\t- [[Larmor-Precession|拉莫尔进动]] — 外磁场中磁矩与角动量的经典进动图像\n162\t- [[Quantum-Numbers|量子数]]\n163\t- [[Hydrogen-Atom-Model|氢原子模型]]\n164\t- [[Principal-Quantum-Number|主量子数]]\n165\t- [[Azimuthal-Quantum-Number|角量子数]]\n166\t- [[Method-of-Separation-of-Variables|分离变量法]]\n167\t\n168\t---\n169\t\n170\t## 📐 核心公式摘要\n171\t\n172\t| 符号 | 含义 | 公式 |\n173\t|------|------|------|\n174\t| $m_l$ | 磁量子数 | $m_l=-l,-l+1,\\cdots,l$ |\n175\t| $\\hat L_z$ | 角动量 $z$ 分量本征值 | $\\hat L_zY_l^m=m_l\\hbar Y_l^m$ |\n176\t| $L_z$ | 轨道角动量投影 | $L_z=m_l\\hbar$ |\n177\t| $\\mu_{L,z}$ | 轨道磁矩投影 | $\\mu_{L,z}=-\\mu_Bm_l$ |\n178\t| 固定 $l$ 的状态数 | 磁量子数个数 | $2l+1$ |\n179\t\n180\t---\n181\t\n182\t## 📝 更新记录\n183\t\n184\t- 2026-05-25: 创建初稿，说明磁量子数的取值、角动量投影、磁场意义和与其他量子数的关系。\n185\t"
+          },
+          {
+            "id": "call_3bfcd68e94014321bcd9b693",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Principal-Quantum-Number.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Quantum Mechanics\n6\taliases:\n7\t  - 主量子数\n8\t  - 主量子数 n\n9\t  - Principal quantum number\n10\tsource: \"self-authored (量子力学基础)\"\n11\tcomprehension: understood\n12\tstatus: In-Progress\n13\tdate: 2026-05-25\n14\ttags:\n15\t  - Physics\n16\t  - Quantum_Mechanics\n17\t  - Atomic_Physics\n18\t  - Quantum_Numbers\n19\t---\n20\t\n21\t# Principal Quantum Number\n22\t\n23\t主量子数（principal quantum number）记为 $n$，是标记原子束缚态能级与壳层的量子数。它首先决定电子波函数的径向尺度和能量主层级，并进一步限制[[Azimuthal-Quantum-Number|角量子数]] $l$ 的可取值。\n24\t\n25\t> [!info] 核心图像\n26\t> $n$ 像是在说电子波函数“整体有多大、能级有多高”。在氢原子中，$n$ 越大，电子平均离原子核越远，能量越接近电离极限 $E=0$。\n27\t\n28\t---\n29\t\n30\t## 定义与取值\n31\t\n32\t主量子数只能取正整数：\n33\t\n34\t$$\n35\tn=1,2,3,\\cdots\n36\t$$\n37\t\n38\t它是三种空间量子数中最外层的标签。给定 $n$ 后，允许的角量子数为：\n39\t\n40\t$$\n41\tl=0,1,2,\\cdots,n-1\n42\t$$\n43\t\n44\t因此 $n$ 不只是一个能级编号，也决定这一壳层中有多少种可能的轨道角动量状态。\n45\t\n46\t---\n47\t\n48\t## 氢原子能级\n49\t\n50\t对非相对论氢原子，能量只依赖主量子数 $n$：\n51\t\n52\t$$\n53\tE_n=-\\frac{13.6\\ \\mathrm{eV}}{n^2}\n54\t$$\n55\t\n56\t更一般地，对核电荷数为 $Z$ 的类氢离子：\n57\t\n58\t$$\n59\tE_n=-\\frac{Z^2\\,13.6\\ \\mathrm{eV}}{n^2}\n60\t$$\n61\t\n62\t这意味着：\n63\t\n64\t- $n=1$ 是基态，能量最低；\n65\t- $n$ 越大，$E_n$ 越接近 $0$；\n66\t- 当 $n\\to\\infty$ 时，电子接近电离状态。\n67\t\n68\t> [!warning] 氢原子与多电子原子不同\n69\t> 氢原子的能量只依赖 $n$ 是一个特殊结果。多电子原子中，由于电子间相互作用和屏蔽效应，同一 $n$ 下不同 $l$ 的能量通常不再相同。\n70\t\n71\t### 能量公式从哪里来\n72\t\n73\t这个 $1/n^2$ 结构可以先从 [[Hydrogen-Atom-Model|氢原子模型]] 的 Bohr 假设看出来。核心假设是：原子存在不辐射的定态轨道，允许轨道满足角动量量子化 $m_evr=n\\hbar$，不同定态之间跃迁时满足 $h\\nu=E_i-E_f$。\n74\t\n75\t具体推导路线是：\n76\t\n77\t1. 库仑力提供向心力：\n78\t\n79\t$$\n80\t\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r^2}=\\frac{m_ev^2}{r}\n81\t$$\n82\t\n83\t2. 电子轨道角动量被量子化：\n84\t\n85\t$$\n86\tm_evr=n\\hbar\n87\t$$\n88\t\n89\t3. 两式联立得到允许半径：\n90\t\n91\t$$\n92\tr_n=a_0n^2\n93\t$$\n94\t\n95\t4. 总能量为动能加库仑势能：\n96\t\n97\t$$\n98\tE=K+V=-\\frac{1}{2}\\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r}\n99\t$$\n100\t\n101\t代入 $r_n\\propto n^2$，就得到\n102\t\n103\t$$\n104\tE_n\\propto-\\frac{1}{n^2}\n105\t$$\n106\t\n107\t更完整的推导见 [[Hydrogen-Atom-Model|氢原子模型]]。在现代量子力学中，这个能级不是来自电子真的沿圆轨道运动，而是来自库仑势下定态薛定谔方程的束缚态本征值；Bohr 假设是通向正确结果的半经典桥梁。\n108\t\n109\t---\n110\t\n111\t## 壳层与轨道数量\n112\t\n113\t固定 $n$ 时，允许的 $l$ 值共有 $n$ 个：\n114\t\n115\t$$\n116\tl=0,1,\\cdots,n-1\n117\t$$\n118\t\n119\t每个 $l$ 又允许 $2l+1$ 个[[Magnetic-Quantum-Number|磁量子数]] $m_l$。所以第 $n$ 层的空间轨道总数为：\n120\t\n121\t$$\n122\t\\sum_{l=0}^{n-1}(2l+1)=n^2\n123\t$$\n124\t\n125\t如果考虑电子自旋，则每个空间轨道可容纳两个电子，因此第 $n$ 层最多容纳：\n126\t\n127\t$$\n128\t2n^2\n129\t$$\n130\t\n131\t个电子。\n132\t\n133\t---\n134\t\n135\t## 径向节点\n136\t\n137\t在氢原子轨道中，主量子数也和径向节点数有关。给定 $n,l$，径向节点数为：\n138\t\n139\t$$\n140\tN_{\\mathrm{radial}}=n-l-1\n141\t$$\n142\t\n143\t径向节点是波函数径向部分 $R_{nl}(r)$ 改变符号的位置，反映电子概率分布在半径方向上的振荡结构。\n144\t\n145\t> [!tip] 记忆方式\n146\t> $n$ 是“总层数感”，$l$ 吃掉一部分角向结构，剩下的 $n-l-1$ 就体现在径向节点上。\n147\t\n148\t---\n149\t\n150\t## 与其他量子数的关系\n151\t\n152\t主量子数、角量子数、磁量子数的关系是：\n153\t\n154\t$$\n155\tn=1,2,3,\\cdots\n156\t$$\n157\t\n158\t$$\n159\tl=0,1,\\cdots,n-1\n160\t$$\n161\t\n162\t$$\n163\tm_l=-l,-l+1,\\cdots,l\n164\t$$\n165\t\n166\t例如 $n=3$ 时：\n167\t\n168\t- $l=0$：$3s$，$m_l=0$\n169\t- $l=1$：$3p$，$m_l=-1,0,1$\n170\t- $l=2$：$3d$，$m_l=-2,-1,0,1,2$\n171\t\n172\t---\n173\t\n174\t## 相关概念\n175\t\n176\t- [[Quantum-Numbers|量子数]]\n177\t- [[Hydrogen-Atom-Model|氢原子模型]]\n178\t- [[Azimuthal-Quantum-Number|角量子数]]\n179\t- [[Magnetic-Quantum-Number|磁量子数]]\n180\t- [[Method-of-Separation-of-Variables|分离变量法]]\n181\t\n182\t---\n183\t\n184\t## 📐 核心公式摘要\n185\t\n186\t| 符号 | 含义 | 公式 |\n187\t|------|------|------|\n188\t| $n$ | 主量子数 | $n=1,2,3,\\cdots$ |\n189\t| $E_n$ | 氢原子能级 | $E_n=-13.6\\ \\mathrm{eV}/n^2$ |\n190\t| $E_n$ | 类氢离子能级 | $E_n=-Z^2 13.6\\ \\mathrm{eV}/n^2$ |\n191\t| $N_{\\mathrm{radial}}$ | 径向节点数 | $n-l-1$ |\n192\t| 第 $n$ 层空间轨道数 | 固定 $n$ 的轨道数 | $n^2$ |\n193\t| 第 $n$ 层最多电子数 | 考虑自旋后 | $2n^2$ |\n194\t\n195\t---\n196\t\n197\t## 📝 更新记录\n198\t\n199\t- 2026-05-27: 补充氢原子能级公式的来源，并链接到 [[Hydrogen-Atom-Model|氢原子模型]] 专题笔记。\n200\t- 2026-05-25: 创建初稿，说明主量子数的取值、能级意义、壳层容量与其他量子数的关系。\n201\t"
+          },
+          {
+            "id": "call_0e904523a9904a01a513d10a",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Math\\Unitary-Matrix.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Math\n4\ttopic:\n5\t  - Linear Algebra\n6\taliases:\n7\t  - 酉矩阵\n8\t  - Unitary Matrix\n9\t  - 幺正矩阵\n10\t  - 酉变换\n11\t  - Unitary Transformation\n12\tsource: \"self-authored (线性代数与量子力学)\"\n13\tcomprehension: understood\n14\tstatus: In-Progress\n15\tdate: 2026-06-01\n16\ttags:\n17\t  - Math\n18\t  - Linear-Algebra\n19\t  - Matrix\n20\t  - Quantum-Mechanics\n21\t  - Group-Theory\n22\t---\n23\t\n24\t# Unitary Matrix (酉矩阵)\n25\t\n26\t> 酉矩阵是复向量空间中的\"保距变换\"——它保持内积、范数和角度不变，是正交矩阵在复数域的自然推广。量子力学中一切不改变概率的时间演化都由酉矩阵/酉算子描述。\n27\t\n28\t---\n29\t\n30\t## 数学直觉\n31\t\n32\t在实向量空间 $\\mathbb{R}^n$ 中，正交矩阵 $O$（满足 $O^T O = I$）表示**旋转和反射**：它保持向量长度和向量之间的夹角。\n33\t\n34\t在复向量空间 $\\mathbb{C}^n$ 中，我们同样需要一种\"不改变内积\"的变换——这就是**酉矩阵**。区别仅在于：复内积涉及共轭，所以转置 $T$ 升级为**共轭转置** $\\dagger$：\n35\t\n36\t$$\\langle \\mathbf{u}, \\mathbf{v} \\rangle = \\mathbf{u}^\\dagger \\mathbf{v} = \\sum_i \\overline{u_i} v_i$$\n37\t\n38\t> [!tip] 物理直觉\n39\t> 在量子力学中，态矢量 $\\vert\\psi\\rangle$ 的模方 $\\langle\\psi\\vert\\psi\\rangle$ 是总概率（必须等于 1）。任何合法的物理演化 $U$ 必须保证 $\\langle U\\psi\\vert U\\psi\\rangle = \\langle\\psi\\vert\\psi\\rangle$，这等价于 $U^\\dagger U = I$——即 $U$ 是酉算子。\n40\t\n41\t> [!info] 术语由来\n42\t> \"酉\"（unitary）源自拉丁语 *unitas*（统一、单位），强调其保持\"单位长度\"的性质。中文有时也译作\"幺正矩阵\"。\n43\t\n44\t---\n45\t\n46\t## 核心定义与公式\n47\t\n48\t### 定义\n49\t\n50\t一个 $n \\times n$ 复矩阵 $U$ 称为**酉矩阵 (Unitary Matrix)**，若满足以下等价条件之一：\n51\t\n52\t$$\\boxed{U^\\dagger U = U U^\\dagger = I_n}$$\n53\t\n54\t即 $U^\\dagger = U^{-1}$（共轭转置等于逆矩阵）。\n55\t\n56\t其中 $U^\\dagger \\equiv (U^*)^T = \\overline{U}^T$ 是 $U$ 的共轭转置（Hermitian conjugate）。\n57\t\n58\t### 等价表述\n59\t\n60\t| 表述 | 含义 |\n61\t|------|------|\n62\t| $U^\\dagger U = I$ | 列向量构成 $\\mathbb{C}^n$ 的标准正交基 |\n63\t| $U U^\\dagger = I$ | 行向量构成 $\\mathbb{C}^n$ 的标准正交基 |\n64\t| $\\langle U\\mathbf{x}, U\\mathbf{y}\\rangle = \\langle\\mathbf{x},\\mathbf{y}\\rangle$ | 保持内积（对所有 $\\mathbf{x},\\mathbf{y}\\in\\mathbb{C}^n$） |\n65\t| $\\|U\\mathbf{x}\\| = \\|\\mathbf{x}\\|$ | 保持范数（对所有 $\\mathbf{x}\\in\\mathbb{C}^n$） |\n66\t| $U^{-1} = U^\\dagger$ | 逆等于共轭转置 |\n67\t\n68\t用列向量表示 $U = [\\mathbf{u}_1\\; \\mathbf{u}_2\\; \\cdots\\; \\mathbf{u}_n]$：\n69\t\n70\t$$\\mathbf{u}_i^\\dagger \\mathbf{u}_j = \\delta_{ij} \\quad \\Longleftrightarrow \\quad \\text{各列互相正交且模长为 1}$$\n71\t\n72\t---\n73\t\n74\t## 关键性质\n75\t\n76\t### 1. 谱性质（特征值）\n77\t\n78\t所有特征值都位于复平面的单位圆上：\n79\t\n80\t$$\\lambda_i = e^{i\\theta_i}, \\quad \\theta_i \\in \\mathbb{R}$$\n81\t\n82\t> [!warning] 常见错误\n83\t> 正交矩阵的实特征值只能是 $\\pm 1$（因为 $O^T O = I$ 且 $O$ 是实矩阵 → 若 $\\lambda$ 是实特征值，则 $\\lambda = \\pm 1$）。但**酉矩阵的特征值可以是单位圆上的任意复数** $e^{i\\theta}$，不限于 $\\pm 1$。\n84\t\n85\t- 属于不同特征值的特征向量互相正交：若 $\\lambda_i \\neq \\lambda_j$，则 $\\mathbf{v}_i^\\dagger \\mathbf{v}_j = 0$\n86\t- 代数重数 = 几何重数（酉矩阵可对角化）\n87\t\n88\t### 2. 行列式\n89\t\n90\t$$\\det U = e^{i\\varphi} = \\prod_{k=1}^n e^{i\\theta_k}$$\n91\t\n92\t即 $|\\det U| = 1$。特别地，$\\det U = +1$ 的酉矩阵构成**特殊酉群** $SU(n)$。\n93\t\n94\t### 3. 代数性质\n95\t\n96\t- **封闭性**：若 $U, V$ 是酉矩阵，则 $UV$ 也是酉矩阵\n97\t- **存在单位元**：$I_n$ 是酉矩阵\n98\t- **存在逆元**：$U^{-1} = U^\\dagger$ 也是酉矩阵\n99\t- **结合律**：矩阵乘法自然满足\n100\t\n101\t→ 全体 $n$ 阶酉矩阵构成**酉群 (Unitary Group)**，记作 $U(n)$。这是一个紧致李群。\n102\t\n103\t> [!info] 三个重要的矩阵群\n104\t> | 群 | 定义 | 维数 (实李群) |\n105\t> |----|------|---------------|\n106\t> | $U(n)$ | $\\{U \\in \\mathbb{C}^{n\\times n}: U^\\dagger U = I\\}$ | $n^2$ |\n107\t> | $SU(n)$ | $\\{U \\in U(n): \\det U = 1\\}$ | $n^2 - 1$ |\n108\t> | $O(n)$ | $\\{O \\in \\mathbb{R}^{n\\times n}: O^T O = I\\}$ | $n(n-1)/2$ |\n109\t\n110\t### 4. 保范性（几何本质）\n111\t\n112\t$$\\|U\\mathbf{x}\\|^2 = (U\\mathbf{x})^\\dagger (U\\mathbf{x}) = \\mathbf{x}^\\dagger U^\\dagger U \\mathbf{x} = \\mathbf{x}^\\dagger \\mathbf{x} = \\|\\mathbf{x}\\|^2$$\n113\t\n114\t这意味着 $U$ 是**等距同构 (isometry)**：它将球面映射到自身。\n115\t\n116\t---\n117\t\n118\t## 谱分解（Spectral Theorem for Unitary Matrices）\n119\t\n120\t任何酉矩阵 $U$ 可以酉对角化：\n121\t\n122\t$$\\boxed{U = V \\Lambda V^\\dagger}$$\n123\t\n124\t其中：\n125\t- $V$ 也是酉矩阵（其列是 $U$ 的特征向量）\n126\t- $\\Lambda = \\operatorname{diag}(e^{i\\theta_1}, e^{i\\theta_2}, \\ldots, e^{i\\theta_n})$\n127\t\n128\t> [!tip] 记忆技巧\n129\t> 酉矩阵的谱分解 = 在某个正交基下，酉变换只不过是**对每个基向量单独乘以一个相位因子** $e^{i\\theta_k}$。这就像\"旋转\"分解到各个独立方向上。\n130\t\n131\t---\n132\t\n133\t## 与 Hermitian 矩阵的深刻联系\n134\t\n135\t这是量子力学中最重要的数学事实之一：\n136\t\n137\t> **每一个酉矩阵 $U$ 都可以写成一个 Hermitian 矩阵 $H$ 的矩阵指数：**\n138\t>\n139\t> $$\\boxed{U = e^{iH},\\qquad H^\\dagger = H}$$\n140\t\n141\t反之，若 $H$ 是 Hermitian 矩阵，则 $e^{iH}$ 一定是酉矩阵：\n142\t\n143\t$$(e^{iH})^\\dagger = e^{-iH^\\dagger} = e^{-iH} = (e^{iH})^{-1}$$\n144\t\n145\t这就是为什么在量子力学中，**Hamiltonian（能量算符，Hermitian）生成的时间演化 $U(t) = e^{-iHt/\\hbar}$ 一定是酉的**。\n146\t\n147\t| 数学对象 | 物理角色 | 对应关系 |\n148\t|----------|----------|----------|\n149\t| Hermitian 矩阵 $H$ | 可观测物理量（能量、动量等） | $H$ 的特征值 $\\in \\mathbb{R}$（实数 = 可测量） |\n150\t| 酉矩阵 $U = e^{iH}$ | 时间演化、对称变换 | $U$ 的特征值 $\\in$ 单位圆（保概率） |\n151\t\n152\t> [!danger] 常见错误\n153\t> 上述公式写为 $U = e^{iH}$ 而不是 $U = e^{H}$。若 $H$ 是 Hermitian，则 $e^{H}$ 是正定的但**不是酉的**。必须加 $i$ 因子使指数为反 Hermitian ($iH$ 满足 $(iH)^\\dagger = -iH$)，此时指数才得到酉矩阵。\n154\t\n155\t---\n156\t\n157\t## 与其他矩阵类型的关系\n158\t\n159\t| 矩阵类型 | 定义 | 关系 |\n160\t|----------|------|------|\n161\t| **正交矩阵** $O$ | $O^T O = I$（实矩阵） | 实酉矩阵 = 正交矩阵：$U(n) \\cap \\mathbb{R}^{n\\times n} = O(n)$ |\n162\t| **Hermitian 矩阵** $H$ | $H^\\dagger = H$ | $e^{iH}$ 是酉矩阵 |\n163\t| **正规矩阵 (Normal)** $N$ | $N^\\dagger N = N N^\\dagger$ | 酉矩阵是正规矩阵的特例 |\n164\t| **幺模酉矩阵** | $\\det U = 1$ | 构成 $SU(n)$ |\n165\t\n166\t**Venn 式关系**：\n167\t\n168\t$$\\text{酉矩阵} \\;\\subset\\; \\text{正规矩阵}$$\n169\t\n170\t$$\\text{正交矩阵} = \\text{酉矩阵} \\cap \\text{实矩阵}$$\n171\t\n172\t---\n173\t\n174\t## 典型实例\n175\t\n176\t### 例 1：一维酉矩阵 = 相位因子\n177\t\n178\t$n=1$ 时：$U = [u]$ 是 $1 \\times 1$ 复矩阵。条件 $U^\\dagger U = \\overline{u}u = |u|^2 = 1$ 给出：\n179\t\n180\t$$U = e^{i\\theta}, \\quad U(1) \\cong \\text{单位圆上的点}$$\n181\t\n182\t$SU(1) = \\{1\\}$（平凡群）。\n183\t\n184\t### 例 2：Pauli 矩阵\n185\t\n186\tPauli 矩阵既是 Hermitian 又是酉的（$\\sigma_k^\\dagger = \\sigma_k$ 且 $\\sigma_k^2 = I$）：\n187\t\n188\t$$\\sigma_x = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix},\\quad\n189\t\\sigma_y = \\begin{pmatrix} 0 & -i \\\\ i & 0 \\end{pmatrix},\\quad\n190\t\\sigma_z = \\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$$\n191\t\n192\t它们生成 $SU(2)$ 的李代数：任何 $SU(2)$ 群元可写为\n193\t\n194\t$$U = e^{i\\theta\\,\\mathbf{n}\\cdot\\boldsymbol{\\sigma}} = \\cos\\theta\\,I + i\\sin\\theta\\,(\\mathbf{n}\\cdot\\boldsymbol{\\sigma})$$\n195\t\n196\t其中 $\\mathbf{n}$ 是单位向量，$\\boldsymbol{\\sigma} = (\\sigma_x, \\sigma_y, \\sigma_z)$。\n197\t\n198\t### 例 3：二维一般酉矩阵\n199\t\n200\t$U(2)$ 最一般的参数化（4 个实参数）：\n201\t\n202\t$$U = e^{i\\alpha}\\begin{pmatrix}\n203\te^{i\\phi}\\cos\\theta & e^{i\\psi}\\sin\\theta \\\\\n204\t-e^{-i\\psi}\\sin\\theta & e^{-i\\phi}\\cos\\theta\n205\t\\end{pmatrix}$$\n206\t\n207\t其中 $\\alpha, \\phi, \\psi \\in [0, 2\\pi)$，$\\theta \\in [0, \\pi/2]$。去掉整体相位 $e^{i\\alpha}$（令 $\\det U = 1$）即得 $SU(2)$ 的一般形式。\n208\t\n209\t---\n210\t\n211\t## 在量子力学中的核心应用\n212\t\n213\t### 1. 时间演化算符\n214\t\n215\t薛定谔绘景中，态矢量随时间演化为：\n216\t\n217\t$$\\vert\\psi(t)\\rangle = U(t)\\vert\\psi(0)\\rangle, \\quad U(t) = e^{-iHt/\\hbar}$$\n218\t\n219\t$U(t)$ 的酉性保证了概率守恒：$\\langle\\psi(t)\\vert\\psi(t)\\rangle = \\langle\\psi(0)\\vert\\psi(0)\\rangle = 1$。\n220\t\n221\t> 相关笔记：[[Larmor-Precession|Larmor Precession (拉莫尔进动)]] — 自旋在外磁场中的演化 $U(t) = e^{-i\\omega t\\,\\sigma_z/2}$ 是 $SU(2)$ 酉变换的经典实例。\n222\t\n223\t### 2. 表象变换（Change of Basis）\n224\t\n225\t从表象 $A$ 到表象 $B$ 的变换由一个酉矩阵实现：\n226\t\n227\t$$\\vert\\psi\\rangle_B = U \\vert\\psi\\rangle_A, \\quad \\hat{O}_B = U \\hat{O}_A U^\\dagger$$\n228\t\n229\t酉变换保持算符的谱（本征值）和所有物理可观测量不变。\n230\t\n231\t### 3. 量子门（Quantum Gates）\n232\t\n233\t在量子计算中，所有合法的量子逻辑门都是酉矩阵：\n234\t\n235\t| 门 | 矩阵 | 群 |\n236\t|----|------|-----|\n237\t| Hadamard $H$ | $\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$ | $U(2)$ |\n238\t| CNOT | $\\begin{pmatrix}1&0&0&0\\\\0&1&0&0\\\\0&0&0&1\\\\0&0&1&0\\end{pmatrix}$ | $U(4)$ |\n239\t| 任意单 qubit 门 | 任意 $U(2)$ 元素 | $U(2)$ |\n240\t\n241\t### 4. 对角化与简正模式\n242\t\n243\tHermitian 矩阵的酉对角化 $H = U \\Lambda U^\\dagger$ 是求解量子系统（以及经典耦合谐振子）的核心技术。\n244\t\n245\t---\n246\t\n247\t## Python 可视化：酉矩阵效应\n248\t\n249\t```python\n250\timport matplotlib.pyplot as plt\n251\timport numpy as np\n252\t\n253\tplt.rcParams['font.sans-serif'] = ['Microsoft YaHei', 'SimHei']\n254\tplt.rcParams['axes.unicode_minus'] = False\n255\t\n256\t# 生成随机的 2×2 酉矩阵\n257\t# 方法：对随机复矩阵做 QR 分解，Q 即为酉矩阵\n258\trng = np.random.default_rng(42)\n259\tA = rng.normal(0, 1, (2, 2)) + 1j * rng.normal(0, 1, (2, 2))\n260\tQ, R = np.linalg.qr(A)\n261\t# 归一化相位使 det 在单位圆上\n262\tU = Q\n263\t\n264\t# 验证酉性\n265\tprint(f\"U^† U =\\n{np.round(Q.conj().T @ Q, 12)}\")\n266\tprint(f\"det(U) = {np.linalg.det(U):.6f}, |det(U)| = {abs(np.linalg.det(U)):.6f}\")\n267\tprint(f\"Eigenvalues = {np.linalg.eigvals(U)}\")\n268\tprint(f\"|Eigenvalues| = {[abs(ev) for ev in np.linalg.eigvals(U)]}\")\n269\t\n270\t# 生成一组单位向量（在单位圆上的 2D 复向量 → 等价于四维实空间中的点）\n271\t# 可视化：展示原向量和酉变换后向量在 C^2 中的关系\n272\t# 简化：展示随机实二维向量经过 SU(2) 型酉变换的效果\n273\ttheta = np.linspace(0, 2*np.pi, 200)\n274\tvecs = np.array([np.cos(theta), np.sin(theta)])  # 单位圆上的点 (实数化处理)\n275\t\n276\t# 构造一个 SU(2) 变换：U = exp(i α n·σ)\n277\talpha = np.pi/3\n278\tn_vec = np.array([0, 0, 1])  # 绕 z 轴\n279\tpauli_x = np.array([[0, 1], [1, 0]], dtype=complex)\n280\tpauli_y = np.array([[0, -1j], [1j, 0]], dtype=complex)\n281\tpauli_z = np.array([[1, 0], [0, -1]], dtype=complex)\n282\tU_su2 = (np.cos(alpha) * np.eye(2, dtype=complex)\n283\t         + 1j * np.sin(alpha) * (n_vec[0]*pauli_x + n_vec[1]*pauli_y + n_vec[2]*pauli_z))\n284\t\n285\t# 作用在实向量上 -> 得到复向量，取其实部和虚部分别可视化\n286\ttransformed = U_su2 @ vecs.astype(complex)\n287\t\n288\tfig, axes = plt.subplots(1, 3, figsize=(16, 5))\n289\t\n290\t# 图 1：原向量 (单位圆)\n291\taxes[0].plot(vecs[0], vecs[1], 'b-', linewidth=2, label=r'Original vectors $\\mathbf{v}$')\n292\taxes[0].quiver(0, 0, vecs[0, 30], vecs[1, 30], angles='xy', scale_units='xy',\n293\t               scale=1, color='blue', width=0.008)\n294\taxes[0].set_xlim(-1.5, 1.5); axes[0].set_ylim(-1.5, 1.5)\n295\taxes[0].set_aspect('equal')\n296\taxes[0].set_xlabel('$x_1$'); axes[0].set_ylabel('$x_2$')\n297\taxes[0].set_title(r'Original (unit circle in $\\mathbb{R}^2$)', fontsize=12)\n298\taxes[0].grid(alpha=0.3)\n299\taxes[0].legend(fontsize=10)\n300\t\n301\t# 图 2：特征值在单位圆上\n302\tevals = np.linalg.eigvals(U_su2)\n303\tcircle = plt.Circle((0, 0), 1, fill=False, color='gray', linestyle='--', linewidth=1)\n304\taxes[1].add_artist(circle)\n305\taxes[1].scatter(evals.real, evals.imag, s=120, c='#e74c3c', zorder=5,\n306\t                edgecolors='darkred', linewidths=1.5)\n307\tfor i, ev in enumerate(evals):\n308\t    axes[1].annotate(rf'$e^{{i\\theta_{i+1}}}$', (ev.real, ev.imag),\n309\t                     textcoords=\"offset points\", xytext=(10, -15 if i==0 else 10),\n310\t                     fontsize=10, color='darkred')\n311\taxes[1].axhline(0, color='gray', alpha=0.3); axes[1].axvline(0, color='gray', alpha=0.3)\n312\taxes[1].set_xlim(-1.3, 1.3); axes[1].set_ylim(-1.3, 1.3)\n313\taxes[1].set_aspect('equal')\n314\taxes[1].set_xlabel(r'$\\mathrm{Re}(\\lambda)$'); axes[1].set_ylabel(r'$\\mathrm{Im}(\\lambda)$')\n315\taxes[1].set_title(r'Eigenvalues of $U \\in SU(2)$ lie on unit circle', fontsize=12)\n316\taxes[1].grid(alpha=0.3)\n317\t\n318\t# 图 3：酉变换效果（取复向量模长验证保范性）\n319\tnorms_before = np.sqrt(vecs[0]**2 + vecs[1]**2)\n320\tnorms_after = np.abs(transformed[0])**2 + np.abs(transformed[1])**2\n321\tnorms_after = np.sqrt(norms_after)\n322\t\n323\taxes[2].plot(theta, norms_before, 'b-', linewidth=2.5, label=r'$\\|\\mathbf{v}\\|$ (original)')\n324\taxes[2].plot(theta, norms_after, 'r--', linewidth=2.5, label=r'$\\|U\\mathbf{v}\\|$ (after $U$)')\n325\taxes[2].set_xlabel(r'$\\theta$ (angle on unit circle)', fontsize=12)\n326\taxes[2].set_ylabel('Norm', fontsize=12)\n327\taxes[2].set_title(r'Norm Preservation: $\\|U\\mathbf{v}\\| = \\|\\mathbf{v}\\| = 1$', fontsize=12)\n328\taxes[2].legend(fontsize=10)\n329\taxes[2].set_ylim(0.8, 1.2)\n330\taxes[2].grid(alpha=0.3)\n331\t\n332\tplt.tight_layout()\n333\t\n334\t# Obsidian Execute Code compatibility\n335\tcompat_ax = fig.add_axes([0, 0, 1, 1], frameon=False)\n336\tcompat_ax.set_axis_off()\n337\tplt.show()\n338\t```\n339\t\n340\t---\n341\t\n342\t## 📐 核心公式摘要\n343\t\n344\t| 项目 | 公式 |\n345\t|------|------|\n346\t| 定义 | $U^\\dagger U = U U^\\dagger = I$，等价于 $U^{-1} = U^\\dagger$ |\n347\t| 特征值 | $\\lambda_k = e^{i\\theta_k},\\; \\theta_k \\in \\mathbb{R}$（都在单位圆上） |\n348\t| 行列式 | $\\det U = e^{i\\varphi},\\; \\vert\\det U\\vert = 1$ |\n349\t| 谱分解 | $U = V \\Lambda V^\\dagger$，其中 $V$ 是酉矩阵，$\\Lambda = \\operatorname{diag}(e^{i\\theta_k})$ |\n350\t| Hermitian → 酉 | $U = e^{iH}$（$H^\\dagger = H$） |\n351\t| 酉 → Hermitian | $H = -i\\ln U$（取主值分支） |\n352\t| 保内积 | $\\langle U\\mathbf{x}, U\\mathbf{y}\\rangle = \\langle\\mathbf{x}, \\mathbf{y}\\rangle$ |\n353\t| 保范数 | $\\|U\\mathbf{x}\\| = \\|\\mathbf{x}\\|$ |\n354\t| $SU(n)$ | $\\{U \\in U(n): \\det U = 1\\}$，维数 $n^2-1$ |\n355\t| Pauli 生成 $SU(2)$ | $U = e^{i\\theta\\,\\mathbf{n}\\cdot\\boldsymbol{\\sigma}} = \\cos\\theta\\,I + i\\sin\\theta\\,(\\mathbf{n}\\cdot\\boldsymbol{\\sigma})$ |\n356\t\n357\t---\n358\t\n359\t## 相关概念\n360\t\n361\t- [[Gaussian-Integral|Gaussian Integral (高斯积分)]] — 多变量高斯积分中需要正交/酉对角化协方差矩阵\n362\t- [[Larmor-Precession|Larmor Precession (拉莫尔进动)]] — 自旋在外磁场中的时间演化是 $SU(2)$ 酉变换的物理实例\n363\t- 正交矩阵 (Orthogonal Matrix) — 酉矩阵在实数域的特例\n364\t- Hermitian 矩阵 (Hermitian Matrix) — 经指数映射 $e^{iH}$ 生成酉矩阵\n365\t- 正规矩阵 (Normal Matrix) — 酉矩阵是正规矩阵的子类\n366\t\n367\t---\n368\t\n369\t## 📝 更新记录\n370\t\n371\t- 2026-06-01: 创建初稿 — 涵盖定义、性质、谱分解、与 Hermitian 的联系、量子力学应用、Python 可视化、核心公式表\n372\t"
+          },
+          {
+            "id": "call_18dde184a69a4fe09c396c4e",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Study-Roadmap.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Math\n4\t  - Physics\n5\ttopic:\n6\t  - Study-Roadmap\n7\taliases:\n8\t  - 学习路径\n9\t  - 学习计划\n10\t  - Study Roadmap\n11\t  - 知识图谱\n12\tstatus: In-Progress\n13\tdate: 2026-06-01\n14\ttags:\n15\t  - Study-Roadmap\n16\t  - Math\n17\t  - Physics\n18\t---\n19\t\n20\t# Study Roadmap (学习路径)\n21\t\n22\t> 全局学习路径，记录各学科领域的知识点完成情况与学习顺序。✅ = 已有笔记，⬜ = 待学/待补。\n23\t\n24\t---\n25\t\n26\t## 一、数学 Math\n27\t\n28\t### 微积分 Calculus\n29\t\n30\t| 状态 | 知识点 | 说明 |\n31\t|------|--------|------|\n32\t| ✅ | [[Gaussian-Integral\\|高斯积分]] | 数学物理最核心积分，概率/场论/统计物理的基石 |\n33\t| ⬜ | Multivariable-Calculus（多元微积分）| 梯度、散度、旋度，Green/Gauss/Stokes 定理 |\n34\t| ⬜ | Complex-Analysis（复变函数）| 留数定理、解析延拓，物理中计算积分的利器 |\n35\t| ⬜ | Fourier-Analysis（Fourier 分析）| Fourier 级数/变换，信号处理与量子力学的共同语言 |\n36\t\n37\t### 线性代数 Linear Algebra\n38\t\n39\t| 状态 | 知识点 | 说明 |\n40\t|------|--------|------|\n41\t| ✅ | [[Unitary-Matrix\\|酉矩阵]] | 复空间保距变换，量子力学时间演化的数学基础 |\n42\t| ⬜ | Eigenvalues-Eigenvectors（特征值与特征向量）| 对角化、谱定理，所有线性物理问题的核心 |\n43\t| ⬜ | Hermitian-Matrix（Hermitian 矩阵）| 量子力学可观测量的数学载体，$U=e^{iH}$ 生成酉矩阵 |\n44\t| ⬜ | Matrix-Diagonalization（矩阵对角化）| Jordan 标准型、相似变换，解耦多体问题的关键 |\n45\t| ⬜ | Tensor-Product（张量积）| 多体量子系统的数学语言 |\n46\t\n47\t### 偏微分方程 PDE\n48\t\n49\t| 状态 | 知识点 | 说明 |\n50\t|------|--------|------|\n51\t| ✅ | [[Method-of-Separation-of-Variables\\|分离变量法]] | PDE 最经典的解法，本征函数展开的起点 |\n52\t| ⬜ | Green-Function（Green 函数）| 非齐次方程的点源响应，场论传播子的数学原型 |\n53\t| ⬜ | Sturm-Liouville-Theory（Sturm-Liouville 理论）| 分离变量法的严格数学基础，本征函数正交完备性 |\n54\t| ⬜ | Special-Functions（特殊函数）| Legendre、Bessel、Hermite 多项式，球谐函数 |\n55\t\n56\t---\n57\t\n58\t## 二、物理 Physics\n59\t\n60\t### 经典力学 Classical Mechanics\n61\t\n62\t| 状态  | 知识点                                | 说明                   |\n63\t| --- | ---------------------------------- | -------------------- |\n64\t| ✅   | [[Torque\\|力矩]]                     | 角动量变化的驱动者            |\n65\t| ⬜   | Lagrangian-Mechanics（Lagrange 力学）  | 最小作用量原理，广义坐标，分析力学的入口 |\n66\t| ⬜   | Hamiltonian-Mechanics（Hamilton 力学） | 相空间、正则方程，经典→量子的桥梁    |\n67\t| ⬜   | Normal-Mode-Analysis（简正模式）         | 耦合振子的对角化，经典→量子场论的对应  |\n68\t| ⬜   | Central-Force-Motion（有心力运动）        | 开普勒问题、散射，为氢原子量子力学铺垫  |\n69\t\n70\t### 电动力学 Electrodynamics\n71\t\n72\t| 状态 | 知识点 | 说明 |\n73\t|------|--------|------|\n74\t| ✅ | [[Magnetic-Moment\\|磁矩]] | 电流回路与自旋磁矩 |\n75\t| ⬜ | Maxwells-Equations（Maxwell 方程组）| 电磁场的统一理论，微分/积分形式 |\n76\t| ⬜ | Electromagnetic-Wave（电磁波）| 波动方程、辐射、波导 |\n77\t| ⬜ | Radiation（辐射）| 加速电荷辐射，Larmor 公式的推广 |\n78\t\n79\t### 原子与量子物理 Atomic & Quantum Physics\n80\t\n81\t| 状态 | 知识点 | 说明 |\n82\t|------|--------|------|\n83\t| ✅ | [[Quantum-Numbers\\|量子数]] | $n, l, m_l, m_s, j, m_j$ 全景 |\n84\t| ✅ | [[Principal-Quantum-Number\\|主量子数]] | 决定能级，$E_n \\propto -1/n^2$ |\n85\t| ✅ | [[Azimuthal-Quantum-Number\\|角量子数]] | 轨道角动量，$l=0,1,\\ldots,n-1$ |\n86\t| ✅ | [[Magnetic-Quantum-Number\\|磁量子数]] | 角动量投影，$m=-l,\\ldots,l$ |\n87\t| ✅ | [[Hydrogen-Atom-Model\\|氢原子模型]] | 最简单的原子，量子力学的\"果蝇\" |\n88\t| ✅ | [[Larmor-Precession\\|拉莫尔进动]] | 磁矩在外磁场中的经典进动 |\n89\t| ⬜ | Schrodinger-Equation（Schrödinger 方程）| 量子力学的基本方程，态演化的核心 |\n90\t| ⬜ | Spin-Orbit-Coupling（自旋-轨道耦合）| 精细结构的来源，$\\Delta E \\propto \\mathbf{L}\\cdot\\mathbf{S}$ |\n91\t| ⬜ | Fine-Structure（精细结构）| 自旋-轨道耦合 + 相对论修正，$\\sim 10^{-3}$ eV |\n92\t| ⬜ | [[Hyperfine-Structure\\|超精细结构]] | 核自旋与电子角动量耦合，21 cm 线，原子钟 |\n93\t| ⬜ | [[Zeeman-Effect\\|塞曼效应]] | 外磁场中能级分裂，正常/反常/Paschen-Back |\n94\t| ⬜ | Perturbation-Theory（微扰论）| 定态/含时微扰，计算能级修正与跃迁概率 |\n95\t| ⬜ | Variational-Method（变分法）| 基态能量估算，Hartree-Fock 的起点 |\n96\t| ⬜ | Scattering-Theory（散射理论）| Born 近似、分波法，实验与理论的接口 |\n97\t| ⬜ | Angular-Momentum-Coupling（角动量耦合）| Clebsch-Gordan 系数，$\\mathbf{J}=\\mathbf{J}_1+\\mathbf{J}_2$ |\n98\t\n99\t### 统计物理 Statistical Physics\n100\t\n101\t| 状态 | 知识点 | 说明 |\n102\t|------|--------|------|\n103\t| ✅ | [[Bose-Einstein-Distribution\\|玻色-爱因斯坦分布]] | 玻色子统计，光子/声子的热力学 |\n104\t| ✅ | [[Ising-Model\\|伊辛模型]] | 统计力学的\"果蝇\"，相变与临界现象 |\n105\t| ✅ | [[Spontaneous-Symmetry-Breaking\\|自发对称破缺]] | 有序相的判据，朗道理论 |\n106\t| ⬜ | Boltzmann-Distribution（玻尔兹曼分布）| 经典统计的基础，配分函数 |\n107\t| ⬜ | Partition-Function（配分函数）| 所有热力学量的生成函数 |\n108\t| ⬜ | Phase-Transition（相变）| 一级/二级相变，临界指数，标度律 |\n109\t| ⬜ | Fermi-Dirac-Distribution（费米-狄拉克分布）| 费米子统计，金属电子论、白矮星 |\n110\t\n111\t### 信息论 Information Theory\n112\t\n113\t| 状态 | 知识点 | 说明 |\n114\t|------|--------|------|\n115\t| ⬜ | Shannon-Entropy（香农熵）| 信息的度量，$H=-\\sum p_i \\log p_i$ |\n116\t| ⬜ | Channel-Capacity（信道容量）| Shannon 定理，极限传输速率 |\n117\t| ⬜ | Quantum-Information（量子信息）| 量子比特、量子纠缠、von Neumann 熵 |\n118\t\n119\t---\n120\t\n121\t## 🔗 全局知识路线图\n122\t\n123\t```\n124\t                        ┌─────────────┐\n125\t                        │  Linear     │\n126\t                        │  Algebra    │\n127\t                        └──────┬──────┘\n128\t                               │\n129\t              ┌────────────────┼────────────────┐\n130\t              ▼                ▼                ▼\n131\t       ┌──────────┐   ┌──────────────┐   ┌───────────┐\n132\t       │ Calculus │   │ PDE          │   │ Complex   │\n133\t       │ & Fourier│   │ (分离变量法,  │   │ Analysis  │\n134\t       │          │   │  Green函数)   │   │ (留数定理) │\n135\t       └────┬─────┘   └──────┬───────┘   └─────┬─────┘\n136\t            │                │                  │\n137\t            └────────┬───────┘──────────────────┘\n138\t                     ▼\n139\t            ┌─────────────────┐\n140\t            │  Classical      │\n141\t            │  Mechanics      │\n142\t            │  (Lagrange →    │\n143\t            │   Hamilton)     │\n144\t            └───────┬─────────┘\n145\t                    │\n146\t        ┌───────────┼───────────┐\n147\t        ▼           ▼           ▼\n148\t ┌───────────┐ ┌─────────┐ ┌──────────┐\n149\t │Electro-   │ │Statistical│ │ Quantum  │\n150\t │dynamics   │ │Physics   │ │Mechanics │\n151\t │(Maxwell,  │ │(Boltzmann│ │(Schrödinger│\n152\t │ 辐射)     │ │ → 相变)  │ │ → 微扰论)│\n153\t └─────┬─────┘ └────┬────┘ └────┬─────┘\n154\t       │            │            │\n155\t       └──────┬─────┘            │\n156\t              ▼                  ▼\n157\t        ┌───────────┐   ┌──────────────┐\n158\t        │ Atomic    │   │ Quantum      │\n159\t        │ Physics   │   │ Information  │\n160\t        │(精细/超精 │   │(纠缠、von    │\n161\t        │ 细/塞曼)  │   │ Neumann 熵)  │\n162\t        └───────────┘   └──────────────┘\n163\t```\n164\t\n165\t---\n166\t\n167\t## 📝 更新记录\n168\t\n169\t- 2026-06-01: 创建全局学习路径，涵盖数学（微积分/线性代数/PDE）和物理（经典力学/电动力学/原子物理/统计物理/信息论）所有分支\n170\t"
+          },
+          {
+            "id": "call_6723300f0c884293931c034b",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "commutator|对易子|\\[.*,.*\\]\\s*="
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 4 files\n.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json\n.obsidian\\plugins\\realclaudian\\main.js\ntools\\Larmor-Precession-Interactive.html\n.obsidian\\plugins\\obsidian-git\\main.js"
+          },
+          {
+            "id": "call_0c5fae2cab7c44ca825cab26",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "canonical|正则"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 5 files\nKnowledge Point\\Physics\\Ising-Model.md\n.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json\nStudy-Roadmap.md\n.obsidian\\plugins\\realclaudian\\main.js\n.obsidian\\plugins\\execute-code\\main.js"
+          },
+          {
+            "id": "call_3a98f412408a40d88b554ff0",
+            "name": "Grep",
+            "input": {
+              "output_mode": "files_with_matches",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "\\hbar"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_a57429a96a76409487998439",
+            "name": "Glob",
+            "input": {
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "**/*[Ss]pin*"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_fb2ef047bc3140d390c78940",
+            "name": "Glob",
+            "input": {
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "**/*[Oo]perator*"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_a01dc74c76f24d2da70577dd",
+            "name": "Glob",
+            "input": {
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore",
+              "pattern": "**/*[Uu]ncertaint*"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_bb4e759431c84baf8f40c463",
+            "name": "Glob",
+            "input": {
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point",
+              "pattern": "**/*.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Knowledge Point\\Math\\Gaussian-Integral.md\nKnowledge Point\\Math\\Unitary-Matrix.md\nKnowledge Point\\Math\\Method-of-Separation-of-Variables.md\nKnowledge Point\\Physics\\Torque.md\nKnowledge Point\\Physics\\Magnetic-Moment.md\nKnowledge Point\\Physics\\Quantum-Numbers.md\nKnowledge Point\\Physics\\Azimuthal-Quantum-Number.md\nKnowledge Point\\Physics\\Magnetic-Quantum-Number.md\nKnowledge Point\\Physics\\Principal-Quantum-Number.md\nKnowledge Point\\Physics\\Hydrogen-Atom-Model.md\nKnowledge Point\\Physics\\Larmor-Precession.md\nKnowledge Point\\Physics\\Bose-Einstein-Distribution.md\nKnowledge Point\\Physics\\Ising-Model.md\nKnowledge Point\\Physics\\Spontaneous-Symmetry-Breaking.md\nKnowledge Point\\Physics\\Hyperfine-Structure.md"
+          }
+        ],
+        "isExpanded": false,
+        "result": "Here is a comprehensive report of all findings.\n\n---\n\n## Search Results: Commutation Relations and Related Topics\n\n### 1. Dedicated Commutation Relation Notes\n\n**No notes exist** with any of the following in their file names or content:\n- \"对易\" (commutation in Chinese)\n- \"commutat\" (English stem for commutation/commutator)\n- \"Heisenberg\"\n- \"canonical commutation\"\n- \"uncertainty\"\n- \"commutator\"\n\nThe only file in the entire vault that mentions \"对易\" or \"Heisenberg\" is a session metadata log (not a knowledge note):\n- `C:\\Personal Profile\\Profile\\MathPhysCore\\.claudian\\sessions\\conv-1780400444865-fcr3x8rbt.meta.json`\n\nThis is a conversation transcript, not a vault knowledge point.\n\n### 2. All Files Under `Knowledge Point/Physics/`\n\nThere are 12 physics notes:\n\n| File | Topic |\n|------|-------|\n| `Knowledge Point\\Physics\\Torque.md` | Torque / 力矩 |\n| `Knowledge Point\\Physics\\Magnetic-Moment.md` | Magnetic Moment / 磁矩 |\n| `Knowledge Point\\Physics\\Quantum-Numbers.md` | Quantum Numbers (n, l, ml) |\n| `Knowledge Point\\Physics\\Principal-Quantum-Number.md` | Principal Quantum Number |\n| `Knowledge Point\\Physics\\Azimuthal-Quantum-Number.md` | Azimuthal Quantum Number (l) |\n| `Knowledge Point\\Physics\\Magnetic-Quantum-Number.md` | Magnetic Quantum Number (ml) |\n| `Knowledge Point\\Physics\\Hydrogen-Atom-Model.md` | Hydrogen Atom / Bohr Model |\n| `Knowledge Point\\Physics\\Larmor-Precession.md` | Larmor Precession |\n| `Knowledge Point\\Physics\\Bose-Einstein-Distribution.md` | Bose-Einstein Distribution |\n| `Knowledge Point\\Physics\\Ising-Model.md` | Ising Model |\n| `Knowledge Point\\Physics\\Spontaneous-Symmetry-Breaking.md` | Spontaneous Symmetry Breaking |\n| `Knowledge Point\\Physics\\Hyperfine-Structure.md` | Hyperfine Structure |\n\nAdditional math notes in `Knowledge Point\\Math/`:\n- `Gaussian-Integral.md`\n- `Unitary-Matrix.md`\n- `Method-of-Separation-of-Variables.md`\n\n### 3. Notes That Mention Angular Momentum Operators\n\nSeveral notes discuss angular momentum **operators** ($\\hat{L}^2$, $\\hat{L}_z$) and their eigenvalues, but **none discuss their commutation relations**:\n\n- **`Knowledge Point\\Physics\\Quantum-Numbers.md`** -- Shows the eigenvalue equations $\\hat{L}^2 Y_l^m = l(l+1)\\hbar^2 Y_l^m$ and $\\hat{L}_z Y_l^m = m_l\\hbar Y_l^m$. No commutator bracket $[\\hat{L}^2, \\hat{L}_z]$ is ever written.\n\n- **`Knowledge Point\\Physics\\Azimuthal-Quantum-Number.md`** -- States $\\hat{L}^2 Y_l^m = l(l+1)\\hbar^2 Y_l^m$. No mention of commutation.\n\n- **`Knowledge Point\\Physics\\Magnetic-Quantum-Number.md`** -- States $\\hat{L}_z Y_l^m = m_l\\hbar Y_l^m$. No mention of commutation.\n\n- **`Knowledge Point\\Physics\\Hyperfine-Structure.md`** -- Mentions the dot product $\\hat{\\mathbf{S}} \\cdot \\hat{\\mathbf{I}}$ in the Fermi contact interaction Hamiltonian, which implicitly relies on spin operators, but no commutator is written.\n\n- **`Knowledge Point\\Math\\Unitary-Matrix.md`** -- Discusses Hermitian operators, Pauli matrices $\\sigma_x, \\sigma_y, \\sigma_z$, and their role as generators of $SU(2)$. Mentions the algebra $\\sigma_k^2 = I$ but does **not** write the Pauli commutation relations $[\\sigma_i, \\sigma_j] = 2i\\epsilon_{ijk}\\sigma_k$.\n\n### 4. Notes Mentioning Angular Momentum (角动量)\n\n13 files reference angular momentum (角动量), including all the quantum number notes, Larmor Precession, Magnetic Moment, Torque, Hyperfine Structure, and the Study-Roadmap. None of these contain commutator brackets.\n\n### 5. Study-Roadmap Planned Notes (Not Yet Created)\n\nFrom `C:\\Personal Profile\\Profile\\MathPhysCore\\Study-Roadmap.md`, the following planned notes are relevant to commutation relations but have NOT been created yet (marked with a square / not started):\n\n| Planned Note | Relevance to Commutation Relations |\n|---|---|\n| **Hamiltonian-Mechanics** (Hamilton 力学) | Phase space, canonical equations, classical Poisson brackets (classical analog of commutators) |\n| **Angular-Momentum-Coupling** (角动量耦合) | Clebsch-Gordan coefficients, $\\mathbf{J}=\\mathbf{J}_1+\\mathbf{J}_2$ -- requires commutation relations of angular momentum operators |\n| **Schrodinger-Equation** (Schrödinger 方程) | Position-momentum canonical commutation $[\\hat{x}, \\hat{p}] = i\\hbar$ is foundational |\n| **Hermitian-Matrix** (Hermitian 矩阵) | Observables in QM; connection to generators and Lie algebras |\n| **Spin-Orbit-Coupling** | Uses angular momentum commutation relations |\n| **Fine-Structure** | Requires spin and orbital angular momentum algebra |\n| **Perturbation-Theory** | Matrix elements computed via commutation-based selection rules |\n\n### 6. All Relevant Existing Notes with Paths\n\nNotes that are closest in content to commutation relations (angular momentum operators, quantum operators, Hermitian structure):\n\n1. `C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Math\\Unitary-Matrix.md` -- Pauli matrices, Hermitian generators, $SU(2)$ group structure. Closest existing note to commutation relations.\n2. `C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Quantum-Numbers.md` -- Angular momentum eigenvalue equations for $\\hat{L}^2$ and $\\hat{L}_z$.\n3. `C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Azimuthal-Quantum-Number.md` -- $\\hat{L}^2$ eigenvalue equation.\n4. `C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Magnetic-Quantum-Number.md` -- $\\hat{L}_z$ eigenvalue equation.\n5. `C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Hyperfine-Structure.md` -- Spin operators $\\hat{\\mathbf{S}}$, $\\hat{\\mathbf{I}}$ in Fermi contact Hamiltonian.\n6. `C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Larmor-Precession.md` -- Time evolution $U(t) = e^{-i\\omega t\\sigma_z/2}$ as $SU(2)$ unitary transformation.\n7. `C:\\Personal Profile\\Profile\\MathPhysCore\\Study-Roadmap.md` -- Master roadmap; no commutation relation note is listed as planned.\n\n### Summary\n\nThe vault has **zero notes** on commutation relations, the Heisenberg uncertainty principle, or canonical commutation relations. There is also **no planned entry** in the Study-Roadmap for any of these topics. The closest existing material is in `Unitary-Matrix.md` (which covers Pauli matrices and Hermitian generators without writing their commutation relations) and the quantum number notes (which write angular momentum eigenvalue equations without discussing the underlying operator algebra). The planned `Angular-Momentum-Coupling` and `Hamiltonian-Mechanics` notes in the roadmap would naturally require commutation relations but have not been created yet."
+      },
+      "call_60d383cc37164b62baedb797": {
+        "id": "call_60d383cc37164b62baedb797",
+        "description": "Scan vault for roadmap sync",
+        "prompt": "I need to scan all knowledge point notes in the vault at C:\\Personal Profile\\Profile\\MathPhysCore to build a complete inventory for roadmap synchronization.\n\nFor every .md file under `Knowledge Point/Math/` and `Knowledge Point/Physics/`:\n1. Read the YAML frontmatter — extract: subject, topic, aliases (first item), status, comprehension, date\n2. Note the filename (without .md)\n\nAlso read `Study-Roadmap.md` at the vault root and list all entries currently in the roadmap tables (both ✅ and ⬜ rows).\n\nThen do a comparison:\n- Which notes exist in vault but are NOT in the roadmap? (差异 A)\n- Which roadmap ⬜ entries have corresponding files in vault? (差异 B)\n- Which roadmap ✅ entries have NO corresponding file? (差异 C)\n\nReport a structured comparison table. Be thorough — read every single .md file's frontmatter.",
+        "status": "completed",
+        "toolCalls": [
+          {
+            "id": "call_12de1516d6e5464c928effd9",
+            "name": "Glob",
+            "input": {
+              "pattern": "Knowledge Point/Math/**/*.md",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Knowledge Point\\Math\\Gaussian-Integral.md\nKnowledge Point\\Math\\Method-of-Separation-of-Variables.md\nKnowledge Point\\Math\\Unitary-Matrix.md"
+          },
+          {
+            "id": "call_d7858c5d545943048563098e",
+            "name": "Glob",
+            "input": {
+              "pattern": "Knowledge Point/Physics/**/*.md",
+              "path": "C:\\Personal Profile\\Profile\\MathPhysCore"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Knowledge Point\\Physics\\Torque.md\nKnowledge Point\\Physics\\Magnetic-Moment.md\nKnowledge Point\\Physics\\Azimuthal-Quantum-Number.md\nKnowledge Point\\Physics\\Magnetic-Quantum-Number.md\nKnowledge Point\\Physics\\Principal-Quantum-Number.md\nKnowledge Point\\Physics\\Hydrogen-Atom-Model.md\nKnowledge Point\\Physics\\Larmor-Precession.md\nKnowledge Point\\Physics\\Bose-Einstein-Distribution.md\nKnowledge Point\\Physics\\Ising-Model.md\nKnowledge Point\\Physics\\Spontaneous-Symmetry-Breaking.md\nKnowledge Point\\Physics\\Hyperfine-Structure.md\nKnowledge Point\\Physics\\Commutation-Relation.md\nKnowledge Point\\Physics\\Quantum-Numbers.md"
+          },
+          {
+            "id": "call_dc1e01dcfc4d421cafeb72b3",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Study-Roadmap.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Math\n4\t  - Physics\n5\ttopic:\n6\t  - Study-Roadmap\n7\taliases:\n8\t  - 学习路径\n9\t  - 学习计划\n10\t  - Study Roadmap\n11\t  - 知识图谱\n12\tstatus: In-Progress\n13\tdate: 2026-06-01\n14\ttags:\n15\t  - Study-Roadmap\n16\t  - Math\n17\t  - Physics\n18\t---\n19\t\n20\t# Study Roadmap (学习路径)\n21\t\n22\t> 全局学习路径，记录各学科领域的知识点完成情况与学习顺序。✅ = 已有笔记，⬜ = 待学/待补。\n23\t\n24\t---\n25\t\n26\t## 一、数学 Math\n27\t\n28\t### 微积分 Calculus\n29\t\n30\t| 状态 | 知识点 | 说明 |\n31\t|------|--------|------|\n32\t| ✅ | [[Gaussian-Integral\\|高斯积分]] | 数学物理最核心积分，概率/场论/统计物理的基石 |\n33\t| ⬜ | Multivariable-Calculus（多元微积分）| 梯度、散度、旋度，Green/Gauss/Stokes 定理 |\n34\t| ⬜ | Complex-Analysis（复变函数）| 留数定理、解析延拓，物理中计算积分的利器 |\n35\t| ⬜ | Fourier-Analysis（Fourier 分析）| Fourier 级数/变换，信号处理与量子力学的共同语言 |\n36\t\n37\t### 线性代数 Linear Algebra\n38\t\n39\t| 状态 | 知识点 | 说明 |\n40\t|------|--------|------|\n41\t| ✅ | [[Unitary-Matrix\\|酉矩阵]] | 复空间保距变换，量子力学时间演化的数学基础 |\n42\t| ⬜ | Eigenvalues-Eigenvectors（特征值与特征向量）| 对角化、谱定理，所有线性物理问题的核心 |\n43\t| ⬜ | Hermitian-Matrix（Hermitian 矩阵）| 量子力学可观测量的数学载体，$U=e^{iH}$ 生成酉矩阵 |\n44\t| ⬜ | Matrix-Diagonalization（矩阵对角化）| Jordan 标准型、相似变换，解耦多体问题的关键 |\n45\t| ⬜ | Tensor-Product（张量积）| 多体量子系统的数学语言 |\n46\t\n47\t### 偏微分方程 PDE\n48\t\n49\t| 状态 | 知识点 | 说明 |\n50\t|------|--------|------|\n51\t| ✅ | [[Method-of-Separation-of-Variables\\|分离变量法]] | PDE 最经典的解法，本征函数展开的起点 |\n52\t| ⬜ | Green-Function（Green 函数）| 非齐次方程的点源响应，场论传播子的数学原型 |\n53\t| ⬜ | Sturm-Liouville-Theory（Sturm-Liouville 理论）| 分离变量法的严格数学基础，本征函数正交完备性 |\n54\t| ⬜ | Special-Functions（特殊函数）| Legendre、Bessel、Hermite 多项式，球谐函数 |\n55\t\n56\t---\n57\t\n58\t## 二、物理 Physics\n59\t\n60\t### 经典力学 Classical Mechanics\n61\t\n62\t| 状态  | 知识点                                | 说明                   |\n63\t| --- | ---------------------------------- | -------------------- |\n64\t| ✅   | [[Torque\\|力矩]]                     | 角动量变化的驱动者            |\n65\t| ⬜   | Lagrangian-Mechanics（Lagrange 力学）  | 最小作用量原理，广义坐标，分析力学的入口 |\n66\t| ⬜   | Hamiltonian-Mechanics（Hamilton 力学） | 相空间、正则方程，经典→量子的桥梁    |\n67\t| ⬜   | Normal-Mode-Analysis（简正模式）         | 耦合振子的对角化，经典→量子场论的对应  |\n68\t| ⬜   | Central-Force-Motion（有心力运动）        | 开普勒问题、散射，为氢原子量子力学铺垫  |\n69\t\n70\t### 电动力学 Electrodynamics\n71\t\n72\t| 状态 | 知识点 | 说明 |\n73\t|------|--------|------|\n74\t| ✅ | [[Magnetic-Moment\\|磁矩]] | 电流回路与自旋磁矩 |\n75\t| ⬜ | Maxwells-Equations（Maxwell 方程组）| 电磁场的统一理论，微分/积分形式 |\n76\t| ⬜ | Electromagnetic-Wave（电磁波）| 波动方程、辐射、波导 |\n77\t| ⬜ | Radiation（辐射）| 加速电荷辐射，Larmor 公式的推广 |\n78\t\n79\t### 原子与量子物理 Atomic & Quantum Physics\n80\t\n81\t| 状态 | 知识点 | 说明 |\n82\t|------|--------|------|\n83\t| ✅ | [[Quantum-Numbers\\|量子数]] | $n, l, m_l, m_s, j, m_j$ 全景 |\n84\t| ✅ | [[Principal-Quantum-Number\\|主量子数]] | 决定能级，$E_n \\propto -1/n^2$ |\n85\t| ✅ | [[Azimuthal-Quantum-Number\\|角量子数]] | 轨道角动量，$l=0,1,\\ldots,n-1$ |\n86\t| ✅ | [[Magnetic-Quantum-Number\\|磁量子数]] | 角动量投影，$m=-l,\\ldots,l$ |\n87\t| ✅ | [[Hydrogen-Atom-Model\\|氢原子模型]] | 最简单的原子，量子力学的\"果蝇\" |\n88\t| ✅ | [[Larmor-Precession\\|拉莫尔进动]] | 磁矩在外磁场中的经典进动 |\n89\t| ⬜ | Schrodinger-Equation（Schrödinger 方程）| 量子力学的基本方程，态演化的核心 |\n90\t| ⬜ | Spin-Orbit-Coupling（自旋-轨道耦合）| 精细结构的来源，$\\Delta E \\propto \\mathbf{L}\\cdot\\mathbf{S}$ |\n91\t| ⬜ | Fine-Structure（精细结构）| 自旋-轨道耦合 + 相对论修正，$\\sim 10^{-3}$ eV |\n92\t| ✅ | [[Hyperfine-Structure\\|超精细结构]] | 核自旋与电子角动量耦合，21 cm 线，原子钟 |\n93\t| ⬜ | [[Zeeman-Effect\\|塞曼效应]] | 外磁场中能级分裂，正常/反常/Paschen-Back |\n94\t| ⬜ | Perturbation-Theory（微扰论）| 定态/含时微扰，计算能级修正与跃迁概率 |\n95\t| ⬜ | Variational-Method（变分法）| 基态能量估算，Hartree-Fock 的起点 |\n96\t| ⬜ | Scattering-Theory（散射理论）| Born 近似、分波法，实验与理论的接口 |\n97\t| ⬜ | Angular-Momentum-Coupling（角动量耦合）| Clebsch-Gordan 系数，$\\mathbf{J}=\\mathbf{J}_1+\\mathbf{J}_2$ |\n98\t\n99\t### 统计物理 Statistical Physics\n100\t\n101\t| 状态 | 知识点 | 说明 |\n102\t|------|--------|------|\n103\t| ✅ | [[Bose-Einstein-Distribution\\|玻色-爱因斯坦分布]] | 玻色子统计，光子/声子的热力学 |\n104\t| ✅ | [[Ising-Model\\|伊辛模型]] | 统计力学的\"果蝇\"，相变与临界现象 |\n105\t| ✅ | [[Spontaneous-Symmetry-Breaking\\|自发对称破缺]] | 有序相的判据，朗道理论 |\n106\t| ⬜ | Boltzmann-Distribution（玻尔兹曼分布）| 经典统计的基础，配分函数 |\n107\t| ⬜ | Partition-Function（配分函数）| 所有热力学量的生成函数 |\n108\t| ⬜ | Phase-Transition（相变）| 一级/二级相变，临界指数，标度律 |\n109\t| ⬜ | Fermi-Dirac-Distribution（费米-狄拉克分布）| 费米子统计，金属电子论、白矮星 |\n110\t\n111\t### 信息论 Information Theory\n112\t\n113\t| 状态 | 知识点 | 说明 |\n114\t|------|--------|------|\n115\t| ⬜ | Shannon-Entropy（香农熵）| 信息的度量，$H=-\\sum p_i \\log p_i$ |\n116\t| ⬜ | Channel-Capacity（信道容量）| Shannon 定理，极限传输速率 |\n117\t| ⬜ | Quantum-Information（量子信息）| 量子比特、量子纠缠、von Neumann 熵 |\n118\t\n119\t---\n120\t\n121\t## 🔗 全局知识路线图\n122\t\n123\t```\n124\t                        ┌─────────────┐\n125\t                        │  Linear     │\n126\t                        │  Algebra    │\n127\t                        └──────┬──────┘\n128\t                               │\n129\t              ┌────────────────┼────────────────┐\n130\t              ▼                ▼                ▼\n131\t       ┌──────────┐   ┌──────────────┐   ┌───────────┐\n132\t       │ Calculus │   │ PDE          │   │ Complex   │\n133\t       │ & Fourier│   │ (分离变量法,  │   │ Analysis  │\n134\t       │          │   │  Green函数)   │   │ (留数定理) │\n135\t       └────┬─────┘   └──────┬───────┘   └─────┬─────┘\n136\t            │                │                  │\n137\t            └────────┬───────┘──────────────────┘\n138\t                     ▼\n139\t            ┌─────────────────┐\n140\t            │  Classical      │\n141\t            │  Mechanics      │\n142\t            │  (Lagrange →    │\n143\t            │   Hamilton)     │\n144\t            └───────┬─────────┘\n145\t                    │\n146\t        ┌───────────┼───────────┐\n147\t        ▼           ▼           ▼\n148\t ┌───────────┐ ┌─────────┐ ┌──────────┐\n149\t │Electro-   │ │Statistical│ │ Quantum  │\n150\t │dynamics   │ │Physics   │ │Mechanics │\n151\t │(Maxwell,  │ │(Boltzmann│ │(Schrödinger│\n152\t │ 辐射)     │ │ → 相变)  │ │ → 微扰论)│\n153\t └─────┬─────┘ └────┬────┘ └────┬─────┘\n154\t       │            │            │\n155\t       └──────┬─────┘            │\n156\t              ▼                  ▼\n157\t        ┌───────────┐   ┌──────────────┐\n158\t        │ Atomic    │   │ Quantum      │\n159\t        │ Physics   │   │ Information  │\n160\t        │(精细/超精 │   │(纠缠、von    │\n161\t        │ 细/塞曼)  │   │ Neumann 熵)  │\n162\t        └───────────┘   └──────────────┘\n163\t```\n164\t\n165\t---\n166\t\n167\t## 📝 更新记录\n168\t\n169\t- 2026-06-01: 创建全局学习路径，涵盖数学（微积分/线性代数/PDE）和物理（经典力学/电动力学/原子物理/统计物理/信息论）所有分支\n170\t"
+          },
+          {
+            "id": "call_b699e6065f58405497f0ef6f",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Math\\Gaussian-Integral.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Math\n4\ttopic:\n5\t  - Calculus\n6\taliases:\n7\t  - 高斯积分\n8\t  - Gaussian Integral\n9\t  - 概率积分\n10\t  - Gauss积分\n11\tsource: \"self-authored (数学物理方法课程整理)\"\n12\tcomprehension: understood\n13\tstatus: In-Progress\n14\tdate: 2026-05-25\n15\ttags:\n16\t  - Math\n17\t  - Calculus\n18\t  - Integration\n19\t  - Gaussian\n20\t---\n21\t\n22\t# Gaussian Integral (高斯积分)\n23\t\n24\t## 物理直觉\n25\t\n26\t高斯积分是数学物理中最常出现的积分之一，核心形式是\n27\t\n28\t$$\\int_{-\\infty}^{\\infty} e^{-a x^2}\\,dx$$\n29\t\n30\t它描述的是\"钟形曲线下的面积\"。为什么它无处不在？因为**凡是出现 $e^{-x^2}$ 的地方，几乎必然涉及归一化、概率、或热力学权重**："
+          },
+          {
+            "id": "call_2b3c4b287e5f4dc4b66286e4",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Math\\Method-of-Separation-of-Variables.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Math\n4\ttopic:\n5\t  - PDE\n6\taliases:\n7\t  - 分离变量\n8\t  - Separation of Variables\n9\t  - 分离变量法\n10\t  - Fourier方法\n11\tsource: \"self-authored (数学物理方法课程整理)\"\n12\tcomprehension: understood\n13\tstatus: In-Progress\n14\tdate: 2026-05-25\n15\ttags:\n16\t  - Math\n17\t  - PDE\n18\t  - ODE\n19\t  - Sturm-Liouville\n20\t---\n21\t\n22\t# Method of Separation of Variables (分离变量法)\n23\t\n24\t## 核心思想\n25\t\n26\t分离变量法是求解线性偏微分方程（PDE）**最经典、最直观**的方法。核心理念一句话：\n27\t\n28\t> 把多变量 PDE **分解**成多个单变量 ODE，分别求解后再**叠加**回来。\n29\t\n30\t具体步骤："
+          },
+          {
+            "id": "call_e7db09044f6444818dc1f9d1",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Math\\Unitary-Matrix.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Math\n4\ttopic:\n5\t  - Linear Algebra\n6\taliases:\n7\t  - 酉矩阵\n8\t  - Unitary Matrix\n9\t  - 幺正矩阵\n10\t  - 酉变换\n11\t  - Unitary Transformation\n12\tsource: \"self-authored (线性代数与量子力学)\"\n13\tcomprehension: understood\n14\tstatus: In-Progress\n15\tdate: 2026-06-01\n16\ttags:\n17\t  - Math\n18\t  - Linear-Algebra\n19\t  - Matrix\n20\t  - Quantum-Mechanics\n21\t  - Group-Theory\n22\t---\n23\t\n24\t# Unitary Matrix (酉矩阵)\n25\t\n26\t> 酉矩阵是复向量空间中的\"保距变换\"——它保持内积、范数和角度不变，是正交矩阵在复数域的自然推广。量子力学中一切不改变概率的时间演化都由酉矩阵/酉算子描述。\n27\t\n28\t---\n29\t\n30\t## 数学直觉"
+          },
+          {
+            "id": "call_d10be34d48674d8b9c662cc1",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Torque.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Classical Mechanics\n6\taliases:\n7\t  - 力矩\n8\t  - torque\n9\t  - 转矩\n10\tsource: \"self-authored (经典力学)\"\n11\tcomprehension: understood\n12\tstatus: In-Progress\n13\tdate: 2026-05-27\n14\ttags:\n15\t  - Physics\n16\t  - Classical_Mechanics\n17\t  - Rotational_Dynamics\n18\t  - Angular_Momentum\n19\t---\n20\t\n21\t# Torque\n22\t\n23\t力矩（Torque）是改变物体**转动**状态的原因，正如力是改变物体**平动**状态的原因一样。你可以把它理解为\"使物体绕某个轴或点发生旋转的效应\"。\n24\t\n25\t---\n26\t\n27\t## 定义与公式\n28\t\n29\t力矩（通常用 $\\vec{\\tau}$ 或 $\\vec{M}$ 表示）定义为作用力 $\\vec{F}$ 与力臂（从转动参考点到力的作用点的位矢 $\\vec{r}$）的叉乘：\n30\t"
+          },
+          {
+            "id": "call_ecd1e2e42cce41ec985b3aa8",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Magnetic-Moment.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Atomic Physics\n6\taliases:\n7\t  - 磁矩\n8\t  - magnetic moment\n9\tsource: \"Gemini 对话整理 (原子物理)\"\n10\tcomprehension: getting there\n11\tstatus: In-Progress\n12\tdate: 2026-05-27\n13\ttags:\n14\t  - Physics\n15\t  - Atomic_Physics\n16\t  - Electromagnetism\n17\t  - Zeeman_Effect\n18\t  - Angular_Momentum\n19\t---\n20\t\n21\t# Magnetic Moment\n22\t\n23\t磁矩（Magnetic Moment）是描述一个物体\"磁性有多强、方向朝哪\"的核心物理量。可以把它理解为衡量一个系统与外部磁场发生相互作用能力的\"身份证\"——大到宏观线圈、永磁体，小到电子、中性原子，都有各自的磁矩。\n24\t\n25\t---\n26\t\n27\t## 物理图像\n28\t\n29\t磁矩本质上来源于**电荷的运动**。在物理学中通常从两个尺度来理解：\n30\t"
+          },
+          {
+            "id": "call_7f43b745cd2d4830bd0cb889",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Azimuthal-Quantum-Number.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Quantum Mechanics\n6\taliases:\n7\t  - 角量子数\n8\t  - 方位量子数\n9\t  - 轨道角动量量子数\n10\t  - Azimuthal quantum number\n11\tsource: \"self-authored (量子力学基础)\"\n12\tcomprehension: understood\n13\tstatus: In-Progress\n14\tdate: 2026-05-25\n15\ttags:\n16\t  - Physics\n17\t  - Quantum_Mechanics\n18\t  - Atomic_Physics\n19\t  - Angular_Momentum\n20\t  - Quantum_Numbers\n21\t---\n22\t\n23\t# Azimuthal Quantum Number\n24\t\n25\t角量子数（azimuthal quantum number），也常叫轨道角动量量子数，记为 $l$。它决定电子轨道角动量的大小、原子轨道的角向形状，并限制[[Magnetic-Quantum-Number|磁量子数]] $m_l$ 的可取值。\n26\t\n27\t> [!info] 核心图像\n28\t> $l$ 描述的不是电子像小球一样绕核运动的经典轨道半径，而是波函数角向结构的复杂程度。$l=0$ 的 $s$ 态没有轨道角动量；$l$ 越大，角向节点和方向性越明显。\n29\t\n30\t---"
+          },
+          {
+            "id": "call_e88a88623e834b90b7536d21",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Magnetic-Quantum-Number.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Quantum Mechanics\n6\taliases:\n7\t  - 磁量子数\n8\t  - 磁量子数 ml\n9\t  - 轨道磁量子数\n10\t  - Magnetic quantum number\n11\tsource: \"self-authored (量子力学基础)\"\n12\tcomprehension: understood\n13\tstatus: In-Progress\n14\tdate: 2026-05-25\n15\ttags:\n16\t  - Physics\n17\t  - Quantum_Mechanics\n18\t  - Atomic_Physics\n19\t  - Angular_Momentum\n20\t  - Quantum_Numbers\n21\t---\n22\t\n23\t# Magnetic Quantum Number\n24\t\n25\t磁量子数（magnetic quantum number）记为 $m_l$，用于标记轨道角动量在某个选定方向（通常是 $z$ 轴）上的投影。它决定同一[[Azimuthal-Quantum-Number|角量子数]] $l$ 下不同空间取向的量子态。\n26\t\n27\t> [!info] 核心图像\n28\t> $m_l$ 不是说轨道真的像刚体一样指向某个确定方向，而是说角动量在测量轴上的投影只能取离散值。外加磁场选定一个方向后，不同 $m_l$ 状态会表现出不同能量，这就是塞曼效应的基础。\n29\t\n30\t---"
+          },
+          {
+            "id": "call_06f9f12e40574bd6a32cf3e2",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Principal-Quantum-Number.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Quantum Mechanics\n6\taliases:\n7\t  - 主量子数\n8\t  - 主量子数 n\n9\t  - Principal quantum number\n10\tsource: \"self-authored (量子力学基础)\"\n11\tcomprehension: understood\n12\tstatus: In-Progress\n13\tdate: 2026-05-25\n14\ttags:\n15\t  - Physics\n16\t  - Quantum_Mechanics\n17\t  - Atomic_Physics\n18\t  - Quantum_Numbers\n19\t---\n20\t\n21\t# Principal Quantum Number\n22\t\n23\t主量子数（principal quantum number）记为 $n$，是标记原子束缚态能级与壳层的量子数。它首先决定电子波函数的径向尺度和能量主层级，并进一步限制[[Azimuthal-Quantum-Number|角量子数]] $l$ 的可取值。\n24\t\n25\t> [!info] 核心图像\n26\t> $n$ 像是在说电子波函数“整体有多大、能级有多高”。在氢原子中，$n$ 越大，电子平均离原子核越远，能量越接近电离极限 $E=0$。\n27\t\n28\t---\n29\t\n30\t## 定义与取值"
+          },
+          {
+            "id": "call_330ddb7dfdf54324b2ea5d91",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Hydrogen-Atom-Model.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Quantum Mechanics\n6\t  - Atomic Physics\n7\taliases:\n8\t  - 氢原子模型\n9\t  - Hydrogen atom model\n10\t  - Bohr model\n11\t  - Bohr atom\n12\t  - 氢原子能级\n13\tsource: \"Gemini 对话整理 + Griffiths QM\"\n14\tcomprehension: getting there\n15\tstatus: In-Progress\n16\tdate: 2026-05-27\n17\ttags:\n18\t  - Physics\n19\t  - Quantum_Mechanics\n20\t  - Atomic_Physics\n21\t  - Quantum_Numbers\n22\t  - Hydrogen_Atom\n23\t---\n24\t\n25\t# Hydrogen Atom Model\n26\t\n27\t氢原子模型解释了为什么氢原子的束缚态能量是离散的，以及为什么非相对论近似下能量只依赖[[Principal-Quantum-Number|主量子数]] $n$：\n28\t\n29\t$$\n30\tE_n=-\\frac{13.6\\ \\mathrm{eV}}{n^2}"
+          },
+          {
+            "id": "call_ed590dd2e94a4732a8dffdcd",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Larmor-Precession.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Atomic Physics\n6\t  - Electromagnetism\n7\taliases:\n8\t  - 拉莫尔进动\n9\t  - Larmor precession\n10\t  - Larmor frequency\n11\t  - 拉莫尔频率\n12\tsource: \"Gemini 对话整理 (原子物理)\"\n13\tcomprehension: getting there\n14\tstatus: In-Progress\n15\tdate: 2026-05-27\n16\ttags:\n17\t  - Physics\n18\t  - Atomic_Physics\n19\t  - Electromagnetism\n20\t  - Magnetic_Moment\n21\t  - Angular_Momentum\n22\t  - Precession\n23\t---\n24\t\n25\t# Larmor Precession\n26\t\n27\t拉莫尔进动（Larmor Precession）描述的是：带有[[Magnetic-Moment|磁矩]]和角动量的系统放进外磁场后，角动量矢量不会简单地倒向磁场方向，而是绕着磁场方向做圆锥形旋转。\n28\t\n29\t最核心的图像是：外磁场 $\\mathbf{B}$ 对磁矩 $\\boldsymbol{\\mu}$ 施加[[Torque|力矩]]，力矩改变角动量 $\\mathbf{J}$ 的方向，但在理想无耗散情况下不改变 $\\mathbf{J}$ 的大小，于是 $\\mathbf{J}$ 的端点沿圆周运动。\n30\t"
+          },
+          {
+            "id": "call_9aa17a22610d4e62a48cf008",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Bose-Einstein-Distribution.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Statistical Physics\n6\taliases:\n7\t  - 玻色\n8\t  - 爱因斯坦分布\n9\t  - 玻色子分布\n10\t  - Bose-Einstein distribution\n11\tsource: \"self-authored (统计物理)\"\n12\tcomprehension: getting there\n13\tstatus: Evergreen\n14\tdate: 2026-05-18\n15\ttags:\n16\t  - Physics\n17\t  - Statistical_Physics\n18\t  - Quantum_Statistics\n19\t  - Bose-Einstein\n20\t---\n21\t\n22\t# Bose-Einstein Distribution\n23\t\n24\t> **Bose-Einstein Distribution (玻色-爱因斯坦分布)** 是量子统计力学中的三大分布之一（与 [[Fermi-Dirac-Distribution|Fermi-Dirac Distribution (费米-狄拉克分布)]]、[[Maxwell-Boltzmann-Distribution|Maxwell-Boltzmann Distribution (麦克斯韦-玻尔兹曼分布)]] 并列）。它描述了在热力学平衡下，由**全同且不可分辨的玻色子**（自旋为整数的粒子，如光子、声子、铷-87 原子等）组成的理想气体中，粒子在各个能级上的平均占据数。\n25\t\n26\t---\n27\t\n28\t## 数学表达与基本参数\n29\t\n30\t处于单粒子能级能量为 $\\epsilon$ 上的平均占据数（即平均粒子数） $\\langle n(\\epsilon) \\rangle$ 为："
+          },
+          {
+            "id": "call_2998461d3600431eaab0e5fc",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Ising-Model.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Statistical Physics\n6\taliases:\n7\t  - 伊辛模型\n8\t  - Ising模型\n9\t  - Ising Model\n10\tsource: \"self-authored (统计物理)\"\n11\tcomprehension: getting there\n12\tstatus: Evergreen\n13\tdate: 2026-05-25\n14\ttags:\n15\t  - Physics\n16\t  - Statistical_Physics\n17\t  - Phase_Transition\n18\t  - Ising_Model\n19\t---\n20\t\n21\t# Ising Model\n22\t\n23\t> **Ising Model** 是统计物理学中研究相变（Phase Transition）和临界现象最经典的格点模型，它通过极其简单的局部自旋相互作用，展现了极为丰富的宏观集体行为与自发对称性破缺（Spontaneous Symmetry Breaking）。\n24\t\n25\t---\n26\t\n27\t## 物理直觉\n28\t\n29\t要理解 Ising Model，首先要建立它的物理图像：**微观的局部“对齐”倾向与宏观温度导致的“无序”热涨落之间的相互竞争**。\n30\t"
+          },
+          {
+            "id": "call_396035279e07451e879590b3",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Spontaneous-Symmetry-Breaking.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Statistical Physics\n6\t  - Condensed Matter Physics\n7\taliases:\n8\t  - 自发对称性破缺\n9\t  - 对称性破缺\n10\t  - Spontaneous Symmetry Breaking\n11\t  - Symmetry Breaking\n12\tsource: \"self-authored (统计物理)\"\n13\tcomprehension: getting there\n14\tstatus: Evergreen\n15\tdate: 2026-05-25\n16\ttags:\n17\t  - Physics\n18\t  - Statistical_Physics\n19\t  - Condensed_Matter\n20\t  - Symmetry_Breaking\n21\t---\n22\t\n23\t# Spontaneous Symmetry Breaking\n24\t\n25\t> **Spontaneous Symmetry Breaking (SSB, 自发对称性破缺)** 是凝聚态物理、统计力学与粒子物理中最核心的统一物理图像之一。它描述了系统哈密顿量（物理规律）具有某种对称性，但在能量最低的基态或宏观热力学平衡态中，系统自发地“选择”了某种特定状态，从而使对称性在宏观层面上被隐藏或丧失的现象。\n26\t\n27\t---\n28\t\n29\t## 物理直觉\n30\t"
+          },
+          {
+            "id": "call_da9f40541927462eb3ce7c46",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Hyperfine-Structure.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Atomic Physics\n6\t  - Quantum Mechanics\n7\tsource: \"Griffiths QM, Ch.6 + 原子物理课程\"\n8\tcomprehension: vague\n9\taliases:\n10\t  - 超精细结构\n11\t  - 超精细相互作用\n12\t  - Hyperfine structure\n13\t  - 21 cm line\n14\tstatus: Draft\n15\tdate: 2026-06-02\n16\ttags:\n17\t  - Physics\n18\t  - Atomic_Physics\n19\t  - Quantum_Mechanics\n20\t  - Angular_Momentum\n21\t  - Hyperfine_Structure\n22\t  - Atomic_Clock\n23\t---\n24\t\n25\t# Hyperfine Structure (超精细结构)\n26\t\n27\t超精细结构（Hyperfine Structure）是原子能级的一种细微分裂，源自**原子核自旋**与**电子总角动量**之间的磁相互作用。它的能量量级约为 $10^{-4}$–$10^{-5}$ eV，比[[Hydrogen-Atom-Model|氢原子]]的精细结构（$\\sim 10^{-3}$ eV）还要小约两个数量级。\n28\t\n29\t> [!tip] 核心图像\n30\t> 把原子核想象成一个微型条形磁铁（核自旋磁矩），把电子云想象成另一个磁场分布。两个磁场叠加后，\"同向\"和\"反向\"排列的总能量略有不同，这就是超精细分裂的物理根源。"
+          },
+          {
+            "id": "call_b208e796e5ec496b833e5e6a",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Commutation-Relation.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Quantum Mechanics\n6\tsource: \"Griffiths Introduction to Quantum Mechanics, Ch.3 & Ch.4; Sakurai Modern Quantum Mechanics, Ch.1\"\n7\tcomprehension: vague\n8\taliases:\n9\t  - 对易关系\n10\t  - 对易子\n11\t  - Commutator\n12\t  - 正则对易关系\n13\t  - Canonical Commutation Relation\n14\tstatus: In-Progress\n15\tdate: 2026-06-02\n16\ttags:\n17\t  - Physics\n18\t  - Quantum_Mechanics\n19\t  - Operator_Algebra\n20\t  - Angular_Momentum\n21\t  - Uncertainty_Principle\n22\t  - Lie_Algebra\n23\t---\n24\t\n25\t# Commutation Relation (对易关系)\n26\t\n27\t> 对易关系是量子力学的**代数骨架**——它用一个简单的表达式 $[A,B] = AB - BA$ 揭示了两个物理量是否可以同时精确测量，是一切量子不确定性、选择规则和守恒律的数学根源。\n28\t\n29\t---\n30\t"
+          },
+          {
+            "id": "call_7b43e384da734a3cb052e648",
+            "name": "Read",
+            "input": {
+              "file_path": "C:\\Personal Profile\\Profile\\MathPhysCore\\Knowledge Point\\Physics\\Quantum-Numbers.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\tsubject:\n3\t  - Physics\n4\ttopic:\n5\t  - Quantum Mechanics\n6\taliases:\n7\t  - 量子数\n8\t  - 氢原子量子数\n9\t  - 原子轨道量子数\n10\t  - Quantum numbers\n11\tsource: \"self-authored (量子力学基础)\"\n12\tcomprehension: understood\n13\tstatus: In-Progress\n14\tdate: 2026-05-25\n15\ttags:\n16\t  - Physics\n17\t  - Quantum_Mechanics\n18\t  - Atomic_Physics\n19\t  - Quantum_Numbers\n20\t---\n21\t\n22\t# Quantum Numbers\n23\t\n24\t量子数（quantum numbers）是一组用来标记原子中电子量子态的离散标签。对中心势场，尤其是氢原子问题，最常用的一组空间量子数是：[[Principal-Quantum-Number|主量子数]] $n$、[[Azimuthal-Quantum-Number|角量子数]] $l$、[[Magnetic-Quantum-Number|磁量子数]] $m_l$。\n25\t\n26\t> [!info] 核心图像\n27\t> $n$ 决定电子波函数的整体能量尺度与径向大小；$l$ 决定轨道角动量大小与轨道形状；$m_l$ 决定角动量在选定 $z$ 轴上的投影方向。三者不是平级随便选的标签，而是有严格嵌套关系。\n28\t\n29\t---\n30\t"
+          }
+        ],
+        "isExpanded": false,
+        "result": "All files read. I now have the complete data. Here is the full structured comparison report.\n\n---\n\n## Complete Vault Inventory: Knowledge Point Notes\n\n### Math Notes (3 files)\n\n| # | Filename | subject | topic | aliases[0] | status | comprehension | date |\n|---|----------|---------|-------|------------|--------|---------------|------|\n| 1 | Gaussian-Integral | Math | Calculus | 高斯积分 | In-Progress | understood | 2026-05-25 |\n| 2 | Method-of-Separation-of-Variables | Math | PDE | 分离变量 | In-Progress | understood | 2026-05-25 |\n| 3 | Unitary-Matrix | Math | Linear Algebra | 酉矩阵 | In-Progress | understood | 2026-06-01 |\n\n### Physics Notes (13 files)\n\n| # | Filename | subject | topic | aliases[0] | status | comprehension | date |\n|---|----------|---------|-------|------------|--------|---------------|------|\n| 4 | Torque | Physics | Classical Mechanics | 力矩 | In-Progress | understood | 2026-05-27 |\n| 5 | Magnetic-Moment | Physics | Atomic Physics | 磁矩 | In-Progress | getting there | 2026-05-27 |\n| 6 | Azimuthal-Quantum-Number | Physics | Quantum Mechanics | 角量子数 | In-Progress | understood | 2026-05-25 |\n| 7 | Magnetic-Quantum-Number | Physics | Quantum Mechanics | 磁量子数 | In-Progress | understood | 2026-05-25 |\n| 8 | Principal-Quantum-Number | Physics | Quantum Mechanics | 主量子数 | In-Progress | understood | 2026-05-25 |\n| 9 | Hydrogen-Atom-Model | Physics | Quantum Mechanics | 氢原子模型 | In-Progress | getting there | 2026-05-27 |\n| 10 | Larmor-Precession | Physics | Atomic Physics | 拉莫尔进动 | In-Progress | getting there | 2026-05-27 |\n| 11 | Bose-Einstein-Distribution | Physics | Statistical Physics | 玻色 | Evergreen | getting there | 2026-05-18 |\n| 12 | Ising-Model | Physics | Statistical Physics | 伊辛模型 | Evergreen | getting there | 2026-05-25 |\n| 13 | Spontaneous-Symmetry-Breaking | Physics | Statistical Physics | 自发对称性破缺 | Evergreen | getting there | 2026-05-25 |\n| 14 | Hyperfine-Structure | Physics | Atomic Physics | 超精细结构 | Draft | vague | 2026-06-02 |\n| 15 | **Commutation-Relation** | Physics | Quantum Mechanics | 对易关系 | In-Progress | vague | 2026-06-02 |\n| 16 | Quantum-Numbers | Physics | Quantum Mechanics | 量子数 | In-Progress | understood | 2026-05-25 |\n\n---\n\n## Complete Roadmap Entries (from `Study-Roadmap.md`)\n\n### Roadmap checkmark entries (18 total):\n\n| # | Roadmap Name | Section |\n|---|-------------|---------|\n| 1 | Gaussian-Integral (高斯积分) | Math / Calculus |\n| 2 | Unitary-Matrix (酉矩阵) | Math / Linear Algebra |\n| 3 | Method-of-Separation-of-Variables (分离变量法) | Math / PDE |\n| 4 | Torque (力矩) | Physics / Classical Mechanics |\n| 5 | Magnetic-Moment (磁矩) | Physics / Electrodynamics |\n| 6 | Quantum-Numbers (量子数) | Physics / Atomic & Quantum |\n| 7 | Principal-Quantum-Number (主量子数) | Physics / Atomic & Quantum |\n| 8 | Azimuthal-Quantum-Number (角量子数) | Physics / Atomic & Quantum |\n| 9 | Magnetic-Quantum-Number (磁量子数) | Physics / Atomic & Quantum |\n| 10 | Hydrogen-Atom-Model (氢原子模型) | Physics / Atomic & Quantum |\n| 11 | Larmor-Precession (拉莫尔进动) | Physics / Atomic & Quantum |\n| 12 | Hyperfine-Structure (超精细结构) | Physics / Atomic & Quantum |\n| 13 | Bose-Einstein-Distribution (玻色-爱因斯坦分布) | Physics / Statistical Physics |\n| 14 | Ising-Model (伊辛模型) | Physics / Statistical Physics |\n| 15 | Spontaneous-Symmetry-Breaking (自发对称破缺) | Physics / Statistical Physics |\n\n### Roadmap empty-box entries (30 total):\n\n| # | Roadmap Name | Section |\n|---|-------------|---------|\n| 1 | Multivariable-Calculus (多元微积分) | Math / Calculus |\n| 2 | Complex-Analysis (复变函数) | Math / Calculus |\n| 3 | Fourier-Analysis (Fourier 分析) | Math / Calculus |\n| 4 | Eigenvalues-Eigenvectors (特征值与特征向量) | Math / Linear Algebra |\n| 5 | Hermitian-Matrix (Hermitian 矩阵) | Math / Linear Algebra |\n| 6 | Matrix-Diagonalization (矩阵对角化) | Math / Linear Algebra |\n| 7 | Tensor-Product (张量积) | Math / Linear Algebra |\n| 8 | Green-Function (Green 函数) | Math / PDE |\n| 9 | Sturm-Liouville-Theory (Sturm-Liouville 理论) | Math / PDE |\n| 10 | Special-Functions (特殊函数) | Math / PDE |\n| 11 | Lagrangian-Mechanics (Lagrange 力学) | Physics / Classical Mechanics |\n| 12 | Hamiltonian-Mechanics (Hamilton 力学) | Physics / Classical Mechanics |\n| 13 | Normal-Mode-Analysis (简正模式) | Physics / Classical Mechanics |\n| 14 | Central-Force-Motion (有心力运动) | Physics / Classical Mechanics |\n| 15 | Maxwells-Equations (Maxwell 方程组) | Physics / Electrodynamics |\n| 16 | Electromagnetic-Wave (电磁波) | Physics / Electrodynamics |\n| 17 | Radiation (辐射) | Physics / Electrodynamics |\n| 18 | Schrodinger-Equation (Schrödinger 方程) | Physics / Atomic & Quantum |\n| 19 | Spin-Orbit-Coupling (自旋-轨道耦合) | Physics / Atomic & Quantum |\n| 20 | Fine-Structure (精细结构) | Physics / Atomic & Quantum |\n| 21 | Zeeman-Effect (塞曼效应) | Physics / Atomic & Quantum |\n| 22 | Perturbation-Theory (微扰论) | Physics / Atomic & Quantum |\n| 23 | Variational-Method (变分法) | Physics / Atomic & Quantum |\n| 24 | Scattering-Theory (散射理论) | Physics / Atomic & Quantum |\n| 25 | Angular-Momentum-Coupling (角动量耦合) | Physics / Atomic & Quantum |\n| 26 | Boltzmann-Distribution (玻尔兹曼分布) | Physics / Statistical Physics |\n| 27 | Partition-Function (配分函数) | Physics / Statistical Physics |\n| 28 | Phase-Transition (相变) | Physics / Statistical Physics |\n| 29 | Fermi-Dirac-Distribution (费米-狄拉克分布) | Physics / Statistical Physics |\n| 30 | Shannon-Entropy (香农熵) | Physics / Information Theory |\n| 31 | Channel-Capacity (信道容量) | Physics / Information Theory |\n| 32 | Quantum-Information (量子信息) | Physics / Information Theory |\n\n---\n\n## Structural Comparison Results\n\n### Difference A -- Notes in vault but NOT in roadmap (1 file)\n\n| Filename | subject | topic | aliases[0] | status | comprehension | date |\n|----------|---------|-------|------------|--------|---------------|------|\n| **Commutation-Relation** | Physics | Quantum Mechanics | 对易关系 | In-Progress | vague | 2026-06-02 |\n\nThis is the only orphaned note. `Commutation-Relation.md` exists in `Knowledge Point/Physics/` but has zero representation in any roadmap table. It was likely created on 2026-06-02 and the roadmap was not updated to include it.\n\n### Difference B -- Roadmap entries with empty boxes that have corresponding vault files (0 entries)\n\n**None.** Every single one of the 30+ empty-box entries in the roadmap currently has NO corresponding `.md` file in the vault. All uncompleted roadmap items are genuinely still pending.\n\n### Difference C -- Roadmap checkmark entries with NO corresponding vault file (0 entries)\n\n**None.** Every one of the 15 checkmark entries in the roadmap has a matching `.md` file in the vault. All \"completed\" items are backed by actual notes.\n\n---\n\n## Summary\n\n| Metric | Count |\n|--------|-------|\n| Total vault note files | 16 (Math: 3, Physics: 13) |\n| Total roadmap checkmark entries | 15 |\n| Total roadmap empty-box entries | 30 |\n| **Difference A** (vault note missing from roadmap) | **1** -- `Commutation-Relation` |\n| **Difference B** (empty-box in roadmap, file exists) | **0** |\n| **Difference C** (checkmark in roadmap, file missing) | **0** |\n\nThe vault and roadmap are nearly perfectly synchronized. The only action needed for roadmap sync is:\n\n1. **Add `Commutation-Relation` (对易关系)** to the roadmap. It should go under \"Atomic & Quantum Physics\" (or possibly a new \"Quantum Mechanics / Operator Algebra\" subsection), as a `⬜` entry since its comprehension is only \"vague\" and status is \"In-Progress\".\n\nNo other discrepancies exist -- no roadmap entries are stale (checking off non-existent files) and no empty-box entries have been silently completed without updating the roadmap symbol."
+      }
+    }
+  },
+  "usage": {
+    "model": "opus[1m]",
+    "inputTokens": 498,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 85056,
+    "contextWindow": 1000000,
+    "contextTokens": 85554,
+    "percentage": 9
+  }
+}

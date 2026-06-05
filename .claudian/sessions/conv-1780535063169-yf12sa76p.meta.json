@@ -1,0 +1,22 @@
+{
+  "id": "conv-1780535063169-yf12sa76p",
+  "providerId": "claude",
+  "title": "这个文件里我库里有的文件打上双链接",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780535063169,
+  "updatedAt": 1780630977719,
+  "lastResponseAt": 1780542936639,
+  "sessionId": "2813fb21-e085-4528-8486-d6e3d1a4db34",
+  "providerState": {
+    "providerSessionId": "2813fb21-e085-4528-8486-d6e3d1a4db34"
+  },
+  "usage": {
+    "model": "sonnet[1m]",
+    "inputTokens": 150,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 128512,
+    "contextWindow": 1000000,
+    "contextTokens": 128662,
+    "percentage": 13
+  }
+}
